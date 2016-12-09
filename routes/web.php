@@ -13,10 +13,6 @@
 
 Route::get('/', function () {
     return view('main.home');
-});
-
-Route::get('/home', function () {
-    return view('main.home');
 })->name('home');
 
 Route::get('/about', function(){
