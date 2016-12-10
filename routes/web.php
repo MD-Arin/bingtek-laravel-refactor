@@ -11,37 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main.home');
-})->name('home');
-
-Route::get('/about', function(){
-    return view('main.about');
-})->name('about');
-
-Route::get('/first_ps', function(){
-    return view('main.first_ps');
-})->name('first_ps');
-
-Route::get('/second_ps', function(){
-    return view('main.second_ps');
-})->name('second_ps');
-
-Route::get('/third_ps', function(){
-    return view('main.third_ps');
-})->name('third_ps');
-
-Route::get('/fourth_ps', function(){
-    return view('main.fourth_ps');
-})->name('fourth_ps');
-
-Route::get('/contacts', function(){
-    return view('main.contacts');
-})->name('contacts');
+Route::get('/', 'PagesController@getHome')->name('home');
+Route::get('/about', 'PagesController@getAbout')->name('about');
+Route::get('/first_ps', 'PagesController@getFirst_ps')->name('first_ps');
+Route::get('/second_ps', 'PagesController@getSecond_ps')->name('second_ps');
+Route::get('/third_ps', 'PagesController@getThird_ps')->name('third_ps');
+Route::get('/fourth_ps', 'PagesController@getFourth_ps')->name('fourth_ps');
+Route::get('/contacts', 'PagesController@getContacts')->name('contacts');
 
 Route::group(['middleware' => ['web']], function(){
 
-    Route::get('/login', function(){
-      return view('main.login');
-    })->name('login');
+    Route::get('/login', 'PagesController@getLogin')->name('login');
 });
