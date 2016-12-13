@@ -21,6 +21,5 @@
       </ul>
     </li>
     <li class="@yield('contacts-active')" role="presentation"><a href="{{ route('contacts') }}"><span class="glyphicon glyphicon-envelope"> Contacts</span></a></li>
-    <li class="@yield('login-active')" role="presentation"><a href="{{ route('login') }}"><span class="glyphicon glyphicon-user"> Manage Site</span></a></li>
   </ul>
 </div>
