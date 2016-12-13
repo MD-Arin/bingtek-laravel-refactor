@@ -4,6 +4,10 @@
   Contact Us
 @endsection
 
+@section('contacts-active')
+  active
+@endsection
+
 @section('content')
 <div class="container-fluid">
   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 vertical-line-right">

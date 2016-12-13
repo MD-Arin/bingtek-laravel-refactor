@@ -4,6 +4,10 @@
   About
 @endsection
 
+@section('about-active')
+ active
+@endsection
+
 @section('content')
 
 <div class="container-fluid">

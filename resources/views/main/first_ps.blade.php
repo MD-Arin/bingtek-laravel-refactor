@@ -4,6 +4,13 @@
   Products and Services
 @endsection
 
+@section('ps-active')
+  active
+@endsection
+@section('first-active')
+  active
+@endsection
+
 @section('content')
 <div class="container-fluid">
   <div class="row">
@@ -129,7 +136,7 @@
         <img src="" class="img-thumbnail" />
         <p class="blockquote">
           <br>
-          
+
         </p>
       </div>
     </div>

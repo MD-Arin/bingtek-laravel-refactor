@@ -4,6 +4,10 @@
   Home
 @endsection
 
+@section('home-active')
+  active
+@endsection
+
 @section('content')
 <div class="cover-image" style="background: url(''); height: 100%">
   <div class="container-fluid">

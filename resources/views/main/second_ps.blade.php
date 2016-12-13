@@ -4,6 +4,13 @@
  Products and Services
 @endsection
 
+@section('ps-active')
+  active
+@endsection
+@section('second-active')
+  active
+@endsection
+
 @section('content')
 <div class="container-fluid">
   <div class="jumbotron">
@@ -55,7 +62,7 @@
       <h3 class="text-center"></h3>
       <hr class="underline">
       <p style="margin-left: 20px;">
-        
+
       </p>
     </div>
   </div>

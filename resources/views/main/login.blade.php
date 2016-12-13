@@ -4,6 +4,10 @@
   Dashboard login
 @endsection
 
+@section('login-active')
+  active
+@endsection
+
 @section('content')
 <div class="container-sm text-center">
   <div class="row">
