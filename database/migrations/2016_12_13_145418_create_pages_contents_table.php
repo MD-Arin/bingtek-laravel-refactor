@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAboutContentsTable extends Migration
+class CreatePagesContentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateAboutContentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('about_contents', function (Blueprint $table) {
+        Schema::create('pages_contents', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('section');
+            $table->string('page');
             $table->text('body')->nullable();
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateAboutContentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('about_contents');
+        Schema::dropIfExists('pages_contents');
     }
 }
