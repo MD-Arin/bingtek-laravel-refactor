@@ -37,37 +37,39 @@
   <div class="row">
     <h3 class="text-center">Where We've Been</h3>
     <hr class="underline">
-    <div class="row">
-      <div id="milestone-carousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#milestone-carousel"  data-slide-to="0" class="active"></li>
-          <li data-target="#milestone-carousel"  data-slide-to="1"></li>
-        </ol>
+    <div class="container-fluid">
+      <div class="row">
+        <div id="milestone-carousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#milestone-carousel"  data-slide-to="0" class="active"></li>
+            <li data-target="#milestone-carousel"  data-slide-to="1"></li>
+          </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <div class="row">
-              <img src="">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="row">
+                <img src="">
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <img src="">
+              </div>
             </div>
           </div>
-          <div class="item">
-            <div class="row">
-              <img src="">
-            </div>
-          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#milestone-carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#milestone-carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#milestone-carousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#milestone-carousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
 
@@ -150,49 +152,51 @@
     <h1>Partners</h1>
     <hr>
   </div>
-  <div class="row">
-    <div id="partners-carousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#partners-carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#partners-carousel" data-slide-to="1"></li>
-    </ol>
+  <div class="container-fluid">
+    <div class="row">
+      <div id="partners-carousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#partners-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#partners-carousel" data-slide-to="1"></li>
+      </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <img src="" class="img-thumbnail">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <img src="" class="img-thumbnail">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <img src="" class="img-thumbnail">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <img src="" class="img-thumbnail">
+          </div>
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <img src="" class="img-thumbnail">
+        <div class="item">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <img src="" class="img-thumbnail">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <img src="" class="img-thumbnail">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <img src="" class="img-thumbnail">
+          </div>
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <img src="" class="img-thumbnail">
         </div>
-      </div>
-      <div class="item">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <img src="" class="img-thumbnail">
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <img src="" class="img-thumbnail">
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <img src="" class="img-thumbnail">
-        </div>
-      </div>
-      </div>
 
-      <!-- Controls -->
-      <a class="left carousel-control" href="#partners-carousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#partners-carousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#partners-carousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#partners-carousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
   </div>
 
