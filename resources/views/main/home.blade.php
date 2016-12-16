@@ -17,7 +17,7 @@
         <h3 class="text-inverse"><b></b></h3>
         <br>
         <!--Add a dynamic link to a page-->
-        <a href="index.php?q=first-ps" class="btn btn-info">Learn More</a>
+        <a href="index.php?q=first-ps" class="btn btn-primary">Learn More</a>
       </div>
     </div>
   </div>
