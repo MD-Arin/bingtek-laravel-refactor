@@ -3057,19 +3057,30 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
+  color: darkorange;
+  background-color: black;
   border-color: #ccc;
 }
+.btn-circle{
+  color: orange;
+  background-color: black;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
 .btn-default:focus,
-.btn-default.focus {
+.btn-default.focus, 
+.btn-circle:focus,
+.btn-circle.focus{
   color: #333;
-  background-color: #e6e6e6;
+  background-color: darkorange;
   border-color: #8c8c8c;
 }
-.btn-default:hover {
+.btn-default:hover, 
+.btn-circle:hover {
   color: #333;
-  background-color: #e6e6e6;
+  background-color: darkorange;
   border-color: #adadad;
 }
 .btn-default:active,

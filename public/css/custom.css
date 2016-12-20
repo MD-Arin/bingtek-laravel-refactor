@@ -189,11 +189,11 @@ html, body
 }
 .vertical-line-right
 {
-  border-right: 1px solid #eee;
+  border-right: 1px solid orange;
 }
 .vertical-line-left
 {
-  border-left: 1px solid #eee;
+  border-left: 1px solid orange;
 }
 .container-sm
 {
@@ -208,4 +208,8 @@ html, body
 .margin-top
 {
   margin-top: 40px;
+}
+.margin-bottom
+{
+  margin-bottom: 40px;
 }

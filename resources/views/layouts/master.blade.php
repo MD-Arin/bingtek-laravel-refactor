@@ -8,9 +8,7 @@
   </head>
   <body>
     @include('includes.nav')
-    <div class="container">
-      @yield('content')
-    </div>
+    @yield('content')
     @include('includes.footer')
   </body>
   <script type="text/javascript" src="{{ URL::to('js/jquery.min.js') }}"></script>

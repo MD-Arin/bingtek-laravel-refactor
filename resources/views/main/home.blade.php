@@ -9,25 +9,42 @@
 @endsection
 
 @section('content')
-<div class="cover-image" style="background: url(''); height: 100%">
+<div class="cover-image" style="background: url('{{ URL::to('img/placeholders/placeholder-1.jpg') }}'); height: 100%">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 text-center vertical-center">
-        <h1 class="text-inverse"><b></b></h1>
-        <h3 class="text-inverse"><b></b></h3>
+    <div class="row vertical-center">
+      <div class="text-center">
+        <h1 class="text-inverse"><b>BINGTEK LTD</b></h1>
         <br>
-        <!--Add a dynamic link to a page-->
-        <a href="index.php?q=first-ps" class="btn btn-primary">Learn More</a>
-      </div>
+        <h4><b>Dedicated to better technology</b></h4>
+        <br>
+        <a href="#intro" class="btn btn-circle"><span class="glyphicon glyphicon-chevron-down text-center vertical-center"></span></a>
+      <div>
     </div>
-  </div>
+  </div>  
 </div>
 
 <div class="container-fluid">
-  <div class="jumbotron">
-    <h1></h1>
-    <p></p>
-    <a href="index.php?q=second-ps" class="btn btn-primary">Learn more</a>
+  <div class="row">
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <div class="jumbotron" id="intro">
+        <h1>Short Intro to BINGTEK</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+        <br>
+        <div class="text-center">
+          <a href="{{ route('about') }}" class="btn btn-primary">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="div-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="jumbotron">
+        <ul class="list-unstyled vertical-center">
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -35,22 +52,46 @@
   <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
       <div class="well well-lg">
-        <img src="" class="img-thumbnail" />
-        <h3></h3>
-        <p>
-
+        <h2 class="text-center"><b>Our Internet Services</b></h2>
+        <img src="{{ URL::to('img/placeholders/placeholder-2.jpg') }}" class="img-thumbnail" />
+        <hr>
+        <p class="text-center">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
         </p>
-        <a href="index.php?q=third-ps" class="btn btn-primary">Learn More</a>
+        <hr>
+        <div class="jumbotron">
+          <ul class="list-unstyled">
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <a href="" class="btn btn-primary">Learn More</a>
+        </div>
       </div>
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
       <div class="well well-lg">
-        <img src="" class="img-thumbnail" />
-        <h3></h3>
+        <h2 class="text-center"><b>Diversified Networking Services</b></h2>
+        <div class="jumbotron">
+          <ul class="list-unstyled">
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          </ul>
+        </div>
+        <hr>
         <p>
-
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
         </p>
-        <a href="index.php?q=fourth-ps" class="btn btn-primary">Learn More</a>
+        <hr>
+        <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail" />
+        <div class="text-center">
+          <a href="" class="btn btn-primary" style="margin-top: 20px;">Learn More</a>
+        </div>
       </div>
     </div>
   </div>
