@@ -14,13 +14,11 @@
     <div class="row vertical-center">
       <div class="text-center">
         <h1 class="text-inverse"><b>BINGTEK LTD</b></h1>
-        <br>
         <h4><b>Dedicated to better technology</b></h4>
-        <br>
-        <a href="#intro" class="btn btn-circle"><span class="glyphicon glyphicon-chevron-down text-center vertical-center"></span></a>
+        <a href="#intro" class="btn btn-circle"><i class="glyphicon glyphicon-chevron-down"></i></a>
       <div>
     </div>
-  </div>  
+  </div>
 </div>
 
 <div class="container-fluid">

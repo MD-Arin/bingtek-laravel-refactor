@@ -3061,24 +3061,43 @@ fieldset[disabled] a.btn {
   background-color: black;
   border-color: #ccc;
 }
-.btn-circle{
-  color: orange;
-  background-color: black;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  position: relative;
+.btn-circle {
+  bottom: 0;
+  background-color: transparent;
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  border-color: white;
+  border-radius: 30px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
 }
+
+.btn-circle:hover {
+  background-color: orange;
+}
+
+.btn-circle > .glyphicon {
+  margin-left: auto;
+  margin-right: auto;
+  color: orange;
+}
+
+.btn-circle:hover > .glyphicon {
+  color: black;
+}
+
 .btn-default:focus,
-.btn-default.focus, 
-.btn-circle:focus,
-.btn-circle.focus{
+.btn-default.focus{
   color: #333;
   background-color: darkorange;
   border-color: #8c8c8c;
 }
-.btn-default:hover, 
-.btn-circle:hover {
+.btn-default:hover{
   color: #333;
   background-color: darkorange;
   border-color: #adadad;
