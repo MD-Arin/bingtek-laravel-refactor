@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePagesContentsTable extends Migration
+class CreateContentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatePagesContentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pages_contents', function (Blueprint $table) {
+        Schema::create('contents', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('page');
+            $table->integer('pages_id')->nullable()->unsigned();
             $table->string('section')->unique();
             $table->text('body')->nullable();
             $table->timestamps();
@@ -29,6 +29,6 @@ class CreatePagesContentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pages_contents');
+        Schema::dropIfExists('contents');
     }
 }
