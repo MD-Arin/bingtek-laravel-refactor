@@ -34,8 +34,4 @@ class PagesController extends Controller
   public function getContacts(){
     return view('main.contacts');
   }
-
-  public function getLogin(){
-    return view('main.login');
-  }
 }

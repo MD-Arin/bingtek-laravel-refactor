@@ -1,14 +1,10 @@
-@extends('layouts.master')
+@extends('layouts.dash')
 
-@section('title')
-  Home
-@endsection
+@section('title', 'Dashboard')
 
-@section('home-active')
-  active
-@endsection
+@section('edit-home-active', 'active')
 
-@section('content')
+@section('dash-content')
 <div class="cover-image" style="background: url('{{ URL::to('img/placeholders/placeholder-1.jpg') }}'); height: 100%">
   <div class="container-fluid">
     <div class="row">
@@ -212,5 +208,8 @@
     </div>
   </div>
 </div>
+@endsection
+
+@section('dash-forms')
 
 @endsection

@@ -35,7 +35,7 @@
           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
         </ul>
       </div>
-      <div class="text-center" style="padding-top: 5%;">
+      <div class="text-center">
         <ul class="list-unstyled">
           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
@@ -44,7 +44,7 @@
           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
         </ul>
       </div>
-      <div class="text-right" style="padding-top: 5%;">
+      <div class="text-right">
         <ul class="list-unstyled">
           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>

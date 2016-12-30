@@ -60,8 +60,12 @@ body {
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: inherit;
+  color: black;
+  background-color: orange;
+}
+.nav-sidebar-fixed
+{
+  position: relative;
 }
 
 

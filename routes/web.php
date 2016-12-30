@@ -19,7 +19,16 @@ Route::get('/third_ps', 'PagesController@getThird_ps')->name('third_ps');
 Route::get('/fourth_ps', 'PagesController@getFourth_ps')->name('fourth_ps');
 Route::get('/contacts', 'PagesController@getContacts')->name('contacts');
 
-Route::group(['middleware' => ['web']], function(){
 
-    Route::get('/login', 'PagesController@getLogin')->name('login');
-});
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/dash-nav', 'HomeController@getDashNav')->name('dash-nav');
+Route::get('/dash-footer', 'HomeController@getDashFooter')->name('dash-footer');
+Route::get('/dash-about', 'HomeController@getDashAbout')->name('dash-about');
+Route::get('/dash-contacts', 'HomeController@getDashContacts')->name('dash-contacts');
+Route::get('/dash-fps', 'HomeController@getDashFps')->name('dash-fps');
+Route::get('/dash-sps', 'HomeController@getDashSps')->name('dash-sps');
+Route::get('/dash-tps', 'HomeController@getDashTps')->name('dash-tps');
+Route::get('/dash-frps', 'HomeController@getDashFrps')->name('dash-frps');
+Route::get('/logout', 'HomeController@getLogout')->name('logout');
