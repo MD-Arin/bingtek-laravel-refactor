@@ -26,7 +26,6 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/dash-nav', 'HomeController@getDashNav')->name('dash-nav');
 Route::get('/dash-footer', 'HomeController@getDashFooter')->name('dash-footer');
 Route::get('/dash-about', 'HomeController@getDashAbout')->name('dash-about');
-Route::get('/dash-contacts', 'HomeController@getDashContacts')->name('dash-contacts');
 Route::get('/dash-fps', 'HomeController@getDashFps')->name('dash-fps');
 Route::get('/dash-sps', 'HomeController@getDashSps')->name('dash-sps');
 Route::get('/dash-tps', 'HomeController@getDashTps')->name('dash-tps');

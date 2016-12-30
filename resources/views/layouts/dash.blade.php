@@ -9,14 +9,14 @@
     @include('includes.nav')
     <div class="container-fluid">
       <div class="row">
-        <div class="cols-xs-2 col-sm-2 col-md-2 col-lg-2 sidebar">
+        <div class="cols-xs-2 col-sm-2 col-md-2 col-lg-2 sidebar nav-sidebar-fixed margin-top">
           @include('includes.dash-nav')
         </div>
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 main">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 main col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
           @yield('dash-content')
+          @include('includes.footer')
       </div>
     </div>
-    @include('includes.footer')
   </body>
   <script type="text/javascript" src="{{ URL::to('js/jquery.min.js') }}"></script>
   <script type="text/javascript" src="{{ URL::to('js/bootstrap.js') }}"></script>

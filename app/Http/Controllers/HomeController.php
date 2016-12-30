@@ -42,26 +42,27 @@ class HomeController extends Controller
     }
 
     public function getDashAbout(){
-      return null;
+      return view('dashboard.dash-about');
     }
 
     public function getDashFps(){
-      return null;
+      return view('dashboard.dash-fps');
     }
 
     public function getDashSps(){
-      return null;
+      return view('dashboard.dash-sps');
     }
 
     public function getDashTps(){
-      return null;
+      return view('dashboard.dash-tps');
     }
 
     public function getDashFrps(){
-      return null;
+      return view('dashboard.dash-frps');
     }
 
     public function getLogout(){
       Auth::logout();
+      return redirect('/');
     }
 }

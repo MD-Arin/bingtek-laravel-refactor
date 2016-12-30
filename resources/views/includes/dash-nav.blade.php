@@ -12,20 +12,26 @@
     <hr>
     <li class="@yield('edit-home-active')"><a href="{{ route('dashboard') }}">Home Page</a></li>
     <li class="@yield('edit-about-active')"><a href="{{ route('dash-about') }}">About Page</a></li>
-    <li class="@yield('edit-contacts-active')"><a href="{{ route('dash-contacts') }}">Contacts Page</a></li>
     <hr>
     <li>Edit Products and Services</li>
     <hr>
-    <li class="@yield('edit-fps-active')"><a href="{{ route('dash-fps') }}"></a></li>
-    <li class="@yield('edit-sps-active')"><a href="{{ route('dash-sps') }}"></a></li>
-    <li class="@yield('edit-tps-active')"><a href="{{ route('dash-tps') }}"></a></li>
-    <li class="@yield('edit-frps-active')"><a href="{{ route('dash-frps') }}"></a></li>
+    <li class="@yield('edit-fps-active')"><a href="{{ route('dash-fps') }}">First Product or Service</a></li>
+    <li class="@yield('edit-sps-active')"><a href="{{ route('dash-sps') }}">Second Product or Service</a></li>
+    <li class="@yield('edit-tps-active')"><a href="{{ route('dash-tps') }}">Third Product or Service</a></li>
+    <li class="@yield('edit-frps-active')"><a href="{{ route('dash-frps') }}">Fourth Product or Service</a></li>
   </ul>
 
-</ul>
-<ul class="nav nav-sidebar">
-  <hr>
-  <li class="@yield('edit-themes-active')">Themes</li>
-  <hr>
-</ul>
+  <ul class="nav nav-sidebar">
+    <hr>
+    <li>Manage Users</li>
+    <hr>
+    <li class="@yield('edit-users-active')"><a href="{{ url('/register') }}">New User</a></li>
+    <li><a href="{{ url('logout') }}">Logout</a></li>
+  </ul>
+
+  <ul class="nav nav-sidebar">
+    <hr>
+    <li class="@yield('edit-themes-active')">Themes</li>
+    <hr>
+  </ul>
 </div>

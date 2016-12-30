@@ -1,6 +1,10 @@
-@extends('layouts.master')
+@extends('layouts.dash')
 
-@section('content')
+@section('title', 'New User')
+
+@section('edit-users-active', 'active')
+
+@section('dash-content')
 <div class="container-fluid margin-top" style="padding-top: 20px;">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
