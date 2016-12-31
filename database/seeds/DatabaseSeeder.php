@@ -12,5 +12,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+
+        Eloquent::unguard();
+
+        //call our bingtek seeder
+        $this->call(PagesTableSeeder::class);
+        $this->call(ContentTableSeeder::class);
+        $this->command->info('Bingtek Seeds are complete');
     }
 }
