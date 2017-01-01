@@ -46,7 +46,7 @@ class ContentTableSeeder extends Seeder
         DB::table('contents')->insert(array(
           'pages_id' => '1',
           'section' => '2-1-btn-link',
-          'body' => "route('about')"
+          'body' => "about"
         ));
 
         DB::table('contents')->insert(array(
@@ -72,6 +72,7 @@ class ContentTableSeeder extends Seeder
           'section' => '2-2-ul-li-4',
           'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
         ));
+
         //Section 3 Home
         DB::table('contents')->insert(array(
           'pages_id' => '1',
@@ -118,7 +119,13 @@ class ContentTableSeeder extends Seeder
         DB::table('contents')->insert(array(
           'pages_id' => '1',
           'section' => '3-1-btn-link',
-          'body' => "route('fps')"
+          'body' => "first_ps"
+        ));
+
+        DB::table('contents')->insert(array(
+          'pages_id' => '1',
+          'section' => '3-2-h1',
+          'body' => "Diversified Networks"
         ));
 
         DB::table('contents')->insert(array(
@@ -159,8 +166,8 @@ class ContentTableSeeder extends Seeder
 
         DB::table('contents')->insert(array(
           'pages_id' => '1',
-          'section' => '3-2-link',
-          'body' => "route('sps')"
+          'section' => '3-2-btn-link',
+          'body' => "second_ps"
         ));
 
         //Section 4 Home
@@ -168,12 +175,6 @@ class ContentTableSeeder extends Seeder
           'pages_id' => '1',
           'section' => '4-img-1',
           'body' => 'img/placeholders/placeholder-1.jpg'
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-img-2',
-          'body' => 'img/placeholders/placeholder-2.jpg'
         ));
 
         DB::table('contents')->insert(array(
@@ -209,85 +210,49 @@ class ContentTableSeeder extends Seeder
         DB::table('contents')->insert(array(
           'pages_id' => '1',
           'section' => '4-1-link',
-          'body' => "route(tps)"
+          'body' => "third_ps"
         ));
 
         DB::table('contents')->insert(array(
           'pages_id' => '1',
-          'section' => '4-2-img1-li-1',
+          'section' => '4-img-2',
+          'body' => 'img/placeholders/placeholder-2.jpg'
+        ));
+
+        DB::table('contents')->insert(array(
+          'pages_id' => '1',
+          'section' => '4-2-img2-h1',
+          'body' => 'Software Development Services'
+        ));
+
+        DB::table('contents')->insert(array(
+          'pages_id' => '1',
+          'section' => '4-2-img2-li-1',
           'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
         ));
 
         DB::table('contents')->insert(array(
           'pages_id' => '1',
-          'section' => '4-2-img1-li-2',
+          'section' => '4-2-img2-li-2',
           'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
         ));
 
         DB::table('contents')->insert(array(
           'pages_id' => '1',
-          'section' => '4-2-img1-li-3',
+          'section' => '4-2-img2-li-3',
           'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
         ));
 
         DB::table('contents')->insert(array(
           'pages_id' => '1',
-          'section' => '4-2-img1-li-4',
+          'section' => '4-2-img2-li-4',
           'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
         ));
 
         DB::table('contents')->insert(array(
           'pages_id' => '1',
-          'section' => '4-3-img2-li-1',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-3-img2-li-2',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-3-img2-li-3',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-3-img2-li-4',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-3-link',
-          'body' => "route(tps)"
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-4-img2-li-1',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-4-img2-li-2',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-4-img2-li-3',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ));
-
-        DB::table('contents')->insert(array(
-          'pages_id' => '1',
-          'section' => '4-4-img2-li-4',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
+          'section' => '4-2-link',
+          'body' => "third_ps"
         ));
 
         //Section 5 Home
@@ -348,7 +313,7 @@ class ContentTableSeeder extends Seeder
         DB::table('contents')->insert(array(
           'pages_id' => '1',
           'section' => '5-3-link',
-          'body' => "route('frps')"
+          'body' => "fourth_ps"
         ));
     }
 }

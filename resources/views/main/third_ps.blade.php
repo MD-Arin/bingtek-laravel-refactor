@@ -13,7 +13,7 @@
 
 @section('content')
 
-  <div class="container-fluid">
+  <div class="container-fluid margin-top">
     <div class="row">
       <div class="container">
         <hr>

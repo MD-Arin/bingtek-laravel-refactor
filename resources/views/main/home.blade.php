@@ -9,12 +9,12 @@
 @endsection
 
 @section('content')
-<div class="cover-image" style="background: url('{{ URL::to('img/placeholders/placeholder-1.jpg') }}'); height: 100%">
+<div class="cover-image" style="background: url('{{ URL::to($homeCover) }}'); height: 100%">
   <div class="container-fluid">
     <div class="row">
       <div class="text-center">
-        <h1 style="font-size: 44; padding-top: 25%;"><b>BINGTEK LTD</b></h1>
-        <h4 style="font-size: 35; padding-bottom: 15px;"><u><b>Dedicated to better technology</b></u></h4>
+        <h1 style="font-size: 44; padding-top: 25%;"><b>{{ $homeCompany }}</b></h1>
+        <h4 style="font-size: 35; padding-bottom: 15px;"><u><b>{{ $homeMotto }}</b></u></h4>
         <a href="#intro" id="home-slide" class="btn btn-circle" click="slide-down"><i class="glyphicon glyphicon-chevron-down"></i></a>
       </div>
     </div>
@@ -26,21 +26,21 @@
   <div class="row">
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
       <div class="jumbotron text-center" id="intro">
-        <h1>Short Intro to BINGTEK</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+        <h1>{{ $homeCoIntro }}</h1>
+        <p>{{ $homeCoIntroBody }}</p>
         <br>
         <div class="text-center">
-          <a href="{{ route('about') }}" class="btn btn-primary">Learn more</a>
+          <a href="{{route("$homeCoIntrolink")}}" class="btn btn-primary">Learn more</a>
         </div>
       </div>
     </div>
     <div class="div-xs-4 col-sm-4 col-md-4 col-lg-4">
       <div class="jumbotron">
         <ul class="list-unstyled vertical-center">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>{{ $homeCoIntroli1 }}<li>
+          <li>{{ $homeCoIntroli2 }}</li>
+          <li>{{ $homeCoIntroli3 }}<li>
+          <li>{{ $homeCoIntroli4 }}</li>
         </ul>
       </div>
     </div>
@@ -52,43 +52,43 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"><b>Our Internet Services</b></h2>
-      <img src="{{ URL::to('img/placeholders/placeholder-2.jpg') }}" class="img-thumbnail" />
+      <h2 class="text-center"><b>{{ $homeInternetH1 }}</b></h2>
+      <img src="{{ URL::to( $homeInternetImg ) }}" class="img-thumbnail" />
       <hr>
       <p class="text-center">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+        {{ $homeInternetP }}
       </p>
       <hr>
       <div class="blockquote">
         <ul class="list-unstyled text-center">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>{{ $homeInternetli1 }}</li>
+          <li>{{ $homeInternetli2 }}</li>
+          <li>{{ $homeInternetli3 }}</li>
+          <li>{{ $homeInternetli4 }}</li>
         </ul>
       </div>
       <div class="text-center">
-        <a href="" class="btn btn-primary">More...</a>
+        <a href="{{route("$homeInternetlink")}}" class="btn btn-primary">More...</a>
       </div>
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"><b>Diversified Networking Services</b></h2>
+      <h2 class="text-center"><b>{{ $homeNetworkingH1 }}</b></h2>
       <div class="blockquote">
         <ul class="list-unstyled text-center">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>{{ $homeNetworkingli1 }}</li>
+          <li>{{ $homeNetworkingli2 }}</li>
+          <li>{{ $homeNetworkingli3 }}</li>
+          <li>{{ $homeNetworkingli4 }}</li>
         </ul>
       </div>
       <hr>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+        {{ $homeNetworkingP }}
       </p>
       <hr>
-      <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail" />
+      <img src="{{ URL::to($homeNetworkingImg) }}" class="img-thumbnail" />
       <div class="text-center">
-        <a href="" class="btn btn-primary" style="margin-top: 10px;">More...</a>
+        <a href="{{route("$homeNetworkinglink")}}" class="btn btn-primary" style="margin-top: 10px;">More...</a>
       </div>
     </div>
   </div>
@@ -106,64 +106,34 @@
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <div class="item active">
+        <div class="item active carousel-height">
           <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 carousel-height">
-              <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}">
-              <div class="carousel-caption-right">
-                <h3>Software Development Services</h3>
-                <ul class="list-unstyled">
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                </ul>
-                <a class="btn btn-default" href="#">More...</a>
-              </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 carousel-height">
-              <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}">
-              <div class="carousel-caption-right">
-                <h3>Software Development Services</h3>
-                <ul class="list-unstyled">
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                </ul>
-              </div>
+            <img src="{{ URL::to($homeSoftDevImg1) }}">
+            <div class="carousel-caption">
+              <h3>{{ $homeSoftDevImg1H1 }}</h3>
+              <ul class="list-unstyled">
+                <li>{{ $homeSoftDevImg1li1 }}</li>
+                <li>{{ $homeSoftDevImg1li2 }}</li>
+                <li>{{ $homeSoftDevImg1li3 }}<li>
+                <li>{{ $homeSoftDevImg1li4 }}</li>
+              </ul>
+              <a class="btn btn-default" href="{{ $homeSoftDevlink }}">More...</a>
             </div>
           </div>
-
         </div>
-        <div class="item">
-          <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 carousel-height">
-              <img src="{{ URL::to('img/placeholders/placeholder-2.jpg') }}">
-              <div class="carousel-caption-right">
-                <h3>Software Maintenance Services</h3>
-                <ul class="list-unstyled">
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                </ul>
-                <a class="btn btn-default" href="#">More...</a>
-              </div>
-            </div>
 
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 carousel-height">
-              <img src="{{ URL::to('img/placeholders/placeholder-2.jpg') }}">
-              <div class="carousel-caption-right">
-                <h3>Software Maintenance Services</h3>
-                <ul class="list-unstyled">
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                </ul>
-              </div>
+        <div class="item carousel-height">
+          <div class="row">
+            <img src="{{ URL::to($homeSoftMaintenanceImg1) }}">
+            <div class="carousel-caption">
+              <h3>{{ $homeSoftMaintenanceImg1H1 }}</h3>
+              <ul class="list-unstyled">
+                <li>{{ $homeSoftMaintenanceImg1li1 }}</li>
+                <li>{{ $homeSoftMaintenanceImg1li2 }}</li>
+                <li>{{ $homeSoftMaintenanceImg1li3 }}</li>
+                <li>{{ $homeSoftMaintenanceImg1li4 }}</li>
+              </ul>
+              <a class="btn btn-default" href="{{ $homeSoftMaintenancelink }}">More...</a>
             </div>
           </div>
         </div>
@@ -188,26 +158,26 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
-        <h1>Office Furnishing</h1>
-        <h3>Small Office partitioning and furnishing</h3>
+        <h1>{{ $homeOffice1H1 }}</h1>
+        <h3>{{ $homeOffice1H2 }}</h3>
         <ul class="list-unstyled">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>{{ $homeOffice1li1 }}</li>
+          <li>{{ $homeOffice1li2 }}</li>
+          <li>{{ $homeOffice1li3 }}</li>
+          <li>{{ $homeOffice1li4 }}</li>
         </ul>
       </div>
       <div class="col-md-6">
-        <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail">
+        <img src="{{ URL::to($homeOffice2Img) }}" class="img-thumbnail">
       </div>
     </div>
     <div class="row">
       <hr>
-      <h3>Office Building Tag line</h3>
+      <h3>{{ $homeOffice3H1 }}</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+        {{ $homeOffice3P }}
       </p>
-      <a class="btn btn-primary" href="#">More...</a>
+      <a class="btn btn-primary" href="{{ route("$homeOffice3link") }}">More...</a>
       <hr>
     </div>
   </div>

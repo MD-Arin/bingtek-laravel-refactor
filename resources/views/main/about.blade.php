@@ -10,7 +10,7 @@
 
 @section('content')
 
-<div class="container-fluid">
+<div class="container-fluid margin-top">
 <hr>
 <h1 class="text-center">Our Story</h1>
 <hr>
