@@ -12,22 +12,22 @@
 
 <div class="container-fluid margin-top">
 <hr>
-<h1 class="text-center">Our Story</h1>
+<h1 class="text-center">{{ $aboutHistory1H1 }}</h1>
 <hr>
   <div class="row">
     <h3 class="text-center"></h3>
     <hr class="underline">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail"/>
+      <img src="{{ URL::to($aboutHistory1Img) }}" class="img-thumbnail"/>
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h4>Founder: Founder's Name</h4>
-      <h4>Year: Founding Date</h4>
+      <h4>{{ $aboutHistory2H1 }}</h4>
+      <h4>{{ $aboutHistory2H2 }}</h4>
       <hr>
-      <h4>The Story: </h4>
+      <h4>{{ $aboutHistory2H3 }}</h4>
       <hr>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+        {{ $aboutHistory2P }}
       </p>
     </div>
   </div>
@@ -35,7 +35,7 @@
   <hr>
 
   <div class="row">
-    <h3 class="text-center">Where We've Been</h3>
+    <h3 class="text-center">{{ $aboutAccomplishments1H1 }}</h3>
     <hr class="underline">
     <div class="container-fluid">
       <div class="row">
@@ -50,30 +50,30 @@
           <div class="carousel-inner" role="listbox">
             <div class="item active carousel-height">
               <div class="row">
-                <img src="{{ URL::to('img/placeholders/placeholder-2.jpg') }}">
+                <img src="{{ URL::to($aboutAccomplishments1Img1) }}">
                 <div class="carousel-caption-right">
-                  <h4>Year: 2005</h4>
-                  <h5>Accomplishment: Best Networkers in Mombasa</h5>
+                  <h4>{{ $aboutAccomplishments1Img1H1 }}</h4>
+                  <h5>{{ $aboutAccomplishments1Img1H2 }}</h5>
                   <hr>
-                  <h4>The Story: </h4>
+                  <h4>{{ $aboutAccomplishments1Img1H3 }}</h4>
                   <hr>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                    {{ $aboutAccomplishments1Img1P }}
                   </p>
                 </div>
               </div>
             </div>
             <div class="item carousel-height">
               <div class="row">
-                <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}">
+                <img src="{{ URL::to($aboutAccomplishments1Img2) }}">
                 <div class="carousel-caption-right">
-                  <h4>Year: 2006</h4>
-                  <h5>Accomplishment: Best Internet Provider in Mombasa</h5>
+                  <h4>{{ $aboutAccomplishments1Img2H1 }}</h4>
+                  <h5>{{ $aboutAccomplishments1Img2H2 }}</h5>
                   <hr>
-                  <h4>The Story: </h4>
+                  <h4>{{ $aboutAccomplishments1Img2H3 }}</h4>
                   <hr>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                    {{ $aboutAccomplishments1Img2P }}
                   </p>
                 </div>
               </div>
@@ -104,44 +104,44 @@
   </div>
   <div class="row">
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-      <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}" class="img-thumbnail" />
+      <img src="{{ URL::to($aboutTestimonials1Img) }}" class="img-thumbnail" />
       <p class="blockquote-reverse">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        {{ $aboutTestimonials1P }}
       </p>
       <hr>
-      <h5 class="blockquote"><i>Name: John Doe</i></h5>
-      <h5 class="blockquote"><i>Position: Procurement</i> </h5>
-      <h5 class="blockquote"><i>Company: Satisfied Ltd</i></h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials1H51 }}</i></h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials1H52 }}</i> </h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials1H53 }}</i></h5>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-      <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}" class="img-thumbnail" />
+      <img src="{{ URL::to($aboutTestimonials2Img) }}" class="img-thumbnail" />
       <p class="blockquote-reverse">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        {{ $aboutTestimonials2P }}
       </p>
       <hr>
-      <h5 class="blockquote"><i>Name: Jane Doe</i></h5>
-      <h5 class="blockquote"><i>Position: CEO</i> </h5>
-      <h5 class="blockquote"><i>Company: Logistics Ltd</i></h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials2H51 }}</i></h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials2H52 }}</i> </h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials2H53 }}</i></h5>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-      <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}" class="img-thumbnail" />
+      <img src="{{ URL::to($aboutTestimonials3Img) }}" class="img-thumbnail" />
       <p class="blockquote-reverse">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        {{ $aboutTestimonials3P }}
       </p>
       <hr>
-      <h5 class="blockquote"><i>Name: John Doe</i></h5>
-      <h5 class="blockquote"><i>Position: Marketing</i> </h5>
-      <h5 class="blockquote"><i>Company: Designs Ltd</i></h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials3H51 }}</i></h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials3H52 }}</i> </h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials3H53 }}</i></h5>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-      <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}" class="img-thumbnail" />
+      <img src="{{ URL::to($aboutTestimonials4Img) }}" class="img-thumbnail" />
       <p class="blockquote-reverse">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        {{ $aboutTestimonials4P }}
       </p>
       <hr>
-      <h5 class="blockquote"><i>Name: Jane Doe</i></h5>
-      <h5 class="blockquote"><i>Position:  Sales</i> </h5>
-      <h5 class="blockquote"><i>Company: Merchant Ltd</i></h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials4H51 }}</i></h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials4H52 }}</i> </h5>
+      <h5 class="blockquote"><i>{{ $aboutTestimonials4H53 }}</i></h5>
     </div>
   </div>
 
@@ -163,41 +163,41 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail">
+            <img src="{{ URL::to($aboutPartners1Img) }}" class="img-thumbnail">
             <div class="carousel-caption">
-              Partner 1
+              {{ $aboutPartners1ImgH1 }}
             </div>
           </div>
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
+            <img src="{{ URL::to($aboutPartners2Img) }}" class="img-thumbnail">
             <div class="carousel-caption">
-              Partner 2
+              {{ $aboutPartners2ImgH1 }}
             </div>
           </div>
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
+            <img src="{{ URL::to($aboutPartners3Img) }}" class="img-thumbnail">
             <div class="carousel-caption">
-              Partner 3
+              {{ $aboutPartners3ImgH1 }}
             </div>
           </div>
         </div>
         <div class="item">
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
+            <img src="{{ URL::to($aboutPartners4Img) }}" class="img-thumbnail">
             <div class="carousel-caption">
-              Partner 4
+              {{ $aboutPartners4ImgH1 }}
             </div>
           </div>
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
+            <img src="{{ URL::to($aboutPartners5Img) }}" class="img-thumbnail">
             <div class="carousel-caption">
-              Partner 5
+              {{ $aboutPartners5ImgH1 }}
             </div>
           </div>
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
+            <img src="{{ URL::to($aboutPartners6Img) }}" class="img-thumbnail">
             <div class="carousel-caption">
-              Partner 6
+              {{ $aboutPartners6ImgH1 }}
             </div>
           </div>
         </div>
@@ -223,22 +223,22 @@
   </div>
   <div class="row">
     <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
-      <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
+      <img src="{{ URL::to($aboutTeam1Img) }}"
       class="center-block img-circle img-responsive">
-      <h3 class="text-center">John Doe</h3>
-      <p class="text-center">CEO</p>
+      <h3 class="text-center">{{ $aboutTeam1ImgH1 }}</h3>
+      <p class="text-center">{{ $aboutTeam1ImgH2 }}</p>
     </div>
     <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
-      <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
+      <img src="{{ URL::to($aboutTeam2Img) }}"
       class="center-block img-circle img-responsive">
-      <h3 class="text-center">Jane Doe</h3>
-      <p class="text-center">CFO</p>
+      <h3 class="text-center">{{ $aboutTeam2ImgH1 }}</h3>
+      <p class="text-center">{{ $aboutTeam2ImgH2 }}</p>
     </div>
     <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
-      <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
+      <img src="{{ URL::to($aboutTeam3Img) }}"
       class="center-block img-circle img-responsive">
-      <h3 class="text-center">John Doe</h3>
-      <p class="text-center">COO</p>
+      <h3 class="text-center">{{ $aboutTeam3ImgH1 }}</h3>
+      <p class="text-center">{{ $aboutTeam3ImgH2 }}</p>
     </div>
   </div>
 </div>
