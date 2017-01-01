@@ -11,6 +11,10 @@ class FrpsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('contents')->insert([
+          'pages_id' => '6',
+          'section' => '',
+          'body' => ''
+        ]);
     }
 }
