@@ -424,7 +424,95 @@ class PagesController extends Controller
   }
 
   public function getThird_ps(){
-    return view('main.third_ps');
+    $contents = new Content;
+    //Software Development Intro`
+    $tpsSoftDevIntro1H1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-1-1-h1']])->value('body');
+    $tpsSoftDevIntro1P = $contents->where([['pages_id', '=', '5'],['section', '=', '5-1-1-p']])->value('body');
+    //Software Development
+    $tpsSoftDev1H1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-1-h1']])->value('body');
+    $tpsSoftDev2H1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-2-h1']])->value('body');
+    $tpsSoftDev2P = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-2-p']])->value('body');
+    $tpsSoftDev2li1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-2-li-1']])->value('body');
+    $tpsSoftDev2li2 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-2-li-2']])->value('body');
+    $tpsSoftDev2li3 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-2-li-3']])->value('body');
+    $tpsSoftDev2li4 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-2-li-4']])->value('body');
+    $tpsSoftDev2Img = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-2-img']])->value('body');
+    $tpsSoftDev3Img = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-3-img']])->value('body');
+    $tpsSoftDev3H1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-3-h1']])->value('body');
+    $tpsSoftDev3P = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-3-p']])->value('body');
+    $tpsSoftDev3li1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-3-li-1']])->value('body');
+    $tpsSoftDev3li2 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-3-li-2']])->value('body');
+    $tpsSoftDev3li3 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-3-li-3']])->value('body');
+    $tpsSoftDev3li4 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-2-3-li-4']])->value('body');
+    //Software Maintenance
+    $tpsSoftMaint1Img = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-1-img']])->value('body');
+    $tpsSoftMaint1H1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-1-h1']])->value('body');
+    $tpsSoftMaint2H1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-2-h1']])->value('body');
+    $tpsSoftMaint2P = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-2-p']])->value('body');
+    $tpsSoftMaint2li1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-2-li-1']])->value('body');
+    $tpsSoftMaint2li2 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-2-li-2']])->value('body');
+    $tpsSoftMaint2li3 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-2-li-3']])->value('body');
+    $tpsSoftMaint2li4 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-2-li-4']])->value('body');
+    $tpsSoftMaint3H1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-3-h1']])->value('body');
+    $tpsSoftMaint3P = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-3-p']])->value('body');
+    $tpsSoftMaint3li1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-3-li-1']])->value('body');
+    $tpsSoftMaint3li2 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-3-li-2']])->value('body');
+    $tpsSoftMaint3li3 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-3-li-3']])->value('body');
+    $tpsSoftMaint3li4 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-3-li-4']])->value('body');
+    $tpsSoftMaint3Img = $contents->where([['pages_id', '=', '5'],['section', '=', '5-3-3-img']])->value('body');
+    //Software Diversified
+    $tpsSoftDiverse1H1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-4-1-h1']])->value('body');
+    $tpsSoftDiverse1P = $contents->where([['pages_id', '=', '5'],['section', '=', '5-4-1-p']])->value('body');
+    $tpsSoftDiverse1li1 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-4-1-li-1']])->value('body');
+    $tpsSoftDiverse1li2 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-4-1-li-2']])->value('body');
+    $tpsSoftDiverse1li3 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-4-1-li-3']])->value('body');
+    $tpsSoftDiverse1li4 = $contents->where([['pages_id', '=', '5'],['section', '=', '5-4-1-li-4']])->value('body');
+
+
+    return view('main.third_ps')->with([
+      //Software Development Inro
+      'tpsSoftDevIntro1H1' => $tpsSoftDevIntro1H1,
+      'tpsSoftDevIntro1P' => $tpsSoftDevIntro1P,
+      //Software Development
+      'tpsSoftDev1H1' => $tpsSoftDev1H1,
+      'tpsSoftDev2H1' => $tpsSoftDev2H1,
+      'tpsSoftDev2P' => $tpsSoftDev2P,
+      'tpsSoftDev2li1' => $tpsSoftDev2li1,
+      'tpsSoftDev2li2' => $tpsSoftDev2li2,
+      'tpsSoftDev2li3' => $tpsSoftDev2li3,
+      'tpsSoftDev2li4' => $tpsSoftDev2li4,
+      'tpsSoftDev2Img' => $tpsSoftDev2Img,
+      'tpsSoftDev3Img' => $tpsSoftDev3Img,
+      'tpsSoftDev3H1' => $tpsSoftDev3H1,
+      'tpsSoftDev3P' => $tpsSoftDev3P,
+      'tpsSoftDev3li1' => $tpsSoftDev3li1,
+      'tpsSoftDev3li2' => $tpsSoftDev3li2,
+      'tpsSoftDev3li3' => $tpsSoftDev3li3,
+      'tpsSoftDev3li4' => $tpsSoftDev3li4,
+      //Software Maintenance
+      'tpsSoftMaint1Img' => $tpsSoftMaint1Img,
+      'tpsSoftMaint1H1' => $tpsSoftMaint1H1,
+      'tpsSoftMaint2H1' => $tpsSoftMaint2H1,
+      'tpsSoftMaint2P' => $tpsSoftMaint2P,
+      'tpsSoftMaint2li1' => $tpsSoftMaint2li1,
+      'tpsSoftMaint2li2' => $tpsSoftMaint2li2,
+      'tpsSoftMaint2li3' => $tpsSoftMaint2li3,
+      'tpsSoftMaint2li4' => $tpsSoftMaint2li4,
+      'tpsSoftMaint3H1' => $tpsSoftMaint3H1,
+      'tpsSoftMaint3P' => $tpsSoftMaint3P,
+      'tpsSoftMaint3li1' => $tpsSoftMaint3li1,
+      'tpsSoftMaint3li2' => $tpsSoftMaint3li2,
+      'tpsSoftMaint3li3' => $tpsSoftMaint3li3,
+      'tpsSoftMaint3li4' => $tpsSoftMaint3li4,
+      'tpsSoftMaint3Img' => $tpsSoftMaint3Img,
+      //Software Diversified
+      'tpsSoftDiverse1H1' => $tpsSoftDiverse1H1,
+      'tpsSoftDiverse1P' => $tpsSoftDiverse1P,
+      'tpsSoftDiverse1li1' => $tpsSoftDiverse1li1,
+      'tpsSoftDiverse1li2' => $tpsSoftDiverse1li2,
+      'tpsSoftDiverse1li3' => $tpsSoftDiverse1li3,
+      'tpsSoftDiverse1li4' => $tpsSoftDiverse1li4
+    ]);
   }
 
   public function getFourth_ps(){
