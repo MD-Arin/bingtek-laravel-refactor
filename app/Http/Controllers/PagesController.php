@@ -354,7 +354,73 @@ class PagesController extends Controller
   }
 
   public function getSecond_ps(){
-    return view('main.second_ps');
+    $content = new Content;
+
+    //Networking Intro
+    $spsNetworkingIntro1H1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-1-1-h1']])->value('body');
+    $spsNetworkingIntro1H2 = $content->where([['pages_id', '=', '4'],['section', '=', '4-1-1-h2']])->value('body');
+    $spsNetworkingIntro1P = $content->where([['pages_id', '=', '4'],['section', '=', '4-1-1-p']])->value('body');
+    //Networking Pointers
+    $spsNetworkingPointers1Img = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-img']])->value('body');
+    $spsNetworkingPointers1li1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-li-1']])->value('body');
+    $spsNetworkingPointers1li2 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-li-2']])->value('body');
+    $spsNetworkingPointers1li3 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-li-3']])->value('body');
+    $spsNetworkingPointers1li4 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-li-4']])->value('body');
+    $spsNetworkingPointers2li1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-2-li-1']])->value('body');
+    $spsNetworkingPointers2li2 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-2-li-2']])->value('body');
+    $spsNetworkingPointers2li3 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-2-li-3']])->value('body');
+    $spsNetworkingPointers2li4 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-2-li-4']])->value('body');
+    $spsNetworkingPointers3li1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-3-li-1']])->value('body');
+    $spsNetworkingPointers3li2 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-3-li-2']])->value('body');
+    $spsNetworkingPointers3li3 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-3-li-3']])->value('body');
+    $spsNetworkingPointers3li4 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-3-li-4']])->value('body');
+    //Networking Touchline
+    $spsNetworkingTouchline1P = $content->where([['pages_id', '=', '4'],['section', '=', '4-3-1-p']])->value('body');
+    //Networking Departmental
+    $spsNetworkingDepartments1H1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-4-1-h1']])->value('body');
+    $spsNetworkingDepartments1P = $content->where([['pages_id', '=', '4'],['section', '=', '4-4-1-p']])->value('body');
+    $spsNetworkingDepartments2Img = $content->where([['pages_id', '=', '4'],['section', '=', '4-4-2-img']])->value('body');
+    //Networking Types
+    $spsNetworkingTypes1H1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-5-1-h1']])->value('body');
+    $spsNetworkingTypes1P = $content->where([['pages_id', '=', '4'],['section', '=', '4-5-1-p']])->value('body');
+    $spsNetworkingTypes2H1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-5-2-h1']])->value('body');
+    $spsNetworkingTypes2P = $content->where([['pages_id', '=', '4'],['section', '=', '4-5-2-p']])->value('body');
+
+    return view('main.second_ps')->with([
+      //Networking Intro
+      'spsNetworkingIntro1H1' => $spsNetworkingIntro1H1,
+      'spsNetworkingIntro1H2' => $spsNetworkingIntro1H2,
+      'spsNetworkingIntro1P' => $spsNetworkingIntro1P,
+
+      //Networking Pointers
+      'spsNetworkingPointers1Img' => $spsNetworkingPointers1Img,
+      'spsNetworkingPointers1li1' => $spsNetworkingPointers1li1,
+      'spsNetworkingPointers1li2' => $spsNetworkingPointers1li2,
+      'spsNetworkingPointers1li3' => $spsNetworkingPointers1li3,
+      'spsNetworkingPointers1li4' => $spsNetworkingPointers1li4,
+      'spsNetworkingPointers2li1' => $spsNetworkingPointers2li1,
+      'spsNetworkingPointers2li2' => $spsNetworkingPointers2li2,
+      'spsNetworkingPointers2li3' => $spsNetworkingPointers2li3,
+      'spsNetworkingPointers2li4' => $spsNetworkingPointers2li4,
+      'spsNetworkingPointers3li1' => $spsNetworkingPointers3li1,
+      'spsNetworkingPointers3li2' => $spsNetworkingPointers3li2,
+      'spsNetworkingPointers3li3' => $spsNetworkingPointers3li3,
+      'spsNetworkingPointers3li4' => $spsNetworkingPointers3li4,
+
+      //Networking Touchline
+      'spsNetworkingTouchline1P' => $spsNetworkingTouchline1P,
+
+      //Networking Departmental
+      'spsNetworkingDepartments1H1' => $spsNetworkingDepartments1H1,
+      'spsNetworkingDepartments1P' => $spsNetworkingDepartments1P,
+      'spsNetworkingDepartments2Img' => $spsNetworkingDepartments2Img,
+
+      //Networking Types
+      'spsNetworkingTypes1H1' => $spsNetworkingTypes1H1,
+      'spsNetworkingTypes1P' => $spsNetworkingTypes1P,
+      'spsNetworkingTypes2H1' => $spsNetworkingTypes2H1,
+      'spsNetworkingTypes2P' => $spsNetworkingTypes2P
+    ]);
   }
 
   public function getThird_ps(){

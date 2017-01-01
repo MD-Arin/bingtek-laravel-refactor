@@ -14,10 +14,10 @@
 @section('content')
 <div class="container-fluid">
   <div class="jumbotron">
-    <h1 class="text-center">Networking</h1>
-    <h3 class="text-center">Diversified Networking Solutions</h3>
+    <h1 class="text-center">{{ $spsNetworkingIntro1H1 }}</h1>
+    <h3 class="text-center">{{ $spsNetworkingIntro1H2 }}</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+      {{ $spsNetworkingIntro1P }}
     </p>
   </div>
 
@@ -25,73 +25,75 @@
     <hr>
   </div>
   <div class="row  carousel-height">
-    <div class="cover-image" style="background: url('{{ URL::to('img/placeholders/placeholder-2.jpg') }}'); height: 100vh; width: 100%;">
+    <div class="cover-image" style="background: url('{{ URL::to($spsNetworkingPointers1Img) }}'); height: 100vh; width: 100%;">
       <div class="text-left">
         <ul class="list-unstyled">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>{{ $spsNetworkingPointers1li1 }}</li>
+          <li>{{ $spsNetworkingPointers1li2 }}</li>
+          <li>{{ $spsNetworkingPointers1li3 }}</li>
+          <li>{{ $spsNetworkingPointers1li4 }}</li>
         </ul>
       </div>
       <div class="text-center">
         <ul class="list-unstyled">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>{{ $spsNetworkingPointers2li1 }}</li>
+          <li>{{ $spsNetworkingPointers2li2 }}</li>
+          <li>{{ $spsNetworkingPointers2li3 }}</li>
+          <li>{{ $spsNetworkingPointers2li4 }}</li>
         </ul>
       </div>
       <div class="text-right">
         <ul class="list-unstyled">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>{{ $spsNetworkingPointers3li1 }}</li>
+          <li>{{ $spsNetworkingPointers3li2 }}</li>
+          <li>{{ $spsNetworkingPointers3li3 }}</li>
+          <li>{{ $spsNetworkingPointers3li4 }}</li>
         </ul>
       </div>
     </div>
   </div>
+
     <hr>
+
     <div class="container">
       <p class="text-info text-center jumbotron">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+        {{ $spsNetworkingTouchline1P }}
       </p>
     </div>
+
     <hr>
+
     <div class="row">
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <h3 class="text-center">Interdepartmental Networking</h3>
+        <h3 class="text-center">{{ $spsNetworkingDepartments1H1 }}</h3>
         <hr>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+          {{ $spsNetworkingDepartments1P }}
         </p>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail"/>
+        <img src="{{ URL::to($spsNetworkingDepartments2Img) }}" class="img-thumbnail"/>
       </div>
     </div>
 
   <hr>
+
   <div class="container-fluid">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 vertical-line-right">
       <div class="row">
-        <h3 class="text-center">Office Networking</h3>
+        <h3 class="text-center">{{ $spsNetworkingTypes1H1 }}</h3>
         <hr>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+          {{ $spsNetworkingTypes1P }}
         </p>
       </div>
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  vertical-line-left">
       <div class="row">
-        <h3 class="text-center">Building Networking</h3>
+        <h3 class="text-center">{{ $spsNetworkingTypes2H1 }}</h3>
         <hr>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+          {{ $spsNetworkingTypes2P }}
         </p>
       </div>
     </div>
