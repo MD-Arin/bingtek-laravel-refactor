@@ -17,7 +17,13 @@ class DatabaseSeeder extends Seeder
 
         //call our bingtek seeder
         $this->call(PagesTableSeeder::class);
-        $this->call(ContentTableSeeder::class);
+        $this->call(HomeSeeder::class);
+        $this->call(AboutSeeder::class);
+        $this->call(FpsSeeder::class);
+        $this->call(SpsSeeder::class);
+        $this->call(TpsSeeder::class);
+        $this->call(FrpsSeeder::class);
+        $this->call(FooterNavSeeder::class);
         $this->command->info('Bingtek Seeds are complete');
     }
 }
