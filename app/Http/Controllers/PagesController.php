@@ -516,7 +516,76 @@ class PagesController extends Controller
   }
 
   public function getFourth_ps(){
-    return view('main.fourth_ps');
+    $contents = new Content;
+
+    //FRPS Office Partitioning
+    $frpsOfficePartitioning1Img = $contents->where([['pages_id', '=', '6'],['section', '=', '6-1-1-img']])->value('body');
+    $frpsOfficePartitioning1H1 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-1-1-h1']])->value('body');
+    $frpsOfficePartitioning1P = $contents->where([['pages_id', '=', '6'],['section', '=', '6-1-1-p']])->value('body');
+    //FRPS Office Smart
+    $frpsOfficeSmart1Img = $contents->where([['pages_id', '=', '6'],['section', '=', '6-2-1-img']])->value('body');
+    $frpsOfficeSmart1H1 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-2-1-h1']])->value('body');
+    $frpsOfficeSmart1P = $contents->where([['pages_id', '=', '6'],['section', '=', '6-2-1-p']])->value('body');
+    $frpsOfficeSmart1li1 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-2-1-li-1']])->value('body');
+    $frpsOfficeSmart1li2 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-2-1-li-2']])->value('body');
+    $frpsOfficeSmart1li3 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-2-1-li-3']])->value('body');
+    $frpsOfficeSmart1li4 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-2-1-li-4']])->value('body');
+    //FRPS Office All
+    $frpsOfficeAll1H1 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-3-1-h1']])->value('body');
+    $frpsOfficeAll1P = $contents->where([['pages_id', '=', '6'],['section', '=', '6-3-1-p']])->value('body');
+    $frpsOfficeAll1li1 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-3-1-li-1']])->value('body');
+    $frpsOfficeAll1li2 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-3-1-li-2']])->value('body');
+    $frpsOfficeAll1li3 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-3-1-li-3']])->value('body');
+    $frpsOfficeAll1li4 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-3-1-li-4']])->value('body');
+    $frpsOfficeAll1Img = $contents->where([['pages_id', '=', '6'],['section', '=', '6-3-1-img']])->value('body');
+    //FRPS Office Comfort
+    $frpsOfficeComfort1H1 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-4-1-h1']])->value('body');
+    $frpsOfficeComfort1H2 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-4-1-h2']])->value('body');
+    $frpsOfficeComfort1P = $contents->where([['pages_id', '=', '6'],['section', '=', '6-4-1-p']])->value('body');
+    //FRPS Office Design
+    $frpsOfficeDesign1Img = $contents->where([['pages_id', '=', '6'],['section', '=', '6-5-1-img']])->value('body');
+    $frpsOfficeDesign1H1 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-5-1-h1']])->value('body');
+    $frpsOfficeDesign1P = $contents->where([['pages_id', '=', '6'],['section', '=', '6-5-1-p']])->value('body');
+    //FRPS Office Luxury
+    $frpsOfficeLuxury1Img = $contents->where([['pages_id', '=', '6'],['section', '=', '6-6-1-img']])->value('body');
+    $frpsOfficeLuxury1H1 = $contents->where([['pages_id', '=', '6'],['section', '=', '6-6-1-h1']])->value('body');
+    $frpsOfficeLuxury1P = $contents->where([['pages_id', '=', '6'],['section', '=', '6-6-1-p']])->value('body');
+
+    return view('main.fourth_ps')->with([
+      //FRPS Office Partitioning
+      'frpsOfficePartitioning1Img' => $frpsOfficePartitioning1Img,
+      'frpsOfficePartitioning1H1' => $frpsOfficePartitioning1H1,
+      'frpsOfficePartitioning1P' => $frpsOfficePartitioning1P,
+      //FRPS Office Smart
+      'frpsOfficeSmart1Img' => $frpsOfficeSmart1Img,
+      'frpsOfficeSmart1H1' => $frpsOfficeSmart1H1,
+      'frpsOfficeSmart1P' => $frpsOfficeSmart1P,
+      'frpsOfficeSmart1li1' => $frpsOfficeSmart1li1,
+      'frpsOfficeSmart1li2' => $frpsOfficeSmart1li2,
+      'frpsOfficeSmart1li3' => $frpsOfficeSmart1li3,
+      'frpsOfficeSmart1li4' => $frpsOfficeSmart1li4,
+      //FRPS Office All
+      'frpsOfficeAll1H1' => $frpsOfficeAll1H1,
+      'frpsOfficeAll1P' => $frpsOfficeAll1P,
+      'frpsOfficeAll1li1' => $frpsOfficeAll1li1,
+      'frpsOfficeAll1li2' => $frpsOfficeAll1li2,
+      'frpsOfficeAll1li3' => $frpsOfficeAll1li3,
+      'frpsOfficeAll1li4' => $frpsOfficeAll1li4,
+      'frpsOfficeAll1Img' => $frpsOfficeAll1Img,
+      //FRPS Office Comfort
+      'frpsOfficeComfort1H1' => $frpsOfficeComfort1H1,
+      'frpsOfficeComfort1H2' => $frpsOfficeComfort1H2,
+      'frpsOfficeComfort1P' => $frpsOfficeComfort1P,
+      //FRPS Office Design
+      'frpsOfficeDesign1Img' => $frpsOfficeDesign1Img,
+      'frpsOfficeDesign1H1' => $frpsOfficeDesign1H1,
+      'frpsOfficeDesign1P' => $frpsOfficeDesign1P,
+      //FRPS Office Luxury
+      'frpsOfficeLuxury1Img' => $frpsOfficeLuxury1Img,
+      'frpsOfficeLuxury1H1' => $frpsOfficeLuxury1H1,
+      'frpsOfficeLuxury1P' => $frpsOfficeLuxury1P
+
+    ]);
   }
 
   public function getContacts(){

@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid margin-top" style="padding-top: 20px;">
   <div>
     <h4 class="text-center">We Would Love to Hear From You!</h4>
   </div>
