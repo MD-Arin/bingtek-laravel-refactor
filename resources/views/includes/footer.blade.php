@@ -1,10 +1,13 @@
+@extends('layouts.master')
+
+@section('footer')
 <div class="panel panel-footer">
   <div class="row">
     <div class="panel-body">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <ul class="list-group">
           <h3 class="text-justify">Find Us:</h3>
-          <li class="list-group-item"><h5>City: Mombasa Kenya</h5></li>
+          <li class="list-group-item"><h5>City: {{ $fLoc1li1 }}</h5></li>
           <li class="list-group-item"><h5>Street: Nkurumah Road</h5></li>
           <li class="list-group-item"><h5>Building: Kaderbhoy Building</h5></li>
           <li class="list-group-item"><h5>Floor: 1st Floor</h5></li>
@@ -42,3 +45,4 @@
     </div>
   </div>
 </div>
+@endsection

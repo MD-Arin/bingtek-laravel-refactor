@@ -1,3 +1,6 @@
+@extends('layouts.master')
+
+@section('nav')
 <div class="container-fluid">
   <nav class="navbar navbar-default navbar-fixed-top">
     <ul class="nav nav-tabs nav-justified">
@@ -15,3 +18,4 @@
     </ul>
   </nav>
 </div>
+@endsection
