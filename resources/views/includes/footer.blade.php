@@ -1,17 +1,14 @@
-@extends('layouts.master')
-
-@section('footer')
 <div class="panel panel-footer">
   <div class="row">
     <div class="panel-body">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <ul class="list-group">
           <h3 class="text-justify">Find Us:</h3>
-          <li class="list-group-item"><h5>City: {{ $fLoc1li1 }}</h5></li>
-          <li class="list-group-item"><h5>Street: Nkurumah Road</h5></li>
-          <li class="list-group-item"><h5>Building: Kaderbhoy Building</h5></li>
-          <li class="list-group-item"><h5>Floor: 1st Floor</h5></li>
-          <li class="list-group-item"><h5>Room No:</h5></li>
+          <li class="list-group-item"><h5>City: {{ $footerLocation1li1 }}</h5></li>
+          <li class="list-group-item"><h5>Street: {{ $footerLocation1li2 }}</h5></li>
+          <li class="list-group-item"><h5>Building: {{ $footerLocation1li3 }}</h5></li>
+          <li class="list-group-item"><h5>Floor: {{ $footerLocation1li4 }}</h5></li>
+          <li class="list-group-item"><h5>Room No: {{ $footerLocation1li5 }}</h5></li>
         </ul>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -19,11 +16,11 @@
           <h3>Social Media: </h3>
         </div>
         <div class="row">
-          <a href="#"><img src="{{ URL::to('img/social media/facebook-dark-active.png') }}" class="img-icon"><span> Facebook</span></a>
+          <a target="_blank" href="{{ $footerSocial1i1 }}"><img src="{{ URL::to('img/social media/facebook-dark-active.png') }}" class="img-icon"><span> Facebook</span></a>
         </div>
         <hr>
         <div class="row">
-          <a href="#"><img src="{{ URL::to('img/social media/twitter-dark-active.png') }}" class="img-icon"><span> Twitter</span></a>
+          <a target="_blank" href="{{ $footerSocial1i2 }}"><img src="{{ URL::to('img/social media/twitter-dark-active.png') }}" class="img-icon"><span> Twitter</span></a>
         </div>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -34,15 +31,14 @@
     <div class="panel panel-heading">
       <h5 class="float-left">Copyright &copy Bingtek 2016</h5>
       <h5 class="float-left">
-        info@bingtek.co.ke
+        {{ $footerContacts1li1 }}
       </h5>
       <h5 class="float-right">
-        +254700000000
+        {{ $footerContacts1li2 }}
       </h5>
       <h5 class="float-right">
-        +254700000000
+        {{ $footerContacts1li3 }}
       </h5>
     </div>
   </div>
 </div>
-@endsection

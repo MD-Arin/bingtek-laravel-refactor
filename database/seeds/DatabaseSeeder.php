@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TpsSeeder::class);
         $this->call(FrpsSeeder::class);
         $this->call(FooterNavSeeder::class);
+        $this->call(DefaultUserSeeder::class);
         $this->command->info('Bingtek Seeds are complete');
     }
 }

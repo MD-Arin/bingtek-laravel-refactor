@@ -15,10 +15,10 @@
     <hr>
     <li>Edit Products and Services</li>
     <hr>
-    <li class="@yield('edit-fps-active')"><a href="{{ route('dash-fps') }}">First Product or Service</a></li>
-    <li class="@yield('edit-sps-active')"><a href="{{ route('dash-sps') }}">Second Product or Service</a></li>
-    <li class="@yield('edit-tps-active')"><a href="{{ route('dash-tps') }}">Third Product or Service</a></li>
-    <li class="@yield('edit-frps-active')"><a href="{{ route('dash-frps') }}">Fourth Product or Service</a></li>
+    <li class="@yield('edit-fps-active')"><a href="{{ route('dash-fps') }}">{{ $navProducts1li1 }}</a></li>
+    <li class="@yield('edit-sps-active')"><a href="{{ route('dash-sps') }}">{{ $navProducts1li2 }}</a></li>
+    <li class="@yield('edit-tps-active')"><a href="{{ route('dash-tps') }}">{{ $navProducts1li3 }}</a></li>
+    <li class="@yield('edit-frps-active')"><a href="{{ route('dash-frps') }}">{{ $navProducts1li4 }}</a></li>
   </ul>
 
   <ul class="nav nav-sidebar">

@@ -40,6 +40,18 @@ class FooterNavSeeder extends Seeder
           'pages_id' => '7',
           'section' => '7-1-2-i-2',
           'body' => 'http://www.twitter.com/'
+        ],[
+          'pages_id' => '7',
+          'section' => '7-2-1-p-1',
+          'body' => 'info@bingtek.co.ke'
+        ],[
+          'pages_id' => '7',
+          'section' => '7-2-1-p-2',
+          'body' => '+254700000000'
+        ],[
+          'pages_id' => '7',
+          'section' => '7-2-1-p-3',
+          'body' => '+254700000000'
         ],//Navbar
         [
           'pages_id' => '8',
