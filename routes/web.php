@@ -11,6 +11,7 @@
 |
 */
 
+//Main routes
 Route::get('/', 'PagesController@getHome')->name('home');
 Route::get('/about', 'PagesController@getAbout')->name('about');
 Route::get('/first_ps', 'PagesController@getFirst_ps')->name('first_ps');
@@ -22,6 +23,7 @@ Route::get('/contacts', 'PagesController@getContacts')->name('contacts');
 
 Auth::routes();
 
+//Dashboard routes
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/dash-nav', 'HomeController@getDashNav')->name('dash-nav');
 Route::get('/dash-footer', 'HomeController@getDashFooter')->name('dash-footer');
@@ -31,3 +33,6 @@ Route::get('/dash-sps', 'HomeController@getDashSps')->name('dash-sps');
 Route::get('/dash-tps', 'HomeController@getDashTps')->name('dash-tps');
 Route::get('/dash-frps', 'HomeController@getDashFrps')->name('dash-frps');
 Route::get('/logout', 'HomeController@getLogout')->name('logout');
+
+//Dashboard routes
+Route::put('/dashboard/{update}', 'DashboardController@update');
