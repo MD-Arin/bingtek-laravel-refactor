@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
+use App\Content;
 
 class HomeController extends Controller
 {
@@ -25,8 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+      $content = new Content;
       if(Auth::check()){
-        return view('dashboard.home');
+        $homeCover = $content->where([['pages_id', '=', '1'],['section', '=', '1-img-cover']])->value('body');
+        return view('dashboard.home')->with(['homeCover' => $homeCover]);
       }
     }
     public function getDashNav(){
