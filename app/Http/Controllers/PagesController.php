@@ -37,6 +37,7 @@ class PagesController extends Controller
     $homeInternetli3 = $content->where([['pages_id', '=', '1'],['section', '=', '3-1-li-3']])->value('body');
     $homeInternetli4 = $content->where([['pages_id', '=', '1'],['section', '=', '3-1-li-4']])->value('body');
     $homeInternetlink = $content->where([['pages_id', '=', '1'],['section', '=', '3-1-btn-link']])->value('body');
+
     //Home Networking
     $homeNetworkingH1 = $content->where([['pages_id', '=', '1'],['section', '=', '3-2-h1']])->value('body');
     $homeNetworkingli1 = $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-1']])->value('body');

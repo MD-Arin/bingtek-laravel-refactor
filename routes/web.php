@@ -35,4 +35,7 @@ Route::get('/dash-frps', 'HomeController@getDashFrps')->name('dash-frps');
 Route::get('/logout', 'HomeController@getLogout')->name('logout');
 
 //Dashboard routes
-Route::post('/dashboard/home', 'DashboardController@updateHome');
+Route::post('/dashboard/homeCover', 'DashboardController@updateHome');
+Route::post('/dashboard/homeCoIntro', 'DashboardController@updateHomeCoIntro');
+Route::post('/dashboard/homeInternet', 'DashboardController@updateHomeInternet');
+Route::post('/dashboard/homeNetworking', 'DashboardController@updateHomeNetworking');

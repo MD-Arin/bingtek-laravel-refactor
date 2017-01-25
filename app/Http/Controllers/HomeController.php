@@ -28,6 +28,7 @@ class HomeController extends Controller
     {
       $content = new Content;
       if(Auth::check()){
+
         $homeCover = $content->where([['pages_id', '=', '1'],['section', '=', '1-img-cover']])->value('body');
         return view('dashboard.home')->with(['homeCover' => $homeCover]);
       }
