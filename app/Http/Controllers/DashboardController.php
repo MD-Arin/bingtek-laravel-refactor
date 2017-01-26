@@ -12,7 +12,7 @@ class DashboardController extends Controller
 {
     public function updateHomeCover(Request $request){
 
-      // Cover image
+      // Home Cover image
         if(Auth::check()){
             $content = new Content;
             if (Input::get('company-name') != null) {
@@ -59,9 +59,12 @@ class DashboardController extends Controller
         }
     }
 
-    public function updateHomeCoIntro(Request $request){
+    //Home Intro
+    public function updateHomeCoIntro(Request $request)
+    {
       $content = new Content;
-      if(Auth::check()){
+      if(Auth::check())
+      {
 
         if(Input::get('Company-Intro') != null){
           $content->where([['pages_id', '=', '1'],['section', '=', '2-1-h1-intro']])->update(['body' => Input::get('Company-Intro')]);
@@ -111,6 +114,7 @@ class DashboardController extends Controller
       return redirect('/dashboard');
     }
 
+    //Home Internet
     public function updateHomeInternet(Request $request)
     {
 
@@ -233,6 +237,182 @@ class DashboardController extends Controller
         elseif (Input::get('Internet-li-4') != null)
         {
           $content->where([['pages_id', '=', '1'],['section', '=', '3-1-li-4']])->update(['body' => Input::get('Internet-li-4')]);
+        }
+
+        if (Input::get('1-Internet-Link-submit'))
+        {
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-1-btn-link']])->update(['body' => Input::get('Internet-Intro-Link')]);
+        }
+
+        return redirect('/dashboard');
+      }
+    }
+
+    // Home Networking
+    public function updateHomeNetworking(Request $request)
+    {
+
+      $content = new Content;
+
+      if(Auth::check())
+      {
+        if(Input::get('Networking-Introduction') != null)
+        {
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-2-h1']])->update(['body' => Input::get('Networking-Introduction')]);
+          if(Input::get('Networking-li-1') != null)
+          {
+            $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-1']])->update(['body' => Input::get('Networking-li-1')]);
+            if(Input::get('Networking-li-2') != null)
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-2']])->update(['body' => Input::get('Networking-li-2')]);
+              if(Input::get('Networking-li-3') != null)
+              {
+                $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-3']])->update(['body' => Input::get('Networking-li-3')]);
+                if(Input::get('Networking-li-4') != null)
+                {
+                  $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-4']])->update(['body' => Input::get('Networking-li-4')]);
+                  if(Input::get('Networking-Paragraph') != null)
+                  {
+                    $content->where([['pages_id', '=', '1'],['section', '=', '3-2-p']])->update(['body' => Input::get('Networking-Paragraph')]);
+                    if($request->hasFile('Networking-Img1'))
+                    {
+                      $img = $request->file('Networking-Img1');
+                      $filename = time() . '.' . $img->getClientOriginalExtension();
+                      $location = public_path('img/production/' . $filename);
+                      $dataLocation = 'img/production/' . $filename;
+                      Image::make($img)->save($location);
+
+                      $content->where([['pages_id', '=', '1'],['section', '=', '3-2-img']])->update(['body' => $dataLocation]);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        elseif(Input::get('Networking-li-1') != null)
+        {
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-1']])->update(['body' => Input::get('Networking-li-1')]);
+          if(Input::get('Networking-li-2') != null)
+          {
+            $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-2']])->update(['body' => Input::get('Networking-li-2')]);
+            if(Input::get('Networking-li-3') != null)
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-3']])->update(['body' => Input::get('Networking-li-3')]);
+              if(Input::get('Networking-li-4') != null)
+              {
+                $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-4']])->update(['body' => Input::get('Networking-li-4')]);
+                if(Input::get('Networking-Paragraph') != null)
+                {
+                  $content->where([['pages_id', '=', '1'],['section', '=', '3-2-p']])->update(['body' => Input::get('Networking-Paragraph')]);
+                  if($request->hasFile('Networking-Img1'))
+                  {
+                    $img = $request->file('Networking-Img1');
+                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                    $location = public_path('img/production/' . $filename);
+                    $dataLocation = 'img/production/' . $filename;
+                    Image::make($img)->save($location);
+
+                    $content->where([['pages_id', '=', '1'],['section', '=', '3-2-img']])->update(['body' => $dataLocation]);
+                  }
+                }
+              }
+            }
+          }
+        }
+        elseif(Input::get('Networking-li-2') != null)
+        {
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-2']])->update(['body' => Input::get('Networking-li-2')]);
+          if(Input::get('Networking-li-3') != null)
+          {
+            $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-3']])->update(['body' => Input::get('Networking-li-3')]);
+            if(Input::get('Networking-li-4') != null)
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-4']])->update(['body' => Input::get('Networking-li-4')]);
+              if(Input::get('Networking-Paragraph') != null)
+              {
+                $content->where([['pages_id', '=', '1'],['section', '=', '3-2-p']])->update(['body' => Input::get('Networking-Paragraph')]);
+                if($request->hasFile('Networking-Img1'))
+                {
+                  $img = $request->file('Networking-Img1');
+                  $filename = time() . '.' . $img->getClientOriginalExtension();
+                  $location = public_path('img/production/' . $filename);
+                  $dataLocation = 'img/production/' . $filename;
+                  Image::make($img)->save($location);
+
+                  $content->where([['pages_id', '=', '1'],['section', '=', '3-2-img']])->update(['body' => $dataLocation]);
+                }
+              }
+            }
+          }
+        }
+        elseif(Input::get('Networking-li-3') != null)
+        {
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-3']])->update(['body' => Input::get('Networking-li-3')]);
+          if(Input::get('Networking-li-4') != null)
+          {
+            $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-4']])->update(['body' => Input::get('Networking-li-4')]);
+            if(Input::get('Networking-Paragraph') != null)
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '3-2-p']])->update(['body' => Input::get('Networking-Paragraph')]);
+              if($request->hasFile('Networking-Img1'))
+              {
+                $img = $request->file('Networking-Img1');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+
+                $content->where([['pages_id', '=', '1'],['section', '=', '3-2-img']])->update(['body' => $dataLocation]);
+              }
+            }
+          }
+        }
+        elseif(Input::get('Networking-li-4') != null)
+        {
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-2-li-4']])->update(['body' => Input::get('Networking-li-4')]);
+          if(Input::get('Networking-Paragraph') != null)
+          {
+            $content->where([['pages_id', '=', '1'],['section', '=', '3-2-p']])->update(['body' => Input::get('Networking-Paragraph')]);
+            if($request->hasFile('Networking-Img1'))
+            {
+              $img = $request->file('Networking-Img1');
+              $filename = time() . '.' . $img->getClientOriginalExtension();
+              $location = public_path('img/production/' . $filename);
+              $dataLocation = 'img/production/' . $filename;
+              Image::make($img)->save($location);
+
+              $content->where([['pages_id', '=', '1'],['section', '=', '3-2-img']])->update(['body' => $dataLocation]);
+            }
+          }
+        }
+        elseif(Input::get('Networking-Paragraph') != null)
+        {
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-2-p']])->update(['body' => Input::get('Networking-Paragraph')]);
+          if($request->hasFile('Networking-Img1'))
+          {
+            $img = $request->file('Networking-Img1');
+            $filename = time() . '.' . $img->getClientOriginalExtension();
+            $location = public_path('img/production/' . $filename);
+            $dataLocation = 'img/production/' . $filename;
+            Image::make($img)->save($location);
+
+            $content->where([['pages_id', '=', '1'],['section', '=', '3-2-img']])->update(['body' => $dataLocation]);
+          }
+        }
+        elseif($request->hasFile('Networking-Img1'))
+        {
+          $img = $request->file('Networking-Img1');
+          $filename = time() . '.' . $img->getClientOriginalExtension();
+          $location = public_path('img/production/' . $filename);
+          $dataLocation = 'img/production/' . $filename;
+          Image::make($img)->save($location);
+
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-2-img']])->update(['body' => $dataLocation]);
+        }
+        elseif(Input::get('1-Networking-Link-submit'))
+        {
+          $content->where([['pages_id', '=', '1'],['section', '=', '3-2-btn-link']])->update(['body' => Input::get('Networking-Intro-Link')]);
         }
 
         return redirect('/dashboard');

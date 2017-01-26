@@ -115,7 +115,7 @@
         <div class="text-center">
           <form class="" action="/dashboard/homeInternet" method="post">
             {{ csrf_field() }}
-            <select class="form-inline" name="Company-Intro-Link" placeholder="Intro Links To Which Page?">
+            <select class="form-inline" name="Internet-Intro-Link">
               <option value="about">About</option>
               <option value="first_ps">First Product Page</option>
               <option value="second_ps">Second Product Page</option>
@@ -123,12 +123,13 @@
               <option value="fourth_ps">Fourth Product Page</option>
               <option value="contacts">Contacts</option>
             </select>
-            <input class="btn btn-primary form-inline" type="submit" name="1-Internet-select-submit" value="Save">
+            <input class="btn btn-primary form-inline" type="submit" name="1-Internet-Link-submit" value="Save">
           </form>
         </div>
     </div>
+    <!-- Home Networking -->
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <form class="form-group" action="/dashboard/homeInternet" method="post" enctype="multipart/form-data">
+      <form class="form-group" action="/dashboard/homeNetworking" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <input class="form-control" type="text" name="Networking-Introduction" placeholder="Networking Services Heading">
         <br>
@@ -147,9 +148,9 @@
       </form>
 
       <div class="text-center">
-        <form class="form-group" action="/dashboard/homeInternet" method="post">
+        <form class="form-group" action="/dashboard/homeNetworking" method="post">
           {{ csrf_field() }}
-          <select class="form-inline" name="Company-Intro-Link" placeholder="Intro Links To Which Page?">
+          <select class="form-inline" name="Networking-Intro-Link" placeholder="Intro Links To Which Page?">
             <option value="about">About</option>
             <option value="first_ps">First Product Page</option>
             <option value="second_ps">Second Product Page</option>
@@ -157,7 +158,7 @@
             <option value="fourth_ps">Fourth Product Page</option>
             <option value="contacts">Contacts</option>
           </select>
-          <input class="btn btn-primary form-inline" type="submit" name="1-Internet-select-submit" value="Save">
+          <input class="btn btn-primary form-inline" type="submit" name="1-Networking-Link-submit" value="Save">
         </form>
       </div>
     </div>
