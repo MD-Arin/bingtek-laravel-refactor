@@ -49,22 +49,20 @@
         </form>
         <!-- End of Form -->
         <br>
-        <div class="text-center">
-          <!-- start of form -->
-          <form class="" action="/dashboard/homeCoIntro" method="post">
-            {{ csrf_field() }}
-            <select class="form-inline" name="Company-Intro-Link" placeholder="Intro Links To Which Page?">
-              <option value="about">About</option>
-              <option value="first_ps">First Product Page</option>
-              <option value="second_ps">Second Product Page</option>
-              <option value="third_ps">Third Product Page</option>
-              <option value="fourth_ps">Fourth Product Page</option>
-              <option value="contacts">Contacts</option>
-            </select>
-            <input class="btn btn-primary form-inline" type="submit" name="4-submit" value="Save">
-          </form>
-          <!-- End of form -->
-      </div>
+      <!-- start of form -->
+      <form class="" action="/dashboard/homeCoIntro" method="post">
+        {{ csrf_field() }}
+        <select class="form-inline" name="Company-Intro-Link" placeholder="Intro Links To Which Page?">
+          <option value="about">About</option>
+          <option value="first_ps">First Product Page</option>
+          <option value="second_ps">Second Product Page</option>
+          <option value="third_ps">Third Product Page</option>
+          <option value="fourth_ps">Fourth Product Page</option>
+          <option value="contacts">Contacts</option>
+        </select>
+        <input class="btn btn-primary form-inline" type="submit" name="4-submit" value="Save">
+      </form>
+      <!-- End of form -->
     </div>
     <div class="div-xs-4 col-sm-4 col-md-4 col-lg-4">
           <!-- start of form -->
@@ -112,20 +110,18 @@
         <input class="btn btn-primary" type="submit" name="1-Internet-submit" value="Save">
         </form>
 
-        <div class="text-center">
-          <form class="" action="/dashboard/homeInternet" method="post">
-            {{ csrf_field() }}
-            <select class="form-inline" name="Internet-Intro-Link">
-              <option value="about">About</option>
-              <option value="first_ps">First Product Page</option>
-              <option value="second_ps">Second Product Page</option>
-              <option value="third_ps">Third Product Page</option>
-              <option value="fourth_ps">Fourth Product Page</option>
-              <option value="contacts">Contacts</option>
-            </select>
-            <input class="btn btn-primary form-inline" type="submit" name="1-Internet-Link-submit" value="Save">
-          </form>
-        </div>
+      <form class="form-group" action="/dashboard/homeInternet" method="post">
+        {{ csrf_field() }}
+        <select class="form-inline" name="Internet-Intro-Link">
+          <option value="about">About</option>
+          <option value="first_ps">First Product Page</option>
+          <option value="second_ps">Second Product Page</option>
+          <option value="third_ps">Third Product Page</option>
+          <option value="fourth_ps">Fourth Product Page</option>
+          <option value="contacts">Contacts</option>
+        </select>
+        <input class="btn btn-primary form-inline" type="submit" name="1-Internet-Link-submit" value="Save">
+      </form>
     </div>
     <!-- Home Networking -->
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -147,10 +143,45 @@
         <input class="btn btn-primary" type="submit" name="1-Networking" value="Save">
       </form>
 
-      <div class="text-center">
-        <form class="form-group" action="/dashboard/homeNetworking" method="post">
+    <form class="form-group" action="/dashboard/homeNetworking" method="post">
+      {{ csrf_field() }}
+      <select class="form-inline" name="Networking-Intro-Link" placeholder="Intro Links To Which Page?">
+        <option value="about">About</option>
+        <option value="first_ps">First Product Page</option>
+        <option value="second_ps">Second Product Page</option>
+        <option value="third_ps">Third Product Page</option>
+        <option value="fourth_ps">Fourth Product Page</option>
+        <option value="contacts">Contacts</option>
+      </select>
+      <input class="btn btn-primary form-inline" type="submit" name="1-Networking-Link-submit" value="Save">
+    </form>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<!-- Home Software Development -->
+<div class="container-fluid">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <form class="form-group" action="/dashboard/homeSoftDev" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <label class="form-control" for="soft-img-1">First Image</label>
+            <input class"btn btn-primary" type="file" name="soft-img-1">
+            <br>
+            <input class="form-control" type="text" name="softDev-h1" placeholder="Software Development Heading">
+            <br>
+            <input class="form-control" type="text" name="softDev-li-1" placeholder="Software Development Pointer 1">
+            <br>
+            <input class="form-control" type="text" name="softDev-li-2" placeholder="Software Development Pointer 2">
+            <br>
+            <input class="form-control" type="text" name="softDev-li-3" placeholder="Software Development Pointer 3">
+            <br>
+            <input class="form-control" type="text" name="softDev-li-4" placeholder="Software Development Pointer 4">
+            <input class="btn btn-primary form-inline" type="submit" name="SoftDev-submit" value="Save">
+        </form>
+        <form class="form-group" action="/dashboard/homeSoftDev" method="post">
           {{ csrf_field() }}
-          <select class="form-inline" name="Networking-Intro-Link" placeholder="Intro Links To Which Page?">
+          <select class="form-inline" name="SoftDev-Intro-Link" placeholder="Intro Links To Which Page?">
             <option value="about">About</option>
             <option value="first_ps">First Product Page</option>
             <option value="second_ps">Second Product Page</option>
@@ -158,13 +189,43 @@
             <option value="fourth_ps">Fourth Product Page</option>
             <option value="contacts">Contacts</option>
           </select>
-          <input class="btn btn-primary form-inline" type="submit" name="1-Networking-Link-submit" value="Save">
+          <input class="btn btn-primary form-inline" type="submit" name="SoftDev-Link-submit" value="Save">
         </form>
-      </div>
     </div>
-  </div>
-  <hr>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <form class="form-group" action="/dashboard/homeSoftMen" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <label class="form-control" for="soft-img-2">Second Image</label>
+            <input class"btn btn-primary" type="file" name="soft-img-2">
+            <br>
+            <input class="form-control" type="text" name="softMen-h1" placeholder="Software Maintenance Heading">
+            <br>
+            <input class="form-control" type="text" name="softMen-li-1" placeholder="Software Maintenance Pointer 1">
+            <br>
+            <input class="form-control" type="text" name="softMen-li-2" placeholder="Software Maintenance Pointer 2">
+            <br>
+            <input class="form-control" type="text" name="softMen-li-3" placeholder="Software Maintenance Pointer 3">
+            <br>
+            <input class="form-control" type="text" name="softMen-li-4" placeholder="Software Maintenance Pointer 4">
+            <input class="btn btn-primary form-inline" type="submit" name="SoftMen-submit" value="Save">
+        </form>
+        <form class="form-group" action="/dashboard/homeSoftMen" method="post">
+          {{ csrf_field() }}
+          <select class="form-inline" name="SoftMen-Intro-Link" placeholder="Intro Links To Which Page?">
+            <option value="about">About</option>
+            <option value="first_ps">First Product Page</option>
+            <option value="second_ps">Second Product Page</option>
+            <option value="third_ps">Third Product Page</option>
+            <option value="fourth_ps">Fourth Product Page</option>
+            <option value="contacts">Contacts</option>
+          </select>
+          <input class="btn btn-primary form-inline" type="submit" name="SoftMen-Link-submit" value="Save">
+        </form>
+    </div>
 </div>
+
+<hr>
+
 
 
 
