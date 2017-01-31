@@ -585,20 +585,20 @@ class DashboardController extends Controller
 
                   $content->where([['pages_id', '=', '1'],['section', '=', '4-img-2']])->update(['body' => $dataLocation]);
 
-                  if (!is_null(Input::get('softMen-h1')))
+                  if (Input::get('softMen-h1') != null)
                   {
                     $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-h1']])->update(['body' => Input::get('softMen-h1')]);
 
-                    if(!is_null(Input::get('softMen-li-1')))
+                    if(Input::get('softMen-li-1') != null)
                     {
                       $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-1']])->update(['body' => Input::get('softMen-li-1')]);
-                      if(!is_null(Input::get('softMen-li-2')))
+                      if(Input::get('softMen-li-2') != null)
                       {
                         $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-2']])->update(['body' => Input::get('softMen-li-2')]);
-                        if(!is_null(Input::get('softMen-li-3')))
+                        if(Input::get('softMen-li-3') != null)
                         {
                           $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
-                          if(!is_null(Input::get('softMen-li-4')))
+                          if(Input::get('softMen-li-4') != null)
                           {
                             $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
                             if(Input::get('SoftMen-Link-submit'))
@@ -611,20 +611,20 @@ class DashboardController extends Controller
                     }
                   }
             }
-            elseif(!is_null(Input::get('softMen-h1')))
+            elseif(Input::get('softMen-h1') != null)
             {
               $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-h1']])->update(['body' => Input::get('softMen-h1')]);
 
-              if(!is_null(Input::get('softMen-li-1')))
+              if(Input::get('softMen-li-1') != null)
               {
                 $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-1']])->update(['body' => Input::get('softMen-li-1')]);
-                if(!is_null(Input::get('softMen-li-2')))
+                if(Input::get('softMen-li-2') != null)
                 {
                   $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-2']])->update(['body' => Input::get('softMen-li-2')]);
-                  if(!is_null(Input::get('softMen-li-3')))
+                  if(Input::get('softMen-li-3') != null)
                   {
                     $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
-                    if(!is_null(Input::get('softMen-li-4')))
+                    if(Input::get('softMen-li-4') != null)
                     {
                       $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
                       if(Input::get('SoftMen-Link-submit'))
@@ -636,16 +636,16 @@ class DashboardController extends Controller
                 }
               }
             }
-            elseif(!is_null(Input::get('softMen-li-1')))
+            elseif(Input::get('softMen-li-1') != null)
             {
               $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-1']])->update(['body' => Input::get('softMen-li-1')]);
-              if(!is_null(Input::get('softMen-li-2')))
+              if(Input::get('softMen-li-2') != null)
               {
                 $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-2']])->update(['body' => Input::get('softMen-li-2')]);
-                if(!is_null(Input::get('softMen-li-3')))
+                if(Input::get('softMen-li-3') != null)
                 {
                   $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
-                  if(!is_null(Input::get('softMen-li-4')))
+                  if(Input::get('softMen-li-4') != null)
                   {
                     $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
                     if(Input::get('SoftMen-Link-submit'))
@@ -656,13 +656,13 @@ class DashboardController extends Controller
                 }
               }
             }
-            elseif(!is_null(Input::get('softMen-li-2')))
+            elseif(Input::get('softMen-li-2') != null)
             {
               $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-2']])->update(['body' => Input::get('softMen-li-2')]);
-              if(!is_null(Input::get('softMen-li-3')))
+              if(Input::get('softMen-li-3') != null)
               {
                 $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
-                if(!is_null(Input::get('softMen-li-4')))
+                if(Input::get('softMen-li-4') != null)
                 {
                   $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
                   if(Input::get('SoftMen-Link-submit'))
@@ -672,10 +672,10 @@ class DashboardController extends Controller
                 }
               }
             }
-            elseif(!is_null(Input::get('softMen-li-3')))
+            elseif(Input::get('softMen-li-3') != null)
             {
               $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
-              if(!is_null(Input::get('softMen-li-4')))
+              if(Input::get('softMen-li-4') != null)
               {
                 $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
                 if(Input::get('SoftMen-Link-submit'))
@@ -684,7 +684,7 @@ class DashboardController extends Controller
                 }
               }
             }
-            elseif(!is_null(Input::get('softMen-li-4')))
+            elseif(Input::get('softMen-li-4') != null)
             {
               $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
               if(Input::get('SoftMen-Link-submit'))
@@ -706,7 +706,7 @@ class DashboardController extends Controller
 
       if(Auth::check())
       {
-        
+
       }
     }
   }
