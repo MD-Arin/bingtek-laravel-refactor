@@ -575,8 +575,138 @@ class DashboardController extends Controller
 
         if(Auth::check())
         {
+            if ($request->hasFile('soft-img-2'))
+            {
+                  $img = $request->file('soft-img-2');
+                  $filename = time() . '.' . $img->getClientOriginalExtension();
+                  $location = public_path('img/production/' . $filename);
+                  $dataLocation = 'img/production/' . $filename;
+                  Image::make($img)->save($location);
 
+                  $content->where([['pages_id', '=', '1'],['section', '=', '4-img-2']])->update(['body' => $dataLocation]);
+
+                  if (!is_null(Input::get('softMen-h1')))
+                  {
+                    $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-h1']])->update(['body' => Input::get('softMen-h1')]);
+
+                    if(!is_null(Input::get('softMen-li-1')))
+                    {
+                      $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-1']])->update(['body' => Input::get('softMen-li-1')]);
+                      if(!is_null(Input::get('softMen-li-2')))
+                      {
+                        $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-2']])->update(['body' => Input::get('softMen-li-2')]);
+                        if(!is_null(Input::get('softMen-li-3')))
+                        {
+                          $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
+                          if(!is_null(Input::get('softMen-li-4')))
+                          {
+                            $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
+                            if(Input::get('SoftMen-Link-submit'))
+                            {
+                              $content->where([['pages_id', '=', '1'],['section', '=', '4-2-link']])->update(['body' => Input::get('SoftMen-Intro-Link')]);
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+            }
+            elseif(!is_null(Input::get('softMen-h1')))
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-h1']])->update(['body' => Input::get('softMen-h1')]);
+
+              if(!is_null(Input::get('softMen-li-1')))
+              {
+                $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-1']])->update(['body' => Input::get('softMen-li-1')]);
+                if(!is_null(Input::get('softMen-li-2')))
+                {
+                  $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-2']])->update(['body' => Input::get('softMen-li-2')]);
+                  if(!is_null(Input::get('softMen-li-3')))
+                  {
+                    $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
+                    if(!is_null(Input::get('softMen-li-4')))
+                    {
+                      $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
+                      if(Input::get('SoftMen-Link-submit'))
+                      {
+                        $content->where([['pages_id', '=', '1'],['section', '=', '4-2-link']])->update(['body' => Input::get('SoftMen-Intro-Link')]);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            elseif(!is_null(Input::get('softMen-li-1')))
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-1']])->update(['body' => Input::get('softMen-li-1')]);
+              if(!is_null(Input::get('softMen-li-2')))
+              {
+                $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-2']])->update(['body' => Input::get('softMen-li-2')]);
+                if(!is_null(Input::get('softMen-li-3')))
+                {
+                  $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
+                  if(!is_null(Input::get('softMen-li-4')))
+                  {
+                    $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
+                    if(Input::get('SoftMen-Link-submit'))
+                    {
+                      $content->where([['pages_id', '=', '1'],['section', '=', '4-2-link']])->update(['body' => Input::get('SoftMen-Intro-Link')]);
+                    }
+                  }
+                }
+              }
+            }
+            elseif(!is_null(Input::get('softMen-li-2')))
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-2']])->update(['body' => Input::get('softMen-li-2')]);
+              if(!is_null(Input::get('softMen-li-3')))
+              {
+                $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
+                if(!is_null(Input::get('softMen-li-4')))
+                {
+                  $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
+                  if(Input::get('SoftMen-Link-submit'))
+                  {
+                    $content->where([['pages_id', '=', '1'],['section', '=', '4-2-link']])->update(['body' => Input::get('SoftMen-Intro-Link')]);
+                  }
+                }
+              }
+            }
+            elseif(!is_null(Input::get('softMen-li-3')))
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-3']])->update(['body' => Input::get('softMen-li-3')]);
+              if(!is_null(Input::get('softMen-li-4')))
+              {
+                $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
+                if(Input::get('SoftMen-Link-submit'))
+                {
+                  $content->where([['pages_id', '=', '1'],['section', '=', '4-2-link']])->update(['body' => Input::get('SoftMen-Intro-Link')]);
+                }
+              }
+            }
+            elseif(!is_null(Input::get('softMen-li-4')))
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '4-2-img2-li-4']])->update(['body' => Input::get('softMen-li-4')]);
+              if(Input::get('SoftMen-Link-submit'))
+              {
+                $content->where([['pages_id', '=', '1'],['section', '=', '4-2-link']])->update(['body' => Input::get('SoftMen-Intro-Link')]);
+              }
+            }
+            elseif(Input::get('SoftMen-Link-submit'))
+            {
+              $content->where([['pages_id', '=', '1'],['section', '=', '4-2-link']])->update(['body' => Input::get('SoftMen-Intro-Link')]);
+            }
             return redirect('/dashboard');
         }
+    }
+
+    public function updateOfficeSpace(Request $request)
+    {
+      $content = new Content;
+
+      if(Auth::check())
+      {
+        
+      }
     }
   }

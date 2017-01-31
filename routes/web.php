@@ -41,3 +41,4 @@ Route::post('/dashboard/homeInternet', 'DashboardController@updateHomeInternet')
 Route::post('/dashboard/homeNetworking', 'DashboardController@updateHomeNetworking');
 Route::post('/dashboard/homeSoftDev', 'DashboardController@updateHomeSoftDev');
 Route::post('/dashboard/homeSoftMen', 'DashboardController@updateHomeSoftMen');
+Route::post('/dashboard/homeOfiiceSpace', 'DashboardController@updateOfficeSpace');

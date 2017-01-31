@@ -9,6 +9,8 @@
 @endsection
 
 @section('content')
+
+<!-- Cover -->
 <div class="cover-image" style="background: url('{{ URL::to($homeCover) }}'); height: 100%">
   <div class="container-fluid">
     <div class="row">
@@ -22,6 +24,7 @@
 </div>
 <hr>
 
+<!-- Company Introduction -->
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
@@ -49,6 +52,7 @@
 
 <hr>
 
+  <!-- Internet Service -->
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -95,6 +99,7 @@
   <hr>
 </div>
 
+<!-- Software -->
 <div class="container-fluid">
   <div class="row">
     <div id="home-carousel" class="carousel slide" data-ride="carousel">
@@ -105,6 +110,7 @@
       </ol>
 
       <!-- Wrapper for slides -->
+      <!-- Software Development -->
       <div class="carousel-inner" role="listbox">
         <div class="item active carousel-height">
           <div class="row">
@@ -122,6 +128,7 @@
           </div>
         </div>
 
+        <!-- Software Maintenance -->
         <div class="item carousel-height">
           <div class="row">
             <img src="{{ URL::to($homeSoftMaintenanceImg1) }}">
@@ -154,6 +161,7 @@
 
 <hr>
 
+<!-- office Space -->
 <div class="well well-lg">
   <div class="container-fluid">
     <div class="row">
