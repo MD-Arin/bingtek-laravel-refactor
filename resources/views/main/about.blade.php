@@ -222,19 +222,19 @@
     <hr>
   </div>
   <div class="row">
-    <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <img src="{{ URL::to($aboutTeam1Img) }}"
       class="center-block img-circle img-responsive">
       <h3 class="text-center">{{ $aboutTeam1ImgH1 }}</h3>
       <p class="text-center">{{ $aboutTeam1ImgH2 }}</p>
     </div>
-    <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <img src="{{ URL::to($aboutTeam2Img) }}"
       class="center-block img-circle img-responsive">
       <h3 class="text-center">{{ $aboutTeam2ImgH1 }}</h3>
       <p class="text-center">{{ $aboutTeam2ImgH2 }}</p>
     </div>
-    <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <img src="{{ URL::to($aboutTeam3Img) }}"
       class="center-block img-circle img-responsive">
       <h3 class="text-center">{{ $aboutTeam3ImgH1 }}</h3>

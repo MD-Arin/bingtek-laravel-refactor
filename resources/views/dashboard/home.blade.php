@@ -52,7 +52,7 @@
       <!-- start of form -->
       <form class="" action="/dashboard/homeCoIntro" method="post">
         {{ csrf_field() }}
-        <select class="form-inline" name="Company-Intro-Link" placeholder="Intro Links To Which Page?">
+        <select class="form-inline" name="Company-Intro-Link">
           <option value="about">About</option>
           <option value="first_ps">First Product Page</option>
           <option value="second_ps">Second Product Page</option>
@@ -145,7 +145,7 @@
 
     <form class="form-group" action="/dashboard/homeNetworking" method="post">
       {{ csrf_field() }}
-      <select class="form-inline" name="Networking-Intro-Link" placeholder="Intro Links To Which Page?">
+      <select class="form-inline" name="Networking-Intro-Link">
         <option value="about">About</option>
         <option value="first_ps">First Product Page</option>
         <option value="second_ps">Second Product Page</option>
@@ -181,7 +181,7 @@
         </form>
         <form class="form-group" action="/dashboard/homeSoftDev" method="post">
           {{ csrf_field() }}
-          <select class="form-inline" name="SoftDev-Intro-Link" placeholder="Intro Links To Which Page?">
+          <select class="form-inline" name="SoftDev-Intro-Link">
             <option value="about">About</option>
             <option value="first_ps">First Product Page</option>
             <option value="second_ps">Second Product Page</option>
@@ -211,7 +211,7 @@
         </form>
         <form class="form-group" action="/dashboard/homeSoftMen" method="post">
           {{ csrf_field() }}
-          <select class="form-inline" name="SoftMen-Intro-Link" placeholder="Intro Links To Which Page?">
+          <select class="form-inline" name="SoftMen-Intro-Link">
             <option value="about">About</option>
             <option value="first_ps">First Product Page</option>
             <option value="second_ps">Second Product Page</option>
@@ -226,8 +226,60 @@
 
 <hr>
 
+<!--Office Space-->
+<div class="container-fluid">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <form class="form-group" action="/dashboard/homeOfficeSpace" method="post">
+              {{ csrf_field() }}
+              <input class="form-control" type="text" name="homeOfficeH1" Placeholder="Office Heading">
+              <br>
+              <input class="form-control" type="text" name="homeOfficeH2" placeholder="Office Sub-Heading" >
+              <br>
+              <input class="form-control" type="text" name="homeOffice1li1" placeholder="Office Pointer 1" >
+              <br>
+              <input class="form-control" type="text" name="homeOffice1li2" placeholder="Office Pointer 2" >
+              <br>
+              <input class="form-control" type="text" name="homeOffice1li3" placeholder="Office Pointer 3" >
+              <br>
+              <input class="form-control" type="text" name="homeOffice1li4" placeholder="Office Pointer 4" >
+              <br>
+              <input class="btn btn-primary" type="submit" name="1-office-submit" value="Save">
+          </form>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <form class="form-group" action="/dashboard/homeOfficeSpace" method="post" enctype="multipart/form-data">
+              {{ csrf_field() }}
+              <input class="btn btn-primary" type="file" name="homeOfficeImg" >
+              <input class="btn btn-primary" type="submit" name="2-office-submit" value="Save">
+          </form>
+      </div>
+</div>
 
+<hr>
 
-
+<div class="row">
+      <form class="form-group" action="/dashboard/homeOfficeSpace" method="post">
+          {{ csrf_field() }}
+          <input class="form-control" type="text" name="homeOffice3H1" Placeholder="Office Tag Line Heading">
+          <br>
+          <textarea class="form-control" rows="8" cols="20" name="homeOffice3P" Placeholder="Office Tag Line Body"></textarea>
+          <br>
+          <input class="btn btn-primary" type="submit" name="3-office-submit" value="Save">
+      </form>
+      
+      <form class="form-group" action="/dashboard/homeOfficeSpace" method="post">
+          {{ csrf_field() }}
+          <select class="form-inline" name="homeOffice3link">
+            <option value="about">About</option>
+            <option value="first_ps">First Product Page</option>
+            <option value="second_ps">Second Product Page</option>
+            <option value="third_ps">Third Product Page</option>
+            <option value="fourth_ps">Fourth Product Page</option>
+            <option value="contacts">Contacts</option>
+          </select>
+          <input class="btn btn-primary form-inline" type="submit" name="4-office-submit" value="Save">
+      </form>    
+      <hr>
+    </div>
 
 @endsection

@@ -218,19 +218,19 @@
     <hr>
   </div>
   <div class="row">
-    <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
       class="center-block img-circle img-responsive">
       <h3 class="text-center">John Doe</h3>
       <p class="text-center">CEO</p>
     </div>
-    <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
       class="center-block img-circle img-responsive">
       <h3 class="text-center">Jane Doe</h3>
       <p class="text-center">CFO</p>
     </div>
-    <div class="col=xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
       class="center-block img-circle img-responsive">
       <h3 class="text-center">John Doe</h3>

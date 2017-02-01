@@ -164,7 +164,7 @@
 <!-- office Space -->
 <div class="well well-lg">
   <div class="container-fluid">
-    <div class="row">
+      <div class="row">
       <div class="col-md-6">
         <h1>{{ $homeOffice1H1 }}</h1>
         <h3>{{ $homeOffice1H2 }}</h3>
