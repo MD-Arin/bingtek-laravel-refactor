@@ -34,7 +34,7 @@ Route::get('/dash-tps', 'HomeController@getDashTps')->name('dash-tps');
 Route::get('/dash-frps', 'HomeController@getDashFrps')->name('dash-frps');
 Route::get('/logout', 'HomeController@getLogout')->name('logout');
 
-//Dashboard routes
+//Dashboard Home routes
 Route::post('/dashboard/homeCover', 'DashboardController@updateHome');
 Route::post('/dashboard/homeCoIntro', 'DashboardController@updateHomeCoIntro');
 Route::post('/dashboard/homeInternet', 'DashboardController@updateHomeInternet');
@@ -42,3 +42,6 @@ Route::post('/dashboard/homeNetworking', 'DashboardController@updateHomeNetworki
 Route::post('/dashboard/homeSoftDev', 'DashboardController@updateHomeSoftDev');
 Route::post('/dashboard/homeSoftMen', 'DashboardController@updateHomeSoftMen');
 Route::post('/dashboard/homeOfficeSpace', 'DashboardController@updateOfficeSpace');
+
+//Dashboard About routes
+Route::post('/dash-about/aboutHistory', 'DashAboutController@updateAboutHistory');

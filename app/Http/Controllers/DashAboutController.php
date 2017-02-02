@@ -10,13 +10,14 @@ use Image;
 
 class DashAboutController extends Controller
 {
-    public function updateHome(Request $request)
+    public function updateAboutHistory(Request $request)
     {
         if(Auth::check())
         {
             $content = new Content;
             
             
+            return redirect('/dash-about');
         }
     }
 }
