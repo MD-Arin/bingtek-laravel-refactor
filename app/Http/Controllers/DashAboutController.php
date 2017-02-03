@@ -20,4 +20,48 @@ class DashAboutController extends Controller
             return redirect('/dash-about');
         }
     }
+    
+    public function updateAboutMilestones(Request $request)
+    {
+        if(Auth::check())
+        {
+            $content = new Content;
+            
+            
+            return redirect('/dash-about');
+        }
+    }
+    
+    public function updateAboutTestimonials(Request $request)
+    {
+        if(Auth::check())
+        {
+            $content = new Content;
+            
+            
+            return redirect('/dash-about');
+        }
+    }
+    
+    public function updateAboutPartners(Request $request)
+    {
+        if(Auth::check())
+        {
+            $content = new Content;
+            
+            
+            return redirect('/dash-about');
+        }
+    }
+    
+    public function updateAboutTeam(Request $request)
+    {
+        if(Auth::check())
+        {
+            $content = new Content;
+            
+            
+            return redirect('/dash-about');
+        }
+    }
 }

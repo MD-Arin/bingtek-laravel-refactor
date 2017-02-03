@@ -14,7 +14,7 @@
         <form class="form-group" action="/dash-about/aboutHistory" method="POST" enctype="multipart/form-data">
             <input class="form-control" type="text" name="1-history-h1" placeholder="Our Story">
             <hr>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg                -6">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 {{ csrf_field() }}       
 
                 <input class="btn btn-primary" type="file" name="1-history-img-1" >
@@ -29,219 +29,156 @@
                 <textarea class="form-control" rows="8" cols="20" name="1-history-h2" placeholder="Story Body Content"></textarea>
             </div>
             
-            <input class="btn btn-primary" style="margin-left: 40%;" type="submit" name="1-history-submit" value="Save">
+            <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" name="1-history-submit" value="Save">
         </form>
 
     </div>
 
     <hr>
+    
+    <!--Milestones-->
 
     <div class="row">
-        <h3 class="text-center">Where We've Been</h3>
+        <h3 class="text-center">Edit Milestones</h3>
         <hr class="underline">
         <div class="container-fluid">
             <div class="row">
-                <div id="milestone-carousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#milestone-carousel"  data-slide-to="0" class="active"></li>
-                        <li data-target="#milestone-carousel"  data-slide-to="1"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active carousel-height">
-                            <div class="row">
-                                <img src="{{ URL::to('img/placeholders/placeholder-2.jpg') }}">
-                                <div class="carousel-caption-right">
-                                    <h4>Year: 2005</h4>
-                                    <h5>Accomplishment: Best Networkers in Mombasa</h5>
-                                    <hr>
-                                    <h4>The Story: </h4>
-                                    <hr>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item carousel-height">
-                            <div class="row">
-                                <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}">
-                                <div class="carousel-caption-right">
-                                    <h4>Year: 2006</h4>
-                                    <h5>Accomplishment: Best Internet Provider in Mombasa</h5>
-                                    <hr>
-                                    <h4>The Story: </h4>
-                                    <hr>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                <form class="form-group" action="/dash-about/aboutMilestones" method="POST" enctype="multipart/form-data">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input class="btn btn-primary" type="file" name="1-milestone-img-1" >
+                        <br>
+                        <input class="form-control" type="number" name="1-milestone-year-1" placeholder="Year Of Milestone">
+                        <br>
+                        <input class="form-control" type="text" name="1-milestone-accomplishment-1" placeholder="Accomplishment">
+                        <br>
+                        <textarea class="form-control" rows="8" cols="20" name="1-milestone-accomplishment-body-1" placeholder="Accomplishment Body/ Story"></textarea>
                     </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#milestone-carousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#milestone-carousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input class="btn btn-primary" type="file" name="1-milestone-img-2" >
+                        <br>
+                        <input class="form-control" type="number" name="1-milestone-year-2" placeholder="Year Of Milestone">
+                        <br>
+                        <input class="form-control" type="text" name="1-milestone-accomplishment-2" placeholder="Accomplishment">
+                        <br>
+                        <textarea class="form-control" rows="8" cols="20" name="1-milestone-accomplishment-body-2" placeholder="Accomplishment Body/ Story"></textarea>
+                    </div>
+                    
+                    <input class="btn btn-primary" type="submit" style="margin-left: 47%; margin-top: 20px;" name="1-milestones-submit" value="Save">
+                </form>
             </div>
         </div>
     </div>
-
     <br>
     <br>
 
+    
+    <!--Testimonials-->
     <div class="text-center">
         <hr>
-        <h1>Testimonials</h1>
+        <h1>Edit Testimonials</h1>
         <hr>
     </div>
     <div class="row">
-        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}" class="img-thumbnail" />
-            <p class="blockquote-reverse">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-            </p>
-            <hr>
-            <h5 class="blockquote"><i>Name: John Doe</i></h5>
-            <h5 class="blockquote"><i>Position: Procurement</i> </h5>
-            <h5 class="blockquote"><i>Company: Satisfied Ltd</i></h5>
-        </div>
-        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}" class="img-thumbnail" />
-            <p class="blockquote-reverse">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-            </p>
-            <hr>
-            <h5 class="blockquote"><i>Name: Jane Doe</i></h5>
-            <h5 class="blockquote"><i>Position: CEO</i> </h5>
-            <h5 class="blockquote"><i>Company: Logistics Ltd</i></h5>
-        </div>
-        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}" class="img-thumbnail" />
-            <p class="blockquote-reverse">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-            </p>
-            <hr>
-            <h5 class="blockquote"><i>Name: John Doe</i></h5>
-            <h5 class="blockquote"><i>Position: Marketing</i> </h5>
-            <h5 class="blockquote"><i>Company: Designs Ltd</i></h5>
-        </div>
-        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}" class="img-thumbnail" />
-            <p class="blockquote-reverse">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-            </p>
-            <hr>
-            <h5 class="blockquote"><i>Name: Jane Doe</i></h5>
-            <h5 class="blockquote"><i>Position:  Sales</i> </h5>
-            <h5 class="blockquote"><i>Company: Merchant Ltd</i></h5>
-        </div>
+        <form class="form-group" action="/dash-about/aboutTestimonials" method="POST" enctype="multipart/form-data">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <input class="btn btn-primary" name="1-testimonials-img-1" type="file">
+                <br>
+                <textarea class="form-control" name="1-testimonials-message-1" rows="8" cols="20" placeholder="Testimonial Message"></textarea>
+                <hr>
+                <input class="form-control" name="1-testimonials-name-1" type="text" placeholder="Name">
+                <br>
+                <input class="form-control" name="1-testimonials-position-1" type="text" placeholder="Position">
+                <br>
+                <input class="form-control" name="1-testimonials-company-1" type="text" placeholder="Company">
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <input class="btn btn-primary" name="1-testimonials-img-2" type="file">
+                <br>
+                <textarea class="form-control" name="1-testimonials-message-2" rows="8" cols="20" placeholder="Testimonial Message"></textarea>
+                <hr>
+                <input class="form-control" name="1-testimonials-name-2" type="text" placeholder="Name">
+                <br>
+                <input class="form-control" name="1-testimonials-position-2" type="text" placeholder="Position">
+                <br>
+                <input class="form-control" name="1-testimonials-company-2" type="text" placeholder="Company">
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <input class="btn btn-primary" name="1-testimonials-img-3" type="file">
+                <br>
+                <textarea class="form-control" name="1-testimonials-message-3" rows="8" cols="20" placeholder="Testimonial Message"></textarea>
+                <hr>
+                <input class="form-control" name="1-testimonials-name-3" type="text" placeholder="Name">
+                <br>
+                <input class="form-control" name="1-testimonials-position-3" type="text" placeholder="Position">
+                <br>
+                <input class="form-control" name="1-testimonials-company-3" type="text" placeholder="Company">
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <input class="btn btn-primary" name="1-testimonials-img-4" type="file">
+                <br>
+                <textarea class="form-control" name="1-testimonials-message-4" rows="8" cols="20" placeholder="Testimonial Message"></textarea>
+                <hr>
+                <input class="form-control" name="1-testimonials-name-4" type="text" placeholder="Name">
+                <br>
+                <input class="form-control" name="1-testimonials-position-4" type="text" placeholder="Position">
+                <br>
+                <input class="form-control" name="1-testimonials-company-4" type="text" placeholder="Company">
+            </div>
+
+            <input class="btn btn-primary" type="submit" name="1-testimonials-submit-1" style="margin-left: 47%; margin-top: 20px;" value="Save">
+        </form>
     </div>
 
     <div class="text-center">
         <hr>
-        <h1>Partners</h1>
+        <h1>Edit Partners</h1>
         <hr>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div id="partners-carousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#partners-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#partners-carousel" data-slide-to="1"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail">
-                            <div class="carousel-caption">
-                                Partner 1
-                            </div>
-                        </div>
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
-                            <div class="carousel-caption">
-                                Partner 2
-                            </div>
-                        </div>
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
-                            <div class="carousel-caption">
-                                Partner 3
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
-                            <div class="carousel-caption">
-                                Partner 4
-                            </div>
-                        </div>
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
-                            <div class="carousel-caption">
-                                Partner 5
-                            </div>
-                        </div>
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail">
-                            <div class="carousel-caption">
-                                Partner 6
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#partners-carousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#partners-carousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+            <form class="form-group" action="/dash-about/aboutPartners" method="POST" enctype="multipart/form-data">
+                <input class="btn btn-primary" type="file" name="1-partners-img-1">
+                <br>
+                <input class="form-control" type="text" name="1-partners-name-1" placeholder="Partner Name">
+                <br>
+                <input class="form-control" type="number" name="1-partners-number-1" min="1" max="6" value="1" placeholder="Partner Number">
+                
+                <input class="btn btn-primary" type="submit" name="1-partners-submit-1" style="margin-left: 47%; margin-top: 20px;" value="Save">
+            </form>
         </div>
     </div>
 
     <div class="text-center">
         <hr>
-        <h1>Our Team</h1>
+        <h1>Edit Team</h1>
         <hr>
     </div>
     <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
-                 class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">CEO</p>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
-                 class="center-block img-circle img-responsive">
-            <h3 class="text-center">Jane Doe</h3>
-            <p class="text-center">CFO</p>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ URL::to('img/placeholders/user-placeholder.png') }}"
-                 class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">COO</p>
-        </div>
+        <form class="form-group" action="/dash-about/aboutTeam" method="POST" enctype="multipart/form-data">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <input class="btn btn-primary" type="file" name="1-team-img-1">
+                <br>
+                <input class="form-control" type="text" name="1-team-name-1" placeholder="Team Member Name">
+                <br>
+                <input class="form-control" type="text" name="1-team-position-1" placeholder="Team Member Position">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <input class="btn btn-primary" type="file" name="1-team-img-2">
+                <br>
+                <input class="form-control" type="text" name="1-team-name-2" placeholder="Team Member Name">
+                <br>
+                <input class="form-control" type="text" name="1-team-position-2" placeholder="Team Member Position">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <input class="btn btn-primary" type="file" name="1-team-img-3">
+                <br>
+                <input class="form-control" type="text" name="1-team-name-3" placeholder="Team Member Name">
+                <br>
+                <input class="form-control" type="text" name="1-team-position-3" placeholder="Team Member Position">
+            </div>
+
+            <input class="btn btn-primary" type="submit" style="margin-left: 47%; margin-top: 20px;" value="Save">
+        </form>
     </div>
 </div>
 
