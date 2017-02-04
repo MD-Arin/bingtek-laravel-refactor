@@ -284,23 +284,836 @@ class DashAboutController extends Controller
         }
     }
     
-    public function updateAboutTestimonials(Request $request)
-    {
-        if(Auth::check())
-        {
+    public function updateAboutTestimonials(Request $request) {
+        if (Auth::check()) {
             $content = new Content;
-            
-            
-            
-            return redirect('/dash-about');
+
+            if ($request->hasFile('1-testimonials-img-1')) {
+                $img = $request->file('1-testimonials-img-2');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-img']])->update(['body' => $dataLocation]);
+                if (Input::get('1-testimonials-message-1') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-p']])->update(['body' => Input::get('1-testimonials-message-1')]);
+                    if (Input::get('1-testimonials-name-1') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-1']])->update(['body' => Input::get('1-testimonials-name-1')]);
+                        if (Input::get('1-testimonials-position-1') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-2']])->update(['body' => Input::get('1-testimonials-position-1')]);
+                            if (Input::get('1-testimonials-company-1') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-3']])->update(['body' => Input::get('1-testimonials-company-1')]);
+                                if ($request->hasFile('1-testimonials-img-2')) {
+                                    $img = $request->file('1-testimonials-img-2');
+                                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                                    $location = public_path('img/production/' . $filename);
+                                    $dataLocation = 'img/production/' . $filename;
+                                    Image::make($img)->save($location);
+
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-img']])->update(['body' => $dataLocation]);
+                                    if (Input::get('1-testimonials-message-2') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-p']])->update(['body' => Input::get('1-testimonials-message-2')]);
+                                        if (Input::get('1-testimonials-name-2') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-1']])->update(['body' => Input::get('1-testimonials-name-2')]);
+                                            if (Input::get('1-testimonials-position-2') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                                                if (Input::get('1-testimonials-company-2') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                                                    if ($request->hasFile('1-testimonials-img-3')) {
+                                                        $img = $request->file('1-testimonials-img-3');
+                                                        $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                        $location = public_path('img/production/' . $filename);
+                                                        $dataLocation = 'img/production/' . $filename;
+                                                        Image::make($img)->save($location);
+
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                                                        if (Input::get('1-testimonials-message-3') != null) {
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                                                            if (Input::get('1-testimonials-name-3') != null) {
+                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                                                if (Input::get('1-testimonials-position-3') != null) {
+                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                                                    if (Input::get('1-testimonials-company-3') != null) {
+                                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                                                        if ($request->hasFile('1-testimonials-img-4')) {
+                                                                            $img = $request->file('1-testimonials-img-4');
+                                                                            $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                                            $location = public_path('img/production/' . $filename);
+                                                                            $dataLocation = 'img/production/' . $filename;
+                                                                            Image::make($img)->save($location);
+
+                                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                                                            if (Input::get('1-testimonials-message-4') != null) {
+                                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                                                if (Input::get('1-testimonials-name-4') != null) {
+                                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                                                    if (Input::get('1-testimonials-position-4') != null) {
+                                                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                                                        if (Input::get('1-testimonials-company-4') != null) {
+                                                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-message-1') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-p']])->update(['body' => Input::get('1-testimonials-message-1')]);
+                if (Input::get('1-testimonials-name-1') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-1']])->update(['body' => Input::get('1-testimonials-name-1')]);
+                    if (Input::get('1-testimonials-position-1') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-2']])->update(['body' => Input::get('1-testimonials-position-1')]);
+                        if (Input::get('1-testimonials-company-1') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-3']])->update(['body' => Input::get('1-testimonials-company-1')]);
+                            if ($request->hasFile('1-testimonials-img-2')) {
+                                $img = $request->file('1-testimonials-img-2');
+                                $filename = time() . '.' . $img->getClientOriginalExtension();
+                                $location = public_path('img/production/' . $filename);
+                                $dataLocation = 'img/production/' . $filename;
+                                Image::make($img)->save($location);
+
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-img']])->update(['body' => $dataLocation]);
+                                if (Input::get('1-testimonials-message-2') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-p']])->update(['body' => Input::get('1-testimonials-message-2')]);
+                                    if (Input::get('1-testimonials-name-2') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-1']])->update(['body' => Input::get('1-testimonials-name-2')]);
+                                        if (Input::get('1-testimonials-position-2') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                                            if (Input::get('1-testimonials-company-2') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                                                if ($request->hasFile('1-testimonials-img-3')) {
+                                                    $img = $request->file('1-testimonials-img-3');
+                                                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                    $location = public_path('img/production/' . $filename);
+                                                    $dataLocation = 'img/production/' . $filename;
+                                                    Image::make($img)->save($location);
+
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                                                    if (Input::get('1-testimonials-message-3') != null) {
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                                                        if (Input::get('1-testimonials-name-3') != null) {
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                                            if (Input::get('1-testimonials-position-3') != null) {
+                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                                                if (Input::get('1-testimonials-company-3') != null) {
+                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                                                    if ($request->hasFile('1-testimonials-img-4')) {
+                                                                        $img = $request->file('1-testimonials-img-4');
+                                                                        $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                                        $location = public_path('img/production/' . $filename);
+                                                                        $dataLocation = 'img/production/' . $filename;
+                                                                        Image::make($img)->save($location);
+
+                                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                                                        if (Input::get('1-testimonials-message-4') != null) {
+                                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                                            if (Input::get('1-testimonials-name-4') != null) {
+                                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                                                if (Input::get('1-testimonials-position-4') != null) {
+                                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                                                    if (Input::get('1-testimonials-company-4') != null) {
+                                                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-name-1') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-1']])->update(['body' => Input::get('1-testimonials-name-1')]);
+                if (Input::get('1-testimonials-position-1') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-2']])->update(['body' => Input::get('1-testimonials-position-1')]);
+                    if (Input::get('1-testimonials-company-1') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-3']])->update(['body' => Input::get('1-testimonials-company-1')]);
+                        if ($request->hasFile('1-testimonials-img-2')) {
+                            $img = $request->file('1-testimonials-img-2');
+                            $filename = time() . '.' . $img->getClientOriginalExtension();
+                            $location = public_path('img/production/' . $filename);
+                            $dataLocation = 'img/production/' . $filename;
+                            Image::make($img)->save($location);
+
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-img']])->update(['body' => $dataLocation]);
+                            if (Input::get('1-testimonials-message-2') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-p']])->update(['body' => Input::get('1-testimonials-message-2')]);
+                                if (Input::get('1-testimonials-name-2') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-1']])->update(['body' => Input::get('1-testimonials-name-2')]);
+                                    if (Input::get('1-testimonials-position-2') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                                        if (Input::get('1-testimonials-company-2') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                                            if ($request->hasFile('1-testimonials-img-3')) {
+                                                $img = $request->file('1-testimonials-img-3');
+                                                $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                $location = public_path('img/production/' . $filename);
+                                                $dataLocation = 'img/production/' . $filename;
+                                                Image::make($img)->save($location);
+
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                                                if (Input::get('1-testimonials-message-3') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                                                    if (Input::get('1-testimonials-name-3') != null) {
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                                        if (Input::get('1-testimonials-position-3') != null) {
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                                            if (Input::get('1-testimonials-company-3') != null) {
+                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                                                if ($request->hasFile('1-testimonials-img-4')) {
+                                                                    $img = $request->file('1-testimonials-img-4');
+                                                                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                                    $location = public_path('img/production/' . $filename);
+                                                                    $dataLocation = 'img/production/' . $filename;
+                                                                    Image::make($img)->save($location);
+
+                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                                                    if (Input::get('1-testimonials-message-4') != null) {
+                                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                                        if (Input::get('1-testimonials-name-4') != null) {
+                                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                                            if (Input::get('1-testimonials-position-4') != null) {
+                                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                                                if (Input::get('1-testimonials-company-4') != null) {
+                                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-position-1') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-2']])->update(['body' => Input::get('1-testimonials-position-1')]);
+                if (Input::get('1-testimonials-company-1') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-3']])->update(['body' => Input::get('1-testimonials-company-1')]);
+                    if ($request->hasFile('1-testimonials-img-2')) {
+                        $img = $request->file('1-testimonials-img-2');
+                        $filename = time() . '.' . $img->getClientOriginalExtension();
+                        $location = public_path('img/production/' . $filename);
+                        $dataLocation = 'img/production/' . $filename;
+                        Image::make($img)->save($location);
+
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-img']])->update(['body' => $dataLocation]);
+                        if (Input::get('1-testimonials-message-2') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-p']])->update(['body' => Input::get('1-testimonials-message-2')]);
+                            if (Input::get('1-testimonials-name-2') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-1']])->update(['body' => Input::get('1-testimonials-name-2')]);
+                                if (Input::get('1-testimonials-position-2') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                                    if (Input::get('1-testimonials-company-2') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                                        if ($request->hasFile('1-testimonials-img-3')) {
+                                            $img = $request->file('1-testimonials-img-3');
+                                            $filename = time() . '.' . $img->getClientOriginalExtension();
+                                            $location = public_path('img/production/' . $filename);
+                                            $dataLocation = 'img/production/' . $filename;
+                                            Image::make($img)->save($location);
+
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                                            if (Input::get('1-testimonials-message-3') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                                                if (Input::get('1-testimonials-name-3') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                                    if (Input::get('1-testimonials-position-3') != null) {
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                                        if (Input::get('1-testimonials-company-3') != null) {
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                                            if ($request->hasFile('1-testimonials-img-4')) {
+                                                                $img = $request->file('1-testimonials-img-4');
+                                                                $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                                $location = public_path('img/production/' . $filename);
+                                                                $dataLocation = 'img/production/' . $filename;
+                                                                Image::make($img)->save($location);
+
+                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                                                if (Input::get('1-testimonials-message-4') != null) {
+                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                                    if (Input::get('1-testimonials-name-4') != null) {
+                                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                                        if (Input::get('1-testimonials-position-4') != null) {
+                                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                                            if (Input::get('1-testimonials-company-4') != null) {
+                                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-company-1') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-1-h5-3']])->update(['body' => Input::get('1-testimonials-company-1')]);
+                if ($request->hasFile('1-testimonials-img-2')) {
+                    $img = $request->file('1-testimonials-img-2');
+                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                    $location = public_path('img/production/' . $filename);
+                    $dataLocation = 'img/production/' . $filename;
+                    Image::make($img)->save($location);
+
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-img']])->update(['body' => $dataLocation]);
+                    if (Input::get('1-testimonials-message-2') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-p']])->update(['body' => Input::get('1-testimonials-message-2')]);
+                        if (Input::get('1-testimonials-name-2') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-1']])->update(['body' => Input::get('1-testimonials-name-2')]);
+                            if (Input::get('1-testimonials-position-2') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                                if (Input::get('1-testimonials-company-2') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                                    if ($request->hasFile('1-testimonials-img-3')) {
+                                        $img = $request->file('1-testimonials-img-3');
+                                        $filename = time() . '.' . $img->getClientOriginalExtension();
+                                        $location = public_path('img/production/' . $filename);
+                                        $dataLocation = 'img/production/' . $filename;
+                                        Image::make($img)->save($location);
+
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                                        if (Input::get('1-testimonials-message-3') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                                            if (Input::get('1-testimonials-name-3') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                                if (Input::get('1-testimonials-position-3') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                                    if (Input::get('1-testimonials-company-3') != null) {
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                                        if ($request->hasFile('1-testimonials-img-4')) {
+                                                            $img = $request->file('1-testimonials-img-4');
+                                                            $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                            $location = public_path('img/production/' . $filename);
+                                                            $dataLocation = 'img/production/' . $filename;
+                                                            Image::make($img)->save($location);
+
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                                            if (Input::get('1-testimonials-message-4') != null) {
+                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                                if (Input::get('1-testimonials-name-4') != null) {
+                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                                    if (Input::get('1-testimonials-position-4') != null) {
+                                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                                        if (Input::get('1-testimonials-company-4') != null) {
+                                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif ($request->hasFile('1-testimonials-img-2')) {
+                $img = $request->file('1-testimonials-img-2');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-img']])->update(['body' => $dataLocation]);
+                if (Input::get('1-testimonials-message-2') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-p']])->update(['body' => Input::get('1-testimonials-message-2')]);
+                    if (Input::get('1-testimonials-name-2') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-1']])->update(['body' => Input::get('1-testimonials-name-2')]);
+                        if (Input::get('1-testimonials-position-2') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                            if (Input::get('1-testimonials-company-2') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                                if ($request->hasFile('1-testimonials-img-3')) {
+                                    $img = $request->file('1-testimonials-img-3');
+                                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                                    $location = public_path('img/production/' . $filename);
+                                    $dataLocation = 'img/production/' . $filename;
+                                    Image::make($img)->save($location);
+
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                                    if (Input::get('1-testimonials-message-3') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                                        if (Input::get('1-testimonials-name-3') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                            if (Input::get('1-testimonials-position-3') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                                if (Input::get('1-testimonials-company-3') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                                    if ($request->hasFile('1-testimonials-img-4')) {
+                                                        $img = $request->file('1-testimonials-img-4');
+                                                        $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                        $location = public_path('img/production/' . $filename);
+                                                        $dataLocation = 'img/production/' . $filename;
+                                                        Image::make($img)->save($location);
+
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                                        if (Input::get('1-testimonials-message-4') != null) {
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                            if (Input::get('1-testimonials-name-4') != null) {
+                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                                if (Input::get('1-testimonials-position-4') != null) {
+                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                                    if (Input::get('1-testimonials-company-4') != null) {
+                                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-message-2') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-p']])->update(['body' => Input::get('1-testimonials-message-2')]);
+                if (Input::get('1-testimonials-name-2') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-1']])->update(['body' => Input::get('1-testimonials-name-2')]);
+                    if (Input::get('1-testimonials-position-2') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                        if (Input::get('1-testimonials-company-2') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                            if ($request->hasFile('1-testimonials-img-3')) {
+                                $img = $request->file('1-testimonials-img-3');
+                                $filename = time() . '.' . $img->getClientOriginalExtension();
+                                $location = public_path('img/production/' . $filename);
+                                $dataLocation = 'img/production/' . $filename;
+                                Image::make($img)->save($location);
+
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                                if (Input::get('1-testimonials-message-3') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                                    if (Input::get('1-testimonials-name-3') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                        if (Input::get('1-testimonials-position-3') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                            if (Input::get('1-testimonials-company-3') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                                if ($request->hasFile('1-testimonials-img-4')) {
+                                                    $img = $request->file('1-testimonials-img-4');
+                                                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                    $location = public_path('img/production/' . $filename);
+                                                    $dataLocation = 'img/production/' . $filename;
+                                                    Image::make($img)->save($location);
+
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                                    if (Input::get('1-testimonials-message-4') != null) {
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                        if (Input::get('1-testimonials-name-4') != null) {
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                            if (Input::get('1-testimonials-position-4') != null) {
+                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                                if (Input::get('1-testimonials-company-4') != null) {
+                                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-name-2') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-1']])->update(['body' => Input::get('1-testimonials-name-2')]);
+                if (Input::get('1-testimonials-position-2') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                    if (Input::get('1-testimonials-company-2') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                        if ($request->hasFile('1-testimonials-img-3')) {
+                            $img = $request->file('1-testimonials-img-3');
+                            $filename = time() . '.' . $img->getClientOriginalExtension();
+                            $location = public_path('img/production/' . $filename);
+                            $dataLocation = 'img/production/' . $filename;
+                            Image::make($img)->save($location);
+
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                            if (Input::get('1-testimonials-message-3') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                                if (Input::get('1-testimonials-name-3') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                    if (Input::get('1-testimonials-position-3') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                        if (Input::get('1-testimonials-company-3') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                            if ($request->hasFile('1-testimonials-img-4')) {
+                                                $img = $request->file('1-testimonials-img-4');
+                                                $filename = time() . '.' . $img->getClientOriginalExtension();
+                                                $location = public_path('img/production/' . $filename);
+                                                $dataLocation = 'img/production/' . $filename;
+                                                Image::make($img)->save($location);
+
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                                if (Input::get('1-testimonials-message-4') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                    if (Input::get('1-testimonials-name-4') != null) {
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                        if (Input::get('1-testimonials-position-4') != null) {
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                            if (Input::get('1-testimonials-company-4') != null) {
+                                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-position-2') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-2']])->update(['body' => Input::get('1-testimonials-position-2')]);
+                if (Input::get('1-testimonials-company-2') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                    if ($request->hasFile('1-testimonials-img-3')) {
+                        $img = $request->file('1-testimonials-img-3');
+                        $filename = time() . '.' . $img->getClientOriginalExtension();
+                        $location = public_path('img/production/' . $filename);
+                        $dataLocation = 'img/production/' . $filename;
+                        Image::make($img)->save($location);
+
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                        if (Input::get('1-testimonials-message-3') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                            if (Input::get('1-testimonials-name-3') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                                if (Input::get('1-testimonials-position-3') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                    if (Input::get('1-testimonials-company-3') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                        if ($request->hasFile('1-testimonials-img-4')) {
+                                            $img = $request->file('1-testimonials-img-4');
+                                            $filename = time() . '.' . $img->getClientOriginalExtension();
+                                            $location = public_path('img/production/' . $filename);
+                                            $dataLocation = 'img/production/' . $filename;
+                                            Image::make($img)->save($location);
+
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                            if (Input::get('1-testimonials-message-4') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                                if (Input::get('1-testimonials-name-4') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                    if (Input::get('1-testimonials-position-4') != null) {
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                        if (Input::get('1-testimonials-company-4') != null) {
+                                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-company-2') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-2-h5-3']])->update(['body' => Input::get('1-testimonials-company-2')]);
+                if ($request->hasFile('1-testimonials-img-3')) {
+                    $img = $request->file('1-testimonials-img-3');
+                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                    $location = public_path('img/production/' . $filename);
+                    $dataLocation = 'img/production/' . $filename;
+                    Image::make($img)->save($location);
+
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                    if (Input::get('1-testimonials-message-3') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                        if (Input::get('1-testimonials-name-3') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                            if (Input::get('1-testimonials-position-3') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                                if (Input::get('1-testimonials-company-3') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                    if ($request->hasFile('1-testimonials-img-4')) {
+                                        $img = $request->file('1-testimonials-img-4');
+                                        $filename = time() . '.' . $img->getClientOriginalExtension();
+                                        $location = public_path('img/production/' . $filename);
+                                        $dataLocation = 'img/production/' . $filename;
+                                        Image::make($img)->save($location);
+
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                        if (Input::get('1-testimonials-message-4') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                            if (Input::get('1-testimonials-name-4') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                                if (Input::get('1-testimonials-position-4') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                    if (Input::get('1-testimonials-company-4') != null) {
+                                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif ($request->hasFile('1-testimonials-img-3')) {
+                $img = $request->file('1-testimonials-img-3');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-img']])->update(['body' => $dataLocation]);
+                if (Input::get('1-testimonials-message-3') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                    if (Input::get('1-testimonials-name-3') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                        if (Input::get('1-testimonials-position-3') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                            if (Input::get('1-testimonials-company-3') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                                if ($request->hasFile('1-testimonials-img-4')) {
+                                    $img = $request->file('1-testimonials-img-4');
+                                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                                    $location = public_path('img/production/' . $filename);
+                                    $dataLocation = 'img/production/' . $filename;
+                                    Image::make($img)->save($location);
+
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                    if (Input::get('1-testimonials-message-4') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                        if (Input::get('1-testimonials-name-4') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                            if (Input::get('1-testimonials-position-4') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                                if (Input::get('1-testimonials-company-4') != null) {
+                                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-message-3') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-p']])->update(['body' => Input::get('1-testimonials-message-3')]);
+                if (Input::get('1-testimonials-name-3') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                    if (Input::get('1-testimonials-position-3') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                        if (Input::get('1-testimonials-company-3') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                            if ($request->hasFile('1-testimonials-img-4')) {
+                                $img = $request->file('1-testimonials-img-4');
+                                $filename = time() . '.' . $img->getClientOriginalExtension();
+                                $location = public_path('img/production/' . $filename);
+                                $dataLocation = 'img/production/' . $filename;
+                                Image::make($img)->save($location);
+
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                                if (Input::get('1-testimonials-message-4') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                    if (Input::get('1-testimonials-name-4') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                        if (Input::get('1-testimonials-position-4') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                            if (Input::get('1-testimonials-company-4') != null) {
+                                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-name-3') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-1']])->update(['body' => Input::get('1-testimonials-name-3')]);
+                if (Input::get('1-testimonials-position-3') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                    if (Input::get('1-testimonials-company-3') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                        if ($request->hasFile('1-testimonials-img-4')) {
+                            $img = $request->file('1-testimonials-img-4');
+                            $filename = time() . '.' . $img->getClientOriginalExtension();
+                            $location = public_path('img/production/' . $filename);
+                            $dataLocation = 'img/production/' . $filename;
+                            Image::make($img)->save($location);
+
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                            if (Input::get('1-testimonials-message-4') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                                if (Input::get('1-testimonials-name-4') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                    if (Input::get('1-testimonials-position-4') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                        if (Input::get('1-testimonials-company-4') != null) {
+                                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-position-3') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-2']])->update(['body' => Input::get('1-testimonials-position-3')]);
+                if (Input::get('1-testimonials-company-3') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                    if ($request->hasFile('1-testimonials-img-4')) {
+                        $img = $request->file('1-testimonials-img-4');
+                        $filename = time() . '.' . $img->getClientOriginalExtension();
+                        $location = public_path('img/production/' . $filename);
+                        $dataLocation = 'img/production/' . $filename;
+                        Image::make($img)->save($location);
+
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                        if (Input::get('1-testimonials-message-4') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                            if (Input::get('1-testimonials-name-4') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                                if (Input::get('1-testimonials-position-4') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                    if (Input::get('1-testimonials-company-4') != null) {
+                                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-company-3') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-3-h5-3']])->update(['body' => Input::get('1-testimonials-company-3')]);
+                if ($request->hasFile('1-testimonials-img-4')) {
+                    $img = $request->file('1-testimonials-img-4');
+                    $filename = time() . '.' . $img->getClientOriginalExtension();
+                    $location = public_path('img/production/' . $filename);
+                    $dataLocation = 'img/production/' . $filename;
+                    Image::make($img)->save($location);
+
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                    if (Input::get('1-testimonials-message-4') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                        if (Input::get('1-testimonials-name-4') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                            if (Input::get('1-testimonials-position-4') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                                if (Input::get('1-testimonials-company-4') != null) {
+                                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                                }
+                            }
+                        }
+                    }
+                }
+            } elseif ($request->hasFile('1-testimonials-img-4')) {
+                $img = $request->file('1-testimonials-img-4');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-img']])->update(['body' => $dataLocation]);
+                if (Input::get('1-testimonials-message-4') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                    if (Input::get('1-testimonials-name-4') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                        if (Input::get('1-testimonials-position-4') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                            if (Input::get('1-testimonials-company-4') != null) {
+                                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                            }
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-message-4') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-p']])->update(['body' => Input::get('1-testimonials-message-4')]);
+                if (Input::get('1-testimonials-name-4') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                    if (Input::get('1-testimonials-position-4') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                        if (Input::get('1-testimonials-company-4') != null) {
+                            $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                        }
+                    }
+                }
+            } elseif (Input::get('1-testimonials-name-4') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-1']])->update(['body' => Input::get('1-testimonials-name-4')]);
+                if (Input::get('1-testimonials-position-4') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                    if (Input::get('1-testimonials-company-4') != null) {
+                        $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                    }
+                }
+            } elseif (Input::get('1-testimonials-position-4') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-2']])->update(['body' => Input::get('1-testimonials-position-4')]);
+                if (Input::get('1-testimonials-company-4') != null) {
+                    $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+                }
+            } elseif (Input::get('1-testimonials-company-4') != null) {
+                $content->where([['pages_id', '=', '2'], ['section', '=', '2-3-4-h5-3']])->update(['body' => Input::get('1-testimonials-company-4')]);
+            }
         }
+
+        return redirect('/dash-about');
     }
-    
+
     public function updateAboutPartners(Request $request)
     {
         if(Auth::check())
         {
             $content = new Content;
+            
             
             
             return redirect('/dash-about');

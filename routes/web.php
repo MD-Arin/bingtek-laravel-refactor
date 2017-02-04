@@ -46,6 +46,6 @@ Route::post('/dashboard/homeOfficeSpace', 'DashboardController@updateOfficeSpace
 //Dashboard About routes
 Route::post('/dash-about/aboutHistory', 'DashAboutController@updateAboutHistory');
 Route::post('/dash-about/aboutMilestones', 'DashAboutController@updateAboutMilestones');
-Route::post('/dash-about/aboutTestimonials', 'DashbAboutController@udpateAboutTestimonials');
+Route::post('/dash-about/aboutTestimonials', 'DashAboutController@updateAboutTestimonials');
 Route::post('/dash-about/aboutPartners', 'DashAboutController@updateAboutPartners');
 Route::post('/dash-about/aboutTeam', 'DashAboutController@updateAboutTeam');

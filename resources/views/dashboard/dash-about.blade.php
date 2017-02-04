@@ -82,6 +82,7 @@
     </div>
     <div class="row">
         <form class="form-group" action="/dash-about/aboutTestimonials" method="POST" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <input class="btn btn-primary" name="1-testimonials-img-1" type="file">
                 <br>
@@ -139,6 +140,7 @@
     <div class="container-fluid">
         <div class="row">
             <form class="form-group" action="/dash-about/aboutPartners" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
                 <input class="btn btn-primary" type="file" name="1-partners-img-1">
                 <br>
                 <input class="form-control" type="text" name="1-partners-name-1" placeholder="Partner Name">
@@ -157,6 +159,7 @@
     </div>
     <div class="row">
         <form class="form-group" action="/dash-about/aboutTeam" method="POST" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                 <input class="btn btn-primary" type="file" name="1-team-img-1">
                 <br>

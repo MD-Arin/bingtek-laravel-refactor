@@ -173,21 +173,25 @@ class PagesController extends Controller
     $aboutTestimonials1H51 = $content->where([['pages_id','=','2'],['section','=','2-3-1-h5-1']])->value('body');
     $aboutTestimonials1H52 = $content->where([['pages_id','=','2'],['section','=','2-3-1-h5-2']])->value('body');
     $aboutTestimonials1H53 = $content->where([['pages_id','=','2'],['section','=','2-3-1-h5-3']])->value('body');
+    
     $aboutTestimonials2Img = $content->where([['pages_id','=','2'],['section','=','2-3-2-img']])->value('body');
     $aboutTestimonials2P = $content->where([['pages_id','=','2'],['section','=','2-3-2-p']])->value('body');
     $aboutTestimonials2H51 = $content->where([['pages_id','=','2'],['section','=','2-3-2-h5-1']])->value('body');
     $aboutTestimonials2H52 = $content->where([['pages_id','=','2'],['section','=','2-3-2-h5-2']])->value('body');
     $aboutTestimonials2H53 = $content->where([['pages_id','=','2'],['section','=','2-3-2-h5-3']])->value('body');
+    
     $aboutTestimonials3Img = $content->where([['pages_id','=','2'],['section','=','2-3-3-img']])->value('body');
     $aboutTestimonials3P = $content->where([['pages_id','=','2'],['section','=','2-3-3-p']])->value('body');
     $aboutTestimonials3H51 = $content->where([['pages_id','=','2'],['section','=','2-3-3-h5-1']])->value('body');
     $aboutTestimonials3H52 = $content->where([['pages_id','=','2'],['section','=','2-3-3-h5-2']])->value('body');
     $aboutTestimonials3H53 = $content->where([['pages_id','=','2'],['section','=','2-3-3-h5-3']])->value('body');
+    
     $aboutTestimonials4Img = $content->where([['pages_id','=','2'],['section','=','2-3-4-img']])->value('body');
     $aboutTestimonials4P = $content->where([['pages_id','=','2'],['section','=','2-3-4-p']])->value('body');
     $aboutTestimonials4H51 = $content->where([['pages_id','=','2'],['section','=','2-3-4-h5-1']])->value('body');
     $aboutTestimonials4H52 = $content->where([['pages_id','=','2'],['section','=','2-3-4-h5-2']])->value('body');
     $aboutTestimonials4H53 = $content->where([['pages_id','=','2'],['section','=','2-3-4-h5-3']])->value('body');
+    
     //About Partners
     $aboutPartners1Img = $content->where([['pages_id','=','2'],['section','=','2-4-1-img']])->value('body');
     $aboutPartners1ImgH1 = $content->where([['pages_id','=','2'],['section','=','2-4-1-img-h1']])->value('body');
