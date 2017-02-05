@@ -1114,8 +1114,114 @@ class DashAboutController extends Controller
         {
             $content = new Content;
             
-            
-            
+            if($request->hasFile('1-partners-img-1') && Input::get('1-partners-number-1') == 1)
+            {
+                $img = $request->file('1-partners-img-1');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+                
+                $content->where([['pages_id','=','2'],['section','=','2-4-1-img']])->update(['body' => $dataLocation]);
+                if(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 1)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-1-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+            }
+            elseif($request->hasFile('1-partners-img-1') && Input::get('1-partners-number-1') == 2)
+            {
+                $img = $request->file('1-partners-img-1');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+                
+                $content->where([['pages_id','=','2'],['section','=','2-4-2-img']])->update(['body' => $dataLocation]);
+                if(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 2)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-2-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+            }
+            elseif($request->hasFile('1-partners-img-1') && Input::get('1-partners-number-1') == 3)
+            {
+                $img = $request->file('1-partners-img-1');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+                
+                $content->where([['pages_id','=','2'],['section','=','2-4-3-img']])->update(['body' => $dataLocation]);
+                if(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 3)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-3-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+            }
+            elseif($request->hasFile('1-partners-img-1') && Input::get('1-partners-number-1') == 4)
+            {
+                $img = $request->file('1-partners-img-1');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+                
+                $content->where([['pages_id','=','2'],['section','=','2-4-4-img']])->update(['body' => $dataLocation]);
+                if(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 4)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-4-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+            }
+            elseif($request->hasFile('1-partners-img-1') && Input::get('1-partners-number-1') == 5)
+            {
+                $img = $request->file('1-partners-img-1');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+                
+                $content->where([['pages_id','=','2'],['section','=','2-4-5-img']])->update(['body' => $dataLocation]);
+                if(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 5)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-5-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+            }
+            elseif($request->hasFile('1-partners-img-1') && Input::get('1-partners-number-1') == 6)
+            {
+                $img = $request->file('1-partners-img-1');
+                $filename = time() . '.' . $img->getClientOriginalExtension();
+                $location = public_path('img/production/' . $filename);
+                $dataLocation = 'img/production/' . $filename;
+                Image::make($img)->save($location);
+                
+                $content->where([['pages_id','=','2'],['section','=','2-4-6-img']])->update(['body' => $dataLocation]);
+                if(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 6)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-6-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+            }
+            elseif(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 1)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-1-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+                elseif(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 2)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-2-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+                elseif(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 3)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-3-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+                elseif(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 4)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-4-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+                elseif(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 5)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-5-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
+                elseif(Input::get('1-partners-name-1') != null && Input::get('1-partners-number-1') == 6)
+                {
+                    $content->where([['pages_id','=','2'],['section','=','2-4-6-img-h1']])->update(['body' => Input::get('1-partners-name-1')]);
+                }
             return redirect('/dash-about');
         }
     }
