@@ -49,3 +49,6 @@ Route::post('/dash-about/aboutMilestones', 'DashAboutController@updateAboutMiles
 Route::post('/dash-about/aboutTestimonials', 'DashAboutController@updateAboutTestimonials');
 Route::post('/dash-about/aboutPartners', 'DashAboutController@updateAboutPartners');
 Route::post('/dash-about/aboutTeam', 'DashAboutController@updateAboutTeam');
+
+//Dashboard First Product/Service routes
+Route::post('/dash-fps/fpsConnectivity', 'DashboardFpsController@updateFpsConnectivity');
