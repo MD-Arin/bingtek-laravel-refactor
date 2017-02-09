@@ -19,4 +19,34 @@ class DashFpsController extends Controller
             
         }
     }
+    
+    public function updateFpsInternet(Request $request)
+    {
+        $content = new Content;
+        
+        if(Auth::check())
+        {
+            
+        }
+    }
+    
+    public function updateFpsFastInternet(Request $request)
+    {
+        $content = new Content;
+        
+        if(Auth::check())
+        {
+            
+        }
+    }
+    
+    public function updateFpsUsers(Request $request)
+    {
+        $content = new Content;
+        
+        if(Auth::check())
+        {
+            
+        }
+    }
 }

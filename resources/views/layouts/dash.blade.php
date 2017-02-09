@@ -17,6 +17,7 @@
           @include('includes.footer')
       </div>
     </div>
+    </div>
   </body>
   <script type="text/javascript" src="{{ URL::to('js/jquery.min.js') }}"></script>
   <script type="text/javascript" src="{{ URL::to('js/bootstrap.js') }}"></script>
