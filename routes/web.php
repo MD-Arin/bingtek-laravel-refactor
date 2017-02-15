@@ -54,4 +54,4 @@ Route::post('/dash-about/aboutTeam', 'DashAboutController@updateAboutTeam');
 Route::post('/dash-fps/fpsConnectivity', 'DashFpsController@updateFpsConnectivity');
 Route::post('/dash-fps/fpsInternet', 'DashFpsController@updateFpsInternet');
 Route::post('/dash-fps/fpsFastInternet', 'DashFpsController@updateFpsFastInternet');
-Route::post('/dash-fps/Users', 'DashFpsController@updateFpsUsers');
+Route::post('/dash-fps/fpsUsers', 'DashFpsController@updateFpsUsers');

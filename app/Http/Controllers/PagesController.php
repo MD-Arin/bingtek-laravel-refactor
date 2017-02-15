@@ -307,7 +307,6 @@ class PagesController extends Controller
     $fpsInternetConnection2H1 = $content->where([['pages_id', '=', '3'],['section', '=', '3-2-2-h1']])->value('body');
     $fpsInternetConnection2H2 = $content->where([['pages_id', '=', '3'],['section', '=', '3-2-2-h2']])->value('body');
     $fpsInternetConnection2P1 = $content->where([['pages_id', '=', '3'],['section', '=', '3-2-2-p-1']])->value('body');
-    $fpsInternetConnection2P2 = $content->where([['pages_id', '=', '3'],['section', '=', '3-2-2-p-2']])->value('body');
     //FPS Fast Internet
     $fpsFastInternet1Img = $content->where([['pages_id', '=', '3'],['section', '=', '3-3-1-img']])->value('body');
     $fpsFastInternet1H1 = $content->where([['pages_id', '=', '3'],['section', '=', '3-3-1-h1']])->value('body');
@@ -340,7 +339,6 @@ class PagesController extends Controller
       'fpsInternetConnection2H1' => $fpsInternetConnection2H1,
       'fpsInternetConnection2H2' => $fpsInternetConnection2H2,
       'fpsInternetConnection2P1' => $fpsInternetConnection2P1,
-      'fpsInternetConnection2P2' => $fpsInternetConnection2P2,
       //FPS Fast Internet
       'fpsFastInternet1Img' => $fpsFastInternet1Img,
       'fpsFastInternet1H1' => $fpsFastInternet1H1,

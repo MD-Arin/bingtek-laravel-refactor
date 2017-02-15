@@ -92,12 +92,6 @@ class FpsSeeder extends Seeder
 
       DB::table('contents')->insert(array(
         'pages_id' => '3',
-        'section' => '3-2-2-p-2',
-        'body' => 'We offer fast internet as quickly as possible.'
-      ));
-
-      DB::table('contents')->insert(array(
-        'pages_id' => '3',
         'section' => '3-3-1-img',
         'body' => 'img/placeholders/placeholder-1.jpg'
       ));

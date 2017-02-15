@@ -54,8 +54,10 @@
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <input class="form-control"  type="text" name="1-fpsInternet-h1-1"  placeholder="Heading">
+              <br>
+              <input class="form-control"  type="text" name="1-fpsInternet-h2-1"  placeholder="Sub Heading">
               <hr>
-                  <textarea class="form-control" rows="8" cols="20" name="1-fpsInternet-p-1" placeholder="Content Body"></textarea>
+              <textarea class="form-control" rows="8" cols="20" name="1-fpsInternet-p-1" placeholder="Content Body"></textarea>
           </div>
           <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" name="1-fpsInternet-submit" value="Save">
       </form>
@@ -85,11 +87,11 @@
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                   <input class="btn btn-primary" type="file" name="1-fastInternet-img-1">
                   <br>
-                  <input class="form-control" type="text" name="1-fastInternet-li-1" placeholder="Quick Pointers">
+                  <input class="form-control" type="text" name="1-fastInternet-li-1" placeholder="Quick Pointer 1">
                   <br>
-                  <input class="form-control" type="text" name="1-fastInternet-li-2" placeholder="Quick Pointers">
+                  <input class="form-control" type="text" name="1-fastInternet-li-2" placeholder="Quick Pointer 2">
                   <br>
-                  <input class="form-control" type="text" name="1-fastInternet-li-3" placeholder="Quick Pointers">
+                  <input class="form-control" type="text" name="1-fastInternet-li-3" placeholder="Quick Pointer 3">
                   <br>
               </div>
               <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" name="1-fastInternet-submit" value="Save">
@@ -121,9 +123,9 @@
               <input class="form-control" type="text" name="1-fpsUsers-p-2" placeholder="Tag Line">
           </div>
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-             <input class="btn btn-primary" type="file" name="1-fpsUsers-img-2">
+             <input class="btn btn-primary" type="file" name="1-fpsUsers-img-3">
               <br>
-              <input class="form-control" type="text" name="1-fpsUsers-p-2" placeholder="Tag Line">
+              <input class="form-control" type="text" name="1-fpsUsers-p-3" placeholder="Tag Line">
           </div>
            <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" name="1-fpsUsers-submit" value="Save">
       </form>

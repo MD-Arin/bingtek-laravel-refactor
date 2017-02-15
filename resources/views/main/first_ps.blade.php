@@ -81,9 +81,6 @@
         <p>
           {{ $fpsInternetConnection2P1 }}
         </p>
-        <p>
-          {{ $fpsInternetConnection2P2 }}
-        </p>
       </ul>
     </div>
   </div>
