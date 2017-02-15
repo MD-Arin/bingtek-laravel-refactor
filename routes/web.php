@@ -51,7 +51,7 @@ Route::post('/dash-about/aboutPartners', 'DashAboutController@updateAboutPartner
 Route::post('/dash-about/aboutTeam', 'DashAboutController@updateAboutTeam');
 
 //Dashboard First Product/Service routes
-Route::post('/dash-fps/fpsConnectivity', 'DashboardFpsController@updateFpsConnectivity');
-Route::post('/dash-fps/fpsInternet', 'DashboardFpsController@updateFpsInternet');
-Route::post('/dash-fps/fpsFastInternet', 'DashboardFpsController@updateFpsFastInternet');
-Route::post('/dash-fpsUsers', 'DashboardFpsController@updateFpsUsers');
+Route::post('/dash-fps/fpsConnectivity', 'DashFpsController@updateFpsConnectivity');
+Route::post('/dash-fps/fpsInternet', 'DashFpsController@updateFpsInternet');
+Route::post('/dash-fps/fpsFastInternet', 'DashFpsController@updateFpsFastInternet');
+Route::post('/dash-fps/Users', 'DashFpsController@updateFpsUsers');

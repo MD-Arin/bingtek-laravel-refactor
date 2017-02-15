@@ -12,7 +12,7 @@
       <hr>
       <h1 class="text-center">Edit Overview</h1>
       <hr> 
-      <form class="form-group" action="/dash-fps/fpsConnectivity/" method="POST" enctype="multipart/form-data">
+      <form class="form-group" action="/dash-fps/fpsConnectivity" method="POST" enctype="multipart/form-data">
           {{ csrf_field()  }}
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
               <input class="btn btn-primary" type="file" name="1-fpsConnect-img-1" >

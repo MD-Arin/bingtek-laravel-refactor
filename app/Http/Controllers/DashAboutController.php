@@ -17,7 +17,7 @@ class DashAboutController extends Controller {
             if (Input::get('1-history-h1') != null) {
                 $content->where([['pages_id', '=', '2'], ['section', '=', '2-1-1-h1']])->update(['body' => Input::get('1-history-h1')]);
                 if ($request->hasFile('1-history-img-1')) {
-                    $img = $request->file('cover-image');
+                    $img = $request->file('1-history-img-1');
                     $filename = time() . '.' . $img->getClientOriginalExtension();
                     $location = public_path('img/production/' . $filename);
                     $dataLocation = 'img/production/' . $filename;
@@ -38,7 +38,7 @@ class DashAboutController extends Controller {
                     }
                 }
             } elseif ($request->hasFile('1-history-img-1')) {
-                $img = $request->file('cover-image');
+                $img = $request->file('1-history-img-1');
                 $filename = time() . '.' . $img->getClientOriginalExtension();
                 $location = public_path('img/production/' . $filename);
                 $dataLocation = 'img/production/' . $filename;
@@ -278,7 +278,7 @@ class DashAboutController extends Controller {
             $content = new Content;
 
             if ($request->hasFile('1-testimonials-img-1')) {
-                $img = $request->file('1-testimonials-img-2');
+                $img = $request->file('1-testimonials-img-1');
                 $filename = time() . '.' . $img->getClientOriginalExtension();
                 $location = public_path('img/production/' . $filename);
                 $dataLocation = 'img/production/' . $filename;
