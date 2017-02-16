@@ -26,28 +26,12 @@
   </div>
   <div class="row  carousel-height">
     <div class="cover-image" style="background: url('{{ URL::to($spsNetworkingPointers1Img) }}'); height: 100vh; width: 100%;">
-      <div class="text-left">
-        <ul class="list-unstyled">
-          <li>{{ $spsNetworkingPointers1li1 }}</li>
-          <li>{{ $spsNetworkingPointers1li2 }}</li>
-          <li>{{ $spsNetworkingPointers1li3 }}</li>
-          <li>{{ $spsNetworkingPointers1li4 }}</li>
-        </ul>
-      </div>
-      <div class="text-center">
+        <div class="text-center" style="padding-top: 23%;">
         <ul class="list-unstyled">
           <li>{{ $spsNetworkingPointers2li1 }}</li>
           <li>{{ $spsNetworkingPointers2li2 }}</li>
           <li>{{ $spsNetworkingPointers2li3 }}</li>
           <li>{{ $spsNetworkingPointers2li4 }}</li>
-        </ul>
-      </div>
-      <div class="text-right">
-        <ul class="list-unstyled">
-          <li>{{ $spsNetworkingPointers3li1 }}</li>
-          <li>{{ $spsNetworkingPointers3li2 }}</li>
-          <li>{{ $spsNetworkingPointers3li3 }}</li>
-          <li>{{ $spsNetworkingPointers3li4 }}</li>
         </ul>
       </div>
     </div>

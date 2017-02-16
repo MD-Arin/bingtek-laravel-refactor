@@ -40,30 +40,6 @@ class SpsSeeder extends Seeder
 
         DB::table('contents')->insert([
           'pages_id' => '4',
-          'section' => '4-2-1-li-1',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ]);
-
-        DB::table('contents')->insert([
-          'pages_id' => '4',
-          'section' => '4-2-1-li-2',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ]);
-
-        DB::table('contents')->insert([
-          'pages_id' => '4',
-          'section' => '4-2-1-li-3',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ]);
-
-        DB::table('contents')->insert([
-          'pages_id' => '4',
-          'section' => '4-2-1-li-4',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ]);
-
-        DB::table('contents')->insert([
-          'pages_id' => '4',
           'section' => '4-2-2-li-1',
           'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
         ]);
@@ -83,30 +59,6 @@ class SpsSeeder extends Seeder
         DB::table('contents')->insert([
           'pages_id' => '4',
           'section' => '4-2-2-li-4',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ]);
-
-        DB::table('contents')->insert([
-          'pages_id' => '4',
-          'section' => '4-2-3-li-1',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ]);
-
-        DB::table('contents')->insert([
-          'pages_id' => '4',
-          'section' => '4-2-3-li-2',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ]);
-
-        DB::table('contents')->insert([
-          'pages_id' => '4',
-          'section' => '4-2-3-li-3',
-          'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-        ]);
-
-        DB::table('contents')->insert([
-          'pages_id' => '4',
-          'section' => '4-2-3-li-4',
           'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
         ]);
 

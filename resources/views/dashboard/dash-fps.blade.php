@@ -40,7 +40,7 @@
 
   <div class="row">
     <hr>
-    <h1 class="text-center"> Edit Internet Connectivity</h1>
+    <h1 class="text-center"> Edit Section 2</h1>
     <hr>
   </div>
       
@@ -65,7 +65,7 @@
 
 <div class="row">
   <hr>
-  <h1 class="text-center">Edit Internet Speeds</h1>
+  <h1 class="text-center">Edit Section 3</h1>
   <hr>
 </div>
 
@@ -104,7 +104,7 @@
    
    <div class="row">
     <hr>
-    <h1 class="text-center">Edit Users</h1>
+    <h1 class="text-center">Edit Tag Line</h1>
     <hr>
   </div>
 

@@ -366,18 +366,10 @@ class PagesController extends Controller
     $spsNetworkingIntro1P = $content->where([['pages_id', '=', '4'],['section', '=', '4-1-1-p']])->value('body');
     //Networking Pointers
     $spsNetworkingPointers1Img = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-img']])->value('body');
-    $spsNetworkingPointers1li1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-li-1']])->value('body');
-    $spsNetworkingPointers1li2 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-li-2']])->value('body');
-    $spsNetworkingPointers1li3 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-li-3']])->value('body');
-    $spsNetworkingPointers1li4 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-1-li-4']])->value('body');
     $spsNetworkingPointers2li1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-2-li-1']])->value('body');
     $spsNetworkingPointers2li2 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-2-li-2']])->value('body');
     $spsNetworkingPointers2li3 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-2-li-3']])->value('body');
     $spsNetworkingPointers2li4 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-2-li-4']])->value('body');
-    $spsNetworkingPointers3li1 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-3-li-1']])->value('body');
-    $spsNetworkingPointers3li2 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-3-li-2']])->value('body');
-    $spsNetworkingPointers3li3 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-3-li-3']])->value('body');
-    $spsNetworkingPointers3li4 = $content->where([['pages_id', '=', '4'],['section', '=', '4-2-3-li-4']])->value('body');
     //Networking Touchline
     $spsNetworkingTouchline1P = $content->where([['pages_id', '=', '4'],['section', '=', '4-3-1-p']])->value('body');
     //Networking Departmental

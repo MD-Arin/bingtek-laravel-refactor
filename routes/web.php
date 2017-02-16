@@ -55,3 +55,10 @@ Route::post('/dash-fps/fpsConnectivity', 'DashFpsController@updateFpsConnectivit
 Route::post('/dash-fps/fpsInternet', 'DashFpsController@updateFpsInternet');
 Route::post('/dash-fps/fpsFastInternet', 'DashFpsController@updateFpsFastInternet');
 Route::post('/dash-fps/fpsUsers', 'DashFpsController@updateFpsUsers');
+
+//Dashboard Second Product/Service routes
+Route::post('/dash-sps/spsIntro', 'DashSpsController@updateSpsIntro');
+Route::post('/dash-sps/spsSec2', 'DashSpsController@updateSpsSec2');
+Route::post('/dash-sps/spsTouchline', 'DashSpsController@updateSpsTouchline');
+Route::post('/dash-sps/spsSec3', 'DashSpsController@updateSpsSec3');
+Route::post('/dash-sps/spsSec4', 'DashSpsController@updateSpsSec4');

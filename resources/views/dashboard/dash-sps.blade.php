@@ -6,89 +6,111 @@
 
 @section('dash-content')
 <div class="container-fluid">
-  <div class="jumbotron">
-    <h1 class="text-center">Networking</h1>
-    <h3 class="text-center">Diversified Networking Solutions</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-    </p>
-  </div>
-
-  <div class="row">
-    <hr>
-  </div>
-  <div class="row  carousel-height">
-    <div class="cover-image" style="background: url('{{ URL::to('img/placeholders/placeholder-2.jpg') }}'); height: 100vh; width: 100%;">
-      <div class="text-left">
-        <ul class="list-unstyled">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-        </ul>
-      </div>
-      <div class="text-center">
-        <ul class="list-unstyled">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-        </ul>
-      </div>
-      <div class="text-right">
-        <ul class="list-unstyled">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-    <hr>
-    <div class="container">
-      <p class="text-info text-center jumbotron">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-      </p>
-    </div>
-    <hr>
     <div class="row">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <h3 class="text-center">Interdepartmental Networking</h3>
         <hr>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail"/>
-      </div>
+        <h1 class="text-center">Edit Introduction</h1>
+        <hr>
+    </div>
+    <div class="jumbotron">
+        <form class="form-group" action="/dash-sps/spsIntro" method="POST" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <input class="form-control" type="text" name="1-spsIntro-h1-1" placeholder="Introduction Heading">
+            <br>
+            <input class="form-control" type="text" name="1-spsIntro-h2-1" placeholder="Introduction Sub-Heading">
+            <br>
+            <textarea class="form-control" rows="8" cols="20" name="1-spsIntro-p-1" placeholder="Introduction Body"></textarea>
+            <input class="btn btn-primary" type="submit" style="margin-left: 47%; margin-top: 20px;" value="Save">
+        </form>
     </div>
 
-  <hr>
-  <div class="container-fluid">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 vertical-line-right">
-      <div class="row">
-        <h3 class="text-center">Office Networking</h3>
+    <div class="row">
         <hr>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-        </p>
-      </div>
-    </div>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  vertical-line-left">
-      <div class="row">
-        <h3 class="text-center">Building Networking</h3>
+        <h1 class="text-center">Edit Section 2</h1>
         <hr>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-        </p>
-      </div>
     </div>
-  </div>
+    <div class="row  carousel-height">
+        <div class="cover-image" style="background: url('{{ URL::to('img/placeholders/placeholder-2.jpg') }}'); height: 100vh; width: 100%;">
+            <form class="form-group" style="padding-top: 23%;" action="/dash-sps/spsSec2" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <input class="form-control" type="text" name="1-spsSec2-li-1" placeholder="Section Pointer 1">
+                    <br>
+                    <input class="form-control" type="text" name="1-spsSec2-li-2" placeholder="Section Pointer 2">
+                    <br>
+                    <input class="form-control" type="text" name="1-spsSec2-li-3" placeholder="Section Pointer 3">
+                    <br>
+                    <input class="form-control" type="text" name="1-spsSec2-li-4" placeholder="Section Pointer 4">
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <input class="btn btn-primary" type="file" name="1-spsSec2-img-1">
+                </div>
+                <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <hr>
+        <h1 class="text-center">Edit Touchline</h1>
+        <hr>
+    </div>
+
+    <div class="container">
+        <form class="form-group" action="/dash-sps/spsTouchline" method="POST" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <textarea class="form-control" rows="8" cols="20" name="1-spsTouchline-p-1" placeholder="Touchline Body"></textarea>
+            <br>
+            <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" value="Save">
+        </form>
+    </div>
+
+    <div class="row">
+        <hr>
+        <h1 class="text-center">Edit Section 3</h1>
+        <hr>
+    </div>
+
+    <div class="row">
+        <form class="form-group" action="/dash-sps/spsSec3" method="POST" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <input class="form-control" type="text" name="1-spsSec2-h1-1" placeholder="Section 3 Heading">
+                <hr>
+                <textarea class="form-control" rows="8" cols="20" name="1-spsSec3-p-1" placeholder="Section 3 Body Content"></textarea>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <input class="btn btn-primary" type="file" name="1-spsSec3-img-1">
+            </div>
+            <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" value="Save">
+        </form>
+    </div>
+
+    <div class="row">
+        <hr>
+        <h1 class="text-center">Edit Final Section</h1>
+        <hr>
+    </div>
+
+    <div class="container-fluid">
+        <form class="form-group" action="/dash-sps/spsSec4" method="POST" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 vertical-line-right">
+                <div class="row">
+                    <input class="form-control" type="text" name="1-spsSec4-h1-1" placeholder="Final Section Heading 1">
+                    <hr>
+                    <textarea class="form-control" rows="8" cols="20" name="1-spsSec4-p-1" placeholder="Final Section Body 1"></textarea>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  vertical-line-left">
+                <div class="row">
+                    <input class="form-control" type="text" name="1-spsSec4-h1-2" placeholder="Final Section Heading 2">
+                    <hr>
+                    <textarea class="form-control" rows="8" cols="20" name="1-spsSec4-p-2" placeholder="Final Section Body 2"></textarea>
+                </div>
+            </div>
+            <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" value="Save">
+        </form>
+    </div>
 </div>
 <hr>
 
