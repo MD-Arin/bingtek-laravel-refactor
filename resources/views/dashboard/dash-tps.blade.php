@@ -8,102 +8,126 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="container">
         <hr>
-        <h2 class="list-group-item-heading text-center">Software Development</h2>
+        <h2 class="list-group-item-heading text-center">Edit Product Introduction</h2>
         <hr>
-        <div class="jumbotron">
-          <p class="list-group-item-text text-center">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-          </p>
-        </div>
-      </div>
+        <form class="form-group" action="/dash-tps/tpsSoftDevIntro" method="POST" enctype="multipart/form-data">
+            <input class="form-control" type="text" name="1-softDevIntro-h1-1" placeholder="Introduction Section Heading" >
+            <br>
+            <textarea class="form-control" rows="8" cols="20" name="1-softDevIntro-p-1" placeholder="Introduction Body"></textarea>
+            <input class="btn btn-primary" type="submit" style="margin-left: 47%; margin-top: 20px;" value="Save">
+        </form>
     </div>
 
     <div class="row">
-      <hr class="underline">
-      <h2 class="text-center">Customized Software Solutions</h2>
-      <hr class="underline">
+      <hr>
+      <h2 class="text-center">Edit Product Section I</h2>
+      <hr>
     </div>
 
-    <div class="row vertical-line-left vertical-line-right">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <h3>Software made Specifically for you</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          </p>
-          <ul class="list-unstyled">
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-          </ul>
-          <img src="{{ URL::to('img/placeholders/placeholder-2.jpg') }}" class="img-thumbnail" />
+      <div class="row vertical-line-left vertical-line-right">
+          <form class="form-group" action="/dash-tps/tpsSoftDev" method="POST" enctype="multipart/form-data">
+              <input class="form-control" type="text" name="1-softDev-1-h1-1" placeholder="Section 1 Heading" >
+              <br>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <input class="form-control" type="text" name="1-softDev-1-h2-1" placeholder="Section 1 Part 1 Sub Heading" >
+                  <br>
+                  <textarea class="form-control" rows="8" cols="20" name="1-softDev-1-p-1" placeholder="Section 1 Part 1 Body Content"></textarea>
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-1-li-1" placeholder="Section 1 Part 1 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-1-li-2" placeholder="Section 1 Part 1 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-1-li-3" placeholder="Section 1 Part 1 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-1-li-4" placeholder="Section 1 Part 1 Pointer" >
+                  <br>
+                  <input class="btn btn-primary" type="file" name="1-softDev-1-img-1">
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <input class="btn btn-primary" type="file" name="1-softDev-2-img-1">
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-2-h2-1" placeholder="Section 1 Part 2 Sub Heading" >
+                  <br>
+                  <textarea class="form-control" rows="8" cols="20" name="1-softDev-2-p-1" placeholder="Section 1 Part 2 Body Content"></textarea>
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-2-li-1" placeholder="Section 1 Part 2 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-2-li-2" placeholder="Section 1 Part 2 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-2-li-3" placeholder="Section 1 Part 2 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softDev-2-li-4" placeholder="Section 1 Part 2 Pointer" >
+              </div>
+              <input class="btn btn-primary" type="submit" style="margin-left: 47%; margin-top: 20px;" value="Save">
+          </form>
       </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail" />
-          <h3>A wide range of softwares</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          </p>
-          <ul class="list-unstyled">
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-          </ul>
-      </div>
-    </div>
 
     <div class="row">
-      <hr class="underline">
-      <h3 class="text-center">Software Maintenance</h3>
-      <hr class="underline">
+      <hr>
+      <h3 class="text-center">Edit Product Section II</h3>
+      <hr>
     </div>
 
-    <div class="row vertical-line-left vertical-line-right">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <img src="{{ URL::to('img/placeholders/placeholder-0.jpg') }}" class="img-thumbnail" />
-          <h3>Quick and Easy Software Installations</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-          </p>
-          <ol class="list-unstyled">
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-          </ol>
+      <div class="row vertical-line-left vertical-line-right">
+          <form class="form-group" action="/dash-tps/tpsSoftMen" method="POST" enctype="multipart/form-data">
+              <input class="form-control" type="text" name="1-softMen-1-h1-1" placeholder="Section 2 Heading" >
+              <br>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <input class="btn btn-primary" type="file" name="1-softMen-1-img-1">
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-1-h1-1" placeholder="Section 2 Part 1 Sub Heading" >
+                  <br>
+                  <textarea class="form-control" rows="8" cols="20" name="1-softMen-1-p-1" placeholder="Section 2 Part 1 Body Content"></textarea>
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-1-li-1" placeholder="Section 2 Part 1 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-1-li-2" placeholder="Section 2 Part 1 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-1-li-3" placeholder="Section 2 Part 1 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-1-li-4" placeholder="Section 2 Part 1 Pointer" >
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <input class="form-control" type="text" name="1-softMen-2-h1-1" placeholder="Section 2 Part 2 Sub Heading" >
+                  <br>
+                  <textarea class="form-control" rows="8" cols="20" name="1-softMen-2-p-1" placeholder="Section 2 Part 2 Body Content"></textarea>
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-2-li-1" placeholder="Section 2 Part 2 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-2-li-2" placeholder="Section 2 Part 2 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-2-li-3" placeholder="Section 2 Part 2 Pointer" >
+                  <br>
+                  <input class="form-control" type="text" name="1-softMen-2-li-4" placeholder="Section 2 Part 2 Pointer" >
+                  <br>
+                  <input class="btn btn-primary" type="file" name="1-softMen-2-img-1">
+              </div>
+              <input class="btn btn-primary" type="submit" style="margin-left: 47%; margin-top: 20px;" value="Save">
+          </form>
       </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <h3>The Latest Software Upgrades</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-          </p>
-          <ol class="list-unstyled">
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-          </ol>
-          <img src="{{ URL::to('img/placeholders/placeholder-1.jpg') }}" class="img-thumbnail" />
-      </div>
-    </div>
 
     <div class="row">
       <div class="jumbotron">
-        <hr class="underline">
-        <h3 class="text-center">Diverse Software Solutions</h3>
-        <hr class="underline">
-        <p class="text-center">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-        </p>
-        <ol class="list-unstyled text-center">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </li>
-        </ol>
+        <hr>
+        <h3 class="text-center">Edit Final Section</h3>
+        <hr>
+        
+        <form class="form-group" action="/dash-tps/tpsSoftDiverse" method="POST" enctype="multipart/form-data">
+            <input class="form-control" type="text" name="1-softDiverse-h1-1" placeholder="Final Section Heading">
+            <br>
+            <textarea class="form-control" name="1-softDiverse-p-1" rows="8" cols="20" placeholder="Final Section Body Content"></textarea>
+            <br>
+            <input class="form-control" type="text" name="1-softDiverse-li-1" placeholder="Final Section Pointer">
+            <br>
+            <input class="form-control" type="text" name="1-softDiverse-li-2" placeholder="Final Section Pointer">
+            <br>
+            <input class="form-control" type="text" name="1-softDiverse-li-3" placeholder="Final Section Pointer">
+            <br>
+            <input class="form-control" type="text" name="1-softDiverse-li-4" placeholder="Final Section Pointer">
+            <br>
+            <input class="btn btn-primary" type="submit" style="margin-left: 47%; margin-top: 20px;" value="Save">
+        </form>
       </div>
     </div>
   </div>

@@ -390,18 +390,10 @@ class PagesController extends Controller
 
       //Networking Pointers
       'spsNetworkingPointers1Img' => $spsNetworkingPointers1Img,
-      'spsNetworkingPointers1li1' => $spsNetworkingPointers1li1,
-      'spsNetworkingPointers1li2' => $spsNetworkingPointers1li2,
-      'spsNetworkingPointers1li3' => $spsNetworkingPointers1li3,
-      'spsNetworkingPointers1li4' => $spsNetworkingPointers1li4,
       'spsNetworkingPointers2li1' => $spsNetworkingPointers2li1,
       'spsNetworkingPointers2li2' => $spsNetworkingPointers2li2,
       'spsNetworkingPointers2li3' => $spsNetworkingPointers2li3,
       'spsNetworkingPointers2li4' => $spsNetworkingPointers2li4,
-      'spsNetworkingPointers3li1' => $spsNetworkingPointers3li1,
-      'spsNetworkingPointers3li2' => $spsNetworkingPointers3li2,
-      'spsNetworkingPointers3li3' => $spsNetworkingPointers3li3,
-      'spsNetworkingPointers3li4' => $spsNetworkingPointers3li4,
 
       //Networking Touchline
       'spsNetworkingTouchline1P' => $spsNetworkingTouchline1P,

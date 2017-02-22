@@ -62,3 +62,9 @@ Route::post('/dash-sps/spsSec2', 'DashSpsController@updateSpsSec2');
 Route::post('/dash-sps/spsTouchline', 'DashSpsController@updateSpsTouchline');
 Route::post('/dash-sps/spsSec3', 'DashSpsController@updateSpsSec3');
 Route::post('/dash-sps/spsSec4', 'DashSpsController@updateSpsSec4');
+
+//Dashboard Third Product/Service routes
+Route::post('/dash-tps/tpsSoftDevIntro', 'DashTpsController@updateSoftDevIntro');
+Route::post('/dash-tps/tpsSoftDev', 'DashTpsController@updateSoftDev');
+Route::post('/dash-tps/tpsSoftMen', 'DashTpsController@updateSoftMen');
+Route::post('/dash-tps/tpsSoftDiverse', 'DashTpsController@updateSoftDiverse');
