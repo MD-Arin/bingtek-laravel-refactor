@@ -10,5 +10,5 @@ use Image;
 
 class DashFrpsController extends Controller
 {
-    //
+    
 }

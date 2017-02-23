@@ -12,6 +12,7 @@
         <h2 class="list-group-item-heading text-center">Edit Product Introduction</h2>
         <hr>
         <form class="form-group" action="/dash-tps/tpsSoftDevIntro" method="POST" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <input class="form-control" type="text" name="1-softDevIntro-h1-1" placeholder="Introduction Section Heading" >
             <br>
             <textarea class="form-control" rows="8" cols="20" name="1-softDevIntro-p-1" placeholder="Introduction Body"></textarea>
@@ -27,6 +28,7 @@
 
       <div class="row vertical-line-left vertical-line-right">
           <form class="form-group" action="/dash-tps/tpsSoftDev" method="POST" enctype="multipart/form-data">
+              {{ csrf_field() }}
               <input class="form-control" type="text" name="1-softDev-1-h1-1" placeholder="Section 1 Heading" >
               <br>
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -71,12 +73,13 @@
 
       <div class="row vertical-line-left vertical-line-right">
           <form class="form-group" action="/dash-tps/tpsSoftMen" method="POST" enctype="multipart/form-data">
+              {{ csrf_field() }}
               <input class="form-control" type="text" name="1-softMen-1-h1-1" placeholder="Section 2 Heading" >
               <br>
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                   <input class="btn btn-primary" type="file" name="1-softMen-1-img-1">
                   <br>
-                  <input class="form-control" type="text" name="1-softMen-1-h1-1" placeholder="Section 2 Part 1 Sub Heading" >
+                  <input class="form-control" type="text" name="1-softMen-1-h2-1" placeholder="Section 2 Part 1 Sub Heading" >
                   <br>
                   <textarea class="form-control" rows="8" cols="20" name="1-softMen-1-p-1" placeholder="Section 2 Part 1 Body Content"></textarea>
                   <br>
@@ -89,7 +92,7 @@
                   <input class="form-control" type="text" name="1-softMen-1-li-4" placeholder="Section 2 Part 1 Pointer" >
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                  <input class="form-control" type="text" name="1-softMen-2-h1-1" placeholder="Section 2 Part 2 Sub Heading" >
+                  <input class="form-control" type="text" name="1-softMen-2-h2-1" placeholder="Section 2 Part 2 Sub Heading" >
                   <br>
                   <textarea class="form-control" rows="8" cols="20" name="1-softMen-2-p-1" placeholder="Section 2 Part 2 Body Content"></textarea>
                   <br>
@@ -114,6 +117,7 @@
         <hr>
         
         <form class="form-group" action="/dash-tps/tpsSoftDiverse" method="POST" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <input class="form-control" type="text" name="1-softDiverse-h1-1" placeholder="Final Section Heading">
             <br>
             <textarea class="form-control" name="1-softDiverse-p-1" rows="8" cols="20" placeholder="Final Section Body Content"></textarea>
