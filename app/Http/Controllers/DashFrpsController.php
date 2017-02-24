@@ -10,5 +10,51 @@ use Image;
 
 class DashFrpsController extends Controller
 {
+    public function updateOfficePartitioning(Request $request){
+        $contents = new Content;
+        
+        if(Auth::check()){
+            
+            
+            
+            return redirect('dash-frps');
+        }
+    }
     
+    public function updateOfficeSmart(Request $request){
+        $contents = new Content;
+        
+        if(Auth::check()){
+            
+            
+            return redirect('dash-frps');
+        }
+    }
+    
+    public function  updateupdateOfficeComfort(Request $request){
+        $contents = new Content;
+        
+        if(Auth::check()){
+            
+            return redirect('dash-frps');
+        }
+    }
+    
+    public function updateOfficeDesign(Request $request){
+        $contents = new Content;
+        
+        if(Auth::check()){
+            
+            return redirect('dash-frps');
+        }
+    }
+    
+    public function updateOfficeLuxury(Request $request){
+        $contents = new Content;
+        
+        if(Auth::check()){
+            
+            return redirect('dash-frps');
+        }
+    }
 }

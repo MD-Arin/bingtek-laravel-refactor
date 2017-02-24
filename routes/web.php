@@ -70,3 +70,9 @@ Route::post('/dash-tps/tpsSoftMen', 'DashTpsController@updateSoftMen');
 Route::post('/dash-tps/tpsSoftDiverse', 'DashTpsController@updateSoftDiverse');
 
 //Dashboard Fourth Product/Service routes
+Route::post('/dash-frps/frpsOfficePartitioning', 'DashFrpsController@updateOfficePartitioning');
+Route::post('/dash-frps/frpsOfficeSmart', 'DashFrpsController@updateOfficeSmart');
+Route::post('/dash-frps/frpsOfficeAll', 'DashFrpsController@updateOfficeAll');
+Route::post('/dash-frps/frpsOfficeComfort', 'DashFrpsController@updateOfficeComfort');
+Route::post('/dash-frps/frpsOfficeDesign', 'DashFrpsController@updateOfficeDesign');
+Route::post('/dash-frps/frpsOfficeLuxury', 'DashFrpsController@updateOfficeLuxury');
