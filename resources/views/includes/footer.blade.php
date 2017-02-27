@@ -30,12 +30,15 @@
         </div>
         <div class="panel panel-heading" >
             <h5 class="float-left">Copyright &copy Bingtek <?php echo date("Y"); ?></h5>
+
             <h5 class="float-right">
                 {{ $footerContacts1li1 }}
             </h5>
+
             <h5 class="float-right">
                 {{ $footerContacts1li2 }}
             </h5>
+
             <h5 class="float-right">
                 {{ $footerContacts1li3 }}
             </h5>

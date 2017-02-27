@@ -101,20 +101,20 @@ class DashFooterController extends Controller {
 
         if (Auth::check()) {
             if (Input::get('1-footerMobile-1') != null) {
-                $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-1']])->update(['body' => Input::get('1-footerMobile-1')]);
+                $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-1']])->update(['body' => Input::get('1-footerMobile-1')]);
                 if (Input::get('1-footerMobile-2') != null) {
-                    $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-2']])->update(['body' => Input::get('1-footerMobile-2')]);
+                    $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-2']])->update(['body' => Input::get('1-footerMobile-2')]);
                     if (Input::get('1-footerMobile-3') != null) {
-                        $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-3']])->update(['body' => Input::get('1-footerMobile-3')]);
+                        $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-3']])->update(['body' => Input::get('1-footerMobile-3')]);
                     }
                 }
             } elseif (Input::get('1-footerMobile-2') != null) {
-                $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-2']])->update(['body' => Input::get('1-footerMobile-2')]);
+                $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-2']])->update(['body' => Input::get('1-footerMobile-2')]);
                 if (Input::get('1-footerMobile-3') != null) {
-                    $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-3']])->update(['body' => Input::get('1-footerMobile-3')]);
+                    $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-3']])->update(['body' => Input::get('1-footerMobile-3')]);
                 }
             } elseif (Input::get('1-footerMobile-3') != null) {
-                $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-3']])->update(['body' => Input::get('1-footerMobile-3')]);
+                $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-3']])->update(['body' => Input::get('1-footerMobile-3')]);
             }
             return redirect('dash-footer');
         }

@@ -39,7 +39,7 @@
     <div class="row">
         <form class="form-group" action="/dash-footer/footerMobile" method="POST">
             {{ csrf_field() }}
-            <input class="form-control" type="number" name="1-footerMobile-1" placeholder="Edit First Company Telephone/Mobile Number">
+            <input class="form-control" type="email" name="1-footerMobile-1" placeholder="Edit Company Email">
             <br>
             <input class="form-control" type="number" name="1-footerMobile-2" placeholder="Edit Second Company Telephone/Mobile Number">
             <br>

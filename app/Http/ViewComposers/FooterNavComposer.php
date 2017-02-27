@@ -30,9 +30,9 @@ class FooterNavComposer {
         $footerSocial1i1 = $content->where([['pages_id', '=', '7'], ['section', '=', '7-1-2-i-1']])->value('body');
         $footerSocial1i2 = $content->where([['pages_id', '=', '7'], ['section', '=', '7-1-2-i-2']])->value('body');
         //Footer Contacts
-        $footerContacts1li1 = $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-1']])->value('body');
-        $footerContacts1li2 = $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-2']])->value('body');
-        $footerContacts1li3 = $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-li-3']])->value('body');
+        $footerContacts1li1 = $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-1']])->value('body');
+        $footerContacts1li2 = $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-2']])->value('body');
+        $footerContacts1li3 = $content->where([['pages_id', '=', '7'], ['section', '=', '7-2-1-p-3']])->value('body');
 
 
         //Nav Poroducts
