@@ -8,8 +8,8 @@ use App\Content;
 use Illuminate\Support\Facades\Auth;
 use Image;
 
-class DashFrpsController extends Controller
-{
+class DashFrpsController extends Controller {
+
     public function updateOfficePartitioning(Request $request) {
         $contents = new Content;
 
@@ -130,8 +130,7 @@ class DashFrpsController extends Controller
                     if (Input::get('1-OfficeSmart-li-4') != null) {
                         $contents->where([['pages_id', '=', '6'], ['section', '=', '6-2-1-li-4']])->update(['body' => Input::get('1-OfficeSmart-li-4')]);
                     }
-                }
-                elseif(Input::get('1-OfficeSmart-li-4') != null) {
+                } elseif (Input::get('1-OfficeSmart-li-4') != null) {
                     $contents->where([['pages_id', '=', '6'], ['section', '=', '6-2-1-li-4']])->update(['body' => Input::get('1-OfficeSmart-li-4')]);
                 }
             }

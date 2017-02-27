@@ -48,12 +48,12 @@
             <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" value="Save">
         </form>
     </div>
-    
-    
+
+
     <hr>
     <h1 class="text-center">Edit Section III</h1>
     <hr>
-    
+
     <div class="row">
         <form class="form-group" action="/dash-frps/frpsOfficeAll" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
@@ -78,7 +78,7 @@
             <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" value="Save">
         </form>
     </div>
-    
+
     <hr>
     <h1 class="text-center">Edit Section IV</h1>
     <hr>
@@ -95,8 +95,8 @@
             <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" value="Save">
         </form>
     </div>
-    
-    
+
+
     <hr>
     <h1 class="text-center">Edit Section V</h1>
     <hr>

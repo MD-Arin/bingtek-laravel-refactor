@@ -1,15 +1,15 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
+  |--------------------------------------------------------------------------
+  | Web Routes
+  |--------------------------------------------------------------------------
+  |
+  | This file is where you may define all of the routes that are handled
+  | by your application. Just tell Laravel the URIs it should respond
+  | to using a Closure or controller method. Build something great!
+  |
+ */
 
 //Main routes
 Route::get('/', 'PagesController@getHome')->name('home');
@@ -79,3 +79,7 @@ Route::post('/dash-frps/frpsOfficeLuxury', 'DashFrpsController@updateOfficeLuxur
 
 //Dashboard Nav routes
 Route::post('/dash-nav/navProductsServices', 'DashNavController@updateProductsServices');
+
+//Dashboard Footer routes
+Route::post('/dash-footer/footerLocation', 'DashFooterController@updateFooterLocation');
+Route::post('/dash-footer/footerMobile', 'DashFooterController@updateFooterMobile');

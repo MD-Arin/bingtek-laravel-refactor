@@ -676,7 +676,7 @@ class DashboardController extends Controller {
                         }
                     }
                 }
-            } elseif (Input::get('homeOffice1li3') != null ) {
+            } elseif (Input::get('homeOffice1li3') != null) {
                 $content->where([['pages_id', '=', '1'], ['section', '=', '5-1-li-3']])->update(['body' => Input::get('homeOffice1li3')]);
                 if (Input::get('homeOffice1li4') != null) {
                     $content->where([['pages_id', '=', '1'], ['section', '=', '5-1-li-4']])->update(['body' => Input::get('homeOffice1li4')]);

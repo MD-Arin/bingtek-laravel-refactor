@@ -38,7 +38,7 @@ class HomeController extends Controller
     }
 
     public function getDashFooter(){
-      return null;
+      return view('dashboard.footer');
     }
 
     public function getDashboard(){

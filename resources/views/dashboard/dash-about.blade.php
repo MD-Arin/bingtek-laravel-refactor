@@ -12,7 +12,7 @@
         <hr class="underline">
 
         <form class="form-group" action="/dash-about/aboutHistory" method="POST" enctype="multipart/form-data">
-             {{ csrf_field() }} 
+            {{ csrf_field() }} 
             <input class="form-control" type="text" name="1-history-h1" placeholder="Our Story">
             <hr>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">      
@@ -27,14 +27,14 @@
                 <br>
                 <textarea class="form-control" rows="8" cols="20" name="1-history-p" placeholder="Story Body Content"></textarea>
             </div>
-            
+
             <input class="btn btn-primary" style="margin-left: 47%; margin-top: 20px;" type="submit" name="1-history-submit" value="Save">
         </form>
 
     </div>
 
     <hr>
-    
+
     <!--Milestones-->
 
     <div class="row">
@@ -64,7 +64,7 @@
                         <br>
                         <textarea class="form-control" rows="8" cols="20" name="1-milestone-body-2" placeholder="Accomplishment Body/ Story"></textarea>
                     </div>
-                    
+
                     <input class="btn btn-primary" type="submit" style="margin-left: 47%; margin-top: 20px;" name="1-milestones-submit" value="Save">
                 </form>
             </div>
@@ -73,7 +73,7 @@
     <br>
     <br>
 
-    
+
     <!--Testimonials-->
     <div class="text-center">
         <hr>
@@ -146,7 +146,7 @@
                 <input class="form-control" type="text" name="1-partners-name-1" placeholder="Partner Name">
                 <br>
                 <input class="form-control" type="number" name="1-partners-number-1" min="1" max="6" value="1" placeholder="Partner Number">
-                
+
                 <input class="btn btn-primary" type="submit" name="1-partners-submit-1" style="margin-left: 47%; margin-top: 20px;" value="Save">
             </form>
         </div>

@@ -2,49 +2,47 @@
 
 use Illuminate\Database\Seeder;
 
-class PagesTableSeeder extends Seeder
-{
+class PagesTableSeeder extends Seeder {
+
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run()
-    {
+    public function run() {
         Eloquent::unguard();
 
         DB::table('pages')->insert([
-          'page' => 'home'
+            'page' => 'home'
         ]);
 
         DB::table('pages')->insert([
-          'page' => 'about'
+            'page' => 'about'
         ]);
 
         DB::table('pages')->insert([
-          'page' => 'fps'
+            'page' => 'fps'
         ]);
 
         DB::table('pages')->insert([
-          'page' => 'sps'
+            'page' => 'sps'
         ]);
 
         DB::table('pages')->insert([
-          'page' => 'tps'
+            'page' => 'tps'
         ]);
 
         DB::table('pages')->insert([
-          'page' => 'frps'
+            'page' => 'frps'
         ]);
 
         DB::table('pages')->insert([
-          'page' => 'footer'
+            'page' => 'footer'
         ]);
 
         DB::table('pages')->insert([
-          'page' => 'nav'
+            'page' => 'nav'
         ]);
-
-
     }
+
 }

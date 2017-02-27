@@ -6,6 +6,9 @@
 
 @section('dash-content')
 <div class="container-fluid">
+    <hr>
+    <h1 class="text-center">Edit Nav</h1>
+    <hr>
     <div class="row">
         <form class="form-group" action="/dash-nav/navProductsServices" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}

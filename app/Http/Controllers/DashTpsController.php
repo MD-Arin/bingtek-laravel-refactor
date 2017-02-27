@@ -8,11 +8,11 @@ use App\Content;
 use Illuminate\Support\Facades\Auth;
 use Image;
 
-class DashTpsController extends Controller
-{
-    public function updateSoftDevIntro(Request $request){
+class DashTpsController extends Controller {
+
+    public function updateSoftDevIntro(Request $request) {
         $contents = new Content;
-        
+
         if (Auth::check()) {
             if (Input::get('1-softDevIntro-h1-1') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-1-1-h1']])->update(['body' => Input::get('1-softDevIntro-h1-1')]);
@@ -26,7 +26,7 @@ class DashTpsController extends Controller
             return redirect('dash-tps');
         }
     }
-    
+
     public function updateSoftDev(Request $request) {
         $contents = new Content;
 
@@ -556,8 +556,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            }
-            elseif($request->hasFile('1-softMen-1-img-1')) {
+            } elseif ($request->hasFile('1-softMen-1-img-1')) {
                 $img = $request->file('1-softMen-1-img-1');
 
                 $filename = time() . '.' . $img->getClientOriginalExtension();
@@ -612,7 +611,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-1-h2-1') != null) {
+            } elseif (Input::get('1-softMen-1-h2-1') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-h1']])->update(['body' => Input::get('1-softMen-1-h2-1')]);
                 if (Input::get('1-softMen-1-p-1') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-p']])->update(['body' => Input::get('1-softMen-1-p-1')]);
@@ -657,7 +656,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-1-p-1') != null) {
+            } elseif (Input::get('1-softMen-1-p-1') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-p']])->update(['body' => Input::get('1-softMen-1-p-1')]);
                 if (Input::get('1-softMen-1-li-1') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-li-1']])->update(['body' => Input::get('1-softMen-1-li-1')]);
@@ -699,7 +698,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-1-li-1') != null) {
+            } elseif (Input::get('1-softMen-1-li-1') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-li-1']])->update(['body' => Input::get('1-softMen-1-li-1')]);
                 if (Input::get('1-softMen-1-li-2') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-li-2']])->update(['body' => Input::get('1-softMen-1-li-2')]);
@@ -738,7 +737,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-1-li-2') != null) {
+            } elseif (Input::get('1-softMen-1-li-2') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-li-2']])->update(['body' => Input::get('1-softMen-1-li-2')]);
                 if (Input::get('1-softMen-1-li-3') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-li-3']])->update(['body' => Input::get('1-softMen-1-li-3')]);
@@ -774,7 +773,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-1-li-3') != null) {
+            } elseif (Input::get('1-softMen-1-li-3') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-li-3']])->update(['body' => Input::get('1-softMen-1-li-3')]);
                 if (Input::get('1-softMen-1-li-4') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-li-4']])->update(['body' => Input::get('1-softMen-1-li-4')]);
@@ -807,7 +806,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-1-li-4') != null) {
+            } elseif (Input::get('1-softMen-1-li-4') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-2-li-4']])->update(['body' => Input::get('1-softMen-1-li-4')]);
                 if (Input::get('1-softMen-2-h2-1') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-h1']])->update(['body' => Input::get('1-softMen-2-h2-1')]);
@@ -837,7 +836,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-2-h2-1') != null) {
+            } elseif (Input::get('1-softMen-2-h2-1') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-h1']])->update(['body' => Input::get('1-softMen-2-h2-1')]);
                 if (Input::get('1-softMen-2-p-1') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-p']])->update(['body' => Input::get('1-softMen-2-p-1')]);
@@ -864,7 +863,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-2-p-1') != null) {
+            } elseif (Input::get('1-softMen-2-p-1') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-p']])->update(['body' => Input::get('1-softMen-2-p-1')]);
                 if (Input::get('1-softMen-2-li-1') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-li-1']])->update(['body' => Input::get('1-softMen-2-li-1')]);
@@ -888,7 +887,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-2-li-1') != null) {
+            } elseif (Input::get('1-softMen-2-li-1') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-li-1']])->update(['body' => Input::get('1-softMen-2-li-1')]);
                 if (Input::get('1-softMen-2-li-2') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-li-2']])->update(['body' => Input::get('1-softMen-2-li-2')]);
@@ -909,7 +908,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-2-li-2') != null) {
+            } elseif (Input::get('1-softMen-2-li-2') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-li-2']])->update(['body' => Input::get('1-softMen-2-li-2')]);
                 if (Input::get('1-softMen-2-li-3') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-li-3']])->update(['body' => Input::get('1-softMen-2-li-3')]);
@@ -927,7 +926,7 @@ class DashTpsController extends Controller
                         }
                     }
                 }
-            } elseif(Input::get('1-softMen-2-li-3') != null) {
+            } elseif (Input::get('1-softMen-2-li-3') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-li-3']])->update(['body' => Input::get('1-softMen-2-li-3')]);
                 if (Input::get('1-softMen-2-li-4') != null) {
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-li-4']])->update(['body' => Input::get('1-softMen-2-li-4')]);
@@ -942,7 +941,7 @@ class DashTpsController extends Controller
                         $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-img']])->update(['body' => $dataLocation]);
                     }
                 }
-            } elseif(Input::get('1-softMen-2-li-4') != null) {
+            } elseif (Input::get('1-softMen-2-li-4') != null) {
                 $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-li-4']])->update(['body' => Input::get('1-softMen-2-li-4')]);
                 if ($request->hasFile('1-softMen-2-img-1')) {
                     $img = $request->file('1-softMen-2-img-1');
@@ -954,7 +953,7 @@ class DashTpsController extends Controller
 
                     $contents->where([['pages_id', '=', '5'], ['section', '=', '5-3-3-img']])->update(['body' => $dataLocation]);
                 }
-            } elseif($request->hasFile('1-softMen-2-img-1')) {
+            } elseif ($request->hasFile('1-softMen-2-img-1')) {
                 $img = $request->file('1-softMen-2-img-1');
 
                 $filename = time() . '.' . $img->getClientOriginalExtension();
