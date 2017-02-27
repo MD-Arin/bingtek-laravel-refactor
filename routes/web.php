@@ -76,3 +76,6 @@ Route::post('/dash-frps/frpsOfficeAll', 'DashFrpsController@updateOfficeAll');
 Route::post('/dash-frps/frpsOfficeComfort', 'DashFrpsController@updateOfficeComfort');
 Route::post('/dash-frps/frpsOfficeDesign', 'DashFrpsController@updateOfficeDesign');
 Route::post('/dash-frps/frpsOfficeLuxury', 'DashFrpsController@updateOfficeLuxury');
+
+//Dashboard Nav routes
+Route::post('/dash-nav/navProductsServices', 'DashNavController@updateProductsServices');

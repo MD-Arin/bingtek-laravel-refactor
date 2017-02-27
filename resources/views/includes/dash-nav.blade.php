@@ -3,8 +3,8 @@
     <hr>
     <li class="nav nav_table @yeild('edit-nav-active')">Edit Navigation</li>
     <hr>
-    <li><a href="{{ route('dash-nav') }}">Navbar and Top Panel</a></li>
-    <li><a href="{{ route('dash-footer') }}">Footer and Bottom Panel</a></li>
+    <li class="@yield('edit-nav-active')"><a href="{{ route('dash-nav') }}">Navbar and Top Panel</a></li>
+    <li class=""><a href="{{ route('dash-footer') }}">Footer and Bottom Panel</a></li>
   </ul>
   <ul class="nav nav-sidebar">
     <hr>
